@@ -44,7 +44,7 @@ disqusShortname = "XXX"
     exponeaTrackVisits = false
 
 [Permalinks]
-    post = "/:year/:month/:day/:filename/"
+    post = "/:filename/"
 
 [[menu.main]]
     name = "Home 🏠"
