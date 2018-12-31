@@ -7,6 +7,8 @@ draft: false
 
 <h1 class="title"> Happy New Year 2019 🎆 </h1>
 
+<img src="/img/2019_svg.svg" height="350px" />
+
 Yeah first post of the year. Let me wish you a Happy New Year.<br/>
 Big project, big work, big ambition, this year will be exciting!
 
