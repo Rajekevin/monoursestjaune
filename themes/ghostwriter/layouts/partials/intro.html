@@ -1,0 +1,16 @@
+{{ if .Site.Params.intro }}
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name">{{ .Site.Params.headline }}</h1>
+
+        <p>{{ .Site.Params.description }}</p>
+
+         {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}   
+             {{ range $key, $value := $taxonomy }}
+                              
+                <a class="{{$key}} tagButton label label-danger" href="{{ "/tags/" | relLangURL }}{{ $key | urlize }}/">{{ $key }}</a>
+            {{ end }}
+                           
+        {{ end }}             
+        
+    </header>
+{{ end }}
