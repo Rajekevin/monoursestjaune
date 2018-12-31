@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "/"
 theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "Rajekevin"
