@@ -2,6 +2,9 @@
 title: "Render Html Tags"
 date: 2019-01-02T19:45:06+01:00
 draft: false
+tags : [
+    "php"
+]
 ---
 
 <h1 class="title"> Render HTML Tags </h1>
