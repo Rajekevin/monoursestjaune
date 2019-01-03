@@ -14,7 +14,7 @@ tags : [
 <img src="/img/posts/php5.PNG" height="350px" />
 
 I started, learned, praticed with this version of PHP.
-Now PHP5, since December 31, 2018, security support for PHP 5.6.x will officially cease, marking the end of all support for any version of the ancient PHP 5.x branch 😥
+Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease, marking the end of all support for any version of the ancient PHP 5.x branch 😥
 
 <h2 class="title" > What does it mean ?</h2>
 
