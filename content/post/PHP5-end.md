@@ -11,10 +11,10 @@ tags : [
 <h1 class="title">Good Bye PHP5 [14.04.2004-31.12.2018] </h1>
 
 14 years of love story with PHP5, now finish, since the new year 2019 !
-<img src="/img/posts/php5.PNG" height="350px" />
+<img src="/img/posts/post2/php5.PNG" height="350px" />
 
 I started, learned, praticed with this version of PHP.
-Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease, marking the end of all support for any version of the ancient PHP 5.x branch 😥
+Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease ; marking the end of all support for any version of the ancient PHP 5.x branch 😥
 
 <h2 class="title" > What does it mean ?</h2>
 
