@@ -20,6 +20,6 @@ Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially 
 
 It exposes hundreds of millions of websites (who still running on PHP 5.x version), to serious security risks ☠️.
 
-<h2 class="title" > what I supposed to do if In still running my website on php 5 ? </h2>
+<h2 class="title" > what I supposed to do if I still running my website on php 5 ? </h2>
 
 Read the official documentation of Migrating from PHP 5.6.x to PHP 7.0.x  : http://php.net/manual/en/migration70.php
