@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
-    <link>/post/</link>
-    <description>Recent content in Posts on </description>
+    <title>Php on </title>
+    <link>/tags/php/</link>
+    <description>Recent content in Php on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
-    <lastBuildDate>Fri, 04 Jan 2019 19:35:13 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jan 2019 20:07:37 +0100</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Friday Read#1</title>
-      <link>/friday-read-1/</link>
-      <pubDate>Fri, 04 Jan 2019 19:35:13 +0100</pubDate>
-      
-      <guid>/friday-read-1/</guid>
-      <description>Friday Read#1  I would like to present you a beautiful website : https://css-tricks.com/  design by Kylie Timpani &amp;amp; Chris Coyier.
-This new design looks awesome ! This website shows you all the tricks for Front-End Developpers or all the people who love coding in CSS
-All the article well very documented, with the sample of code to reproduce the step. Very useful, if you want to develop your front-end skills!</description>
-    </item>
     
     <item>
       <title>Good Bye PHP5 😥</title>
@@ -44,16 +33,6 @@ What does it mean ? It exposes hundreds of millions of websites (who still runni
 Maybe when you want to display this data, it show as a string character :  &amp;quot;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Hello, I am PHP&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;quot;
 Don&amp;rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
  The htmlspecialchars() function converts some predefined characters to HTML entities</description>
-    </item>
-    
-    <item>
-      <title>Let&#39;s 2019 Begin</title>
-      <link>/lets-2019-begin/</link>
-      <pubDate>Tue, 01 Jan 2019 00:15:48 +0100</pubDate>
-      
-      <guid>/lets-2019-begin/</guid>
-      <description>Happy New Year 2019 🎆  Yeah first post of the year. Let me wish you a Happy New Year. Big project, big work, big ambition, this year will be exciting!
-What super fun thing am I planning to do in 2019 ?  Read more books 📚  Train more ElePHPhant in PHP 🐘  Starting to interest in Django Framework 🦎   Maintain XPlaneLover✈️ &amp; MyBearIsYellow 🐻 Blog   Find a project to contribute in Open Source regularly  That&amp;rsquo;s the kinda thing, I&amp;rsquo;m gonna to do&amp;hellip;</description>
     </item>
     
   </channel>

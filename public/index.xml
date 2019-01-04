@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
-    <lastBuildDate>Tue, 01 Jan 2019 00:15:48 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jan 2019 19:35:13 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Friday Read#1</title>
+      <link>/friday-read-1/</link>
+      <pubDate>Fri, 04 Jan 2019 19:35:13 +0100</pubDate>
+      
+      <guid>/friday-read-1/</guid>
+      <description>Friday Read#1  I would like to present you a beautiful website : https://css-tricks.com/  design by Kylie Timpani &amp;amp; Chris Coyier.
+This new design looks awesome ! This website shows you all the tricks for Front-End Developpers or all the people who love coding in CSS
+All the article well very documented, with the sample of code to reproduce the step. Very useful, if you want to develop your front-end skills!</description>
+    </item>
+    
+    <item>
+      <title>Good Bye PHP5 😥</title>
+      <link>/php5-end/</link>
+      <pubDate>Thu, 03 Jan 2019 20:07:37 +0100</pubDate>
+      
+      <guid>/php5-end/</guid>
+      <description>Good Bye PHP5 [14.04.2004-31.12.2018]  14 years of love story with PHP5, now finish, since the new year 2019 ! I started, learned, praticed with this version of PHP. Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease ; marking the end of all support for any version of the ancient PHP 5.x branch 😥
+What does it mean ? It exposes hundreds of millions of websites (who still running on PHP 5.</description>
+    </item>
+    
+    <item>
+      <title>Render Html Tags</title>
+      <link>/render-html-tags/</link>
+      <pubDate>Wed, 02 Jan 2019 19:45:06 +0100</pubDate>
+      
+      <guid>/render-html-tags/</guid>
+      <description>Render HTML Tags  When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not a string right ?
+&amp;lt;?php echo $row[&#39;description&#39;]; ?&amp;gt;
+Maybe when you want to display this data, it show as a string character :  &amp;quot;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Hello, I am PHP&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;quot;
+Don&amp;rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
+ The htmlspecialchars() function converts some predefined characters to HTML entities</description>
+    </item>
     
     <item>
       <title>Let&#39;s 2019 Begin</title>

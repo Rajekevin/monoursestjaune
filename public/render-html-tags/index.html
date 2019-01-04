@@ -4,22 +4,28 @@
         <meta charset="utf-8">
         <link rel="icon" href="/img/monoursestjaune" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Pages &middot; Rajekevin</title>
-        <meta name="description" content="Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science ">
+        <title>Render Html Tags &middot; Rajekevin</title>
+        <meta name="description" content="Render HTML Tags  When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not a string right ?
+&lt;?php echo $row[&#39;description&#39;]; ?&gt;
+Maybe when you want to display this data, it show as a string character :  &quot;&lt;ul&gt;&lt;li&gt;Hello, I am PHP&lt;/li&gt;&lt;/ul&gt;&quot;
+Don&rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
+ The htmlspecialchars() function converts some predefined characters to HTML entities">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.51" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Pages">
-<meta property="og:description" content="Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science ">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/page/">
+        <meta property="og:title" content="Render Html Tags">
+<meta property="og:description" content="Render HTML Tags  When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not a string right ?
+&lt;?php echo $row[&#39;description&#39;]; ?&gt;
+Maybe when you want to display this data, it show as a string character :  &quot;&lt;ul&gt;&lt;li&gt;Hello, I am PHP&lt;/li&gt;&lt;/ul&gt;&quot;
+Don&rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
+ The htmlspecialchars() function converts some predefined characters to HTML entities">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/render-html-tags/">
         <link rel="stylesheet" href="/dist/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        
-            <link href="/page/index.xml" rel="alternate" type="application/rss+xml">
         
         
         
@@ -101,44 +107,75 @@ if (!doNotTrack) {
             <div id="container">
 
 
-<div id="post-index" class="container">
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
     
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name">My BEAR IS YELLOW</h1>
+    <h1 class="post-title" itemprop="name headline">Render Html Tags</h1>
+    
+    
+    <p class="post-date">
+        <span>Published <time datetime="2019-01-02" itemprop="datePublished">
+            Jan 2, 2019</time>
+        </span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;XXX" itemprop="url" rel="author">
+                    Rajekevin
+                </a>
+            </span>
+        </span>
+    </p>
+</header>
 
-        <p>Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science </p>
+        <div class="post-content clearfix" itemprop="articleBody">
+    
 
+    <h1 class="title"> Render HTML Tags </h1>
+
+<p>When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not  a string right ?</p>
+
+<p><code>&lt;?php echo $row['description']; ?&gt;</code></p>
+
+<p>Maybe when you want to display this data, it show  as a string character  : <br/>
+<code>&quot;&lt;ul&gt;&lt;li&gt;Hello, I am PHP&lt;/li&gt;&lt;/ul&gt;&quot;</code></p>
+
+<p>Don&rsquo;t worry, call your best elePHPhant 🐘 and use <code>htmlspecialchars_decode()</code></p>
+
+<blockquote>
+<p>The htmlspecialchars() function converts some predefined characters to HTML entities</p>
+</blockquote>
+
+<p><code>&lt;?php echo htmlspecialchars($row['description']); ?&gt;</code></p>
+
+<p>Hope, you enjoy this post 😉</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
             
-             
-                              
-                <a class="php tagButton label label-danger" href="/tags/php/">php</a>
             
-                           
-                     
-        
-    </header>
+                
+            
+        </p>
+    
 
-
-
-    <ol class="post-list">
-        
-        
-            <li class="post-stub">
-    <a href="/page/about/">
-        <h4 class="post-stub-title">About</h4>
-        
-            <p class="post-stub-description">Things about me.</p>
-        
-        
-    </a>
-</li>
-        
-    </ol>
-
-    <div class="post-navigation">
+    <div class="share">
         
 
+        
     </div>
+</footer>
+
+        
+    <div class="comments">
+        
+    </div>
+
+    </article>
 </div>
 
             </div>
@@ -175,3 +212,4 @@ if (!doNotTrack) {
         <script src="/js/scripts.js"></script>
     </body>
 </html>
+
