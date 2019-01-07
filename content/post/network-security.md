@@ -7,7 +7,10 @@ draft: false
 
 <h1 class="title"> Modern Network Security Threats </h1>
 
-We can see a lot of kinds of threats, like viruses, worms, and Trojan.
+
+<center>  <img src="/img/posts/post5/orange.jpg" height="350px" /></center>
+
+We can see a lot of kinds of threats, like viruses, worms, and Trojan.<br/>
 A virus is malicious software attached to another program to execute unwanted actions on an end system. A worm executes arbitrary code and installs copies of itself in the memory of an infected computer, which then infects other hosts. A Trojan horse is an application that was written to look like something else.
 
 In addition to these types of threats, there are other categories of threats, such as Reconnaissance attacks & DoS attacks.
