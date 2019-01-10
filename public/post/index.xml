@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
-    <lastBuildDate>Fri, 04 Jan 2019 19:35:13 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jan 2019 18:10:16 +0100</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implement Firewall</title>
+      <link>/implement-firewall/</link>
+      <pubDate>Wed, 09 Jan 2019 18:10:16 +0100</pubDate>
+      
+      <guid>/implement-firewall/</guid>
+      <description>Implement Firewall Technology Why should I implement firewall ? It prevents unauthorized users from accessing protected network resources.
+We can use two methods for implementing firewalls:
+ Packet filtering firewall (ACL)  Stateful firewall (a network firewall that tracks the operating state and characteristics of network connections traversing it)   </description>
+    </item>
+    
+    <item>
+      <title>AAA Protocol</title>
+      <link>/aaa-protocol/</link>
+      <pubDate>Tue, 08 Jan 2019 17:49:07 +0100</pubDate>
+      
+      <guid>/aaa-protocol/</guid>
+      <description>AAA (Authentication, Authorization, and Accounting) The authentication, authorization, and accounting (AAA) is a protocol for enabling administrative access. AAA controls who is allowed to connect to the network, what they are allowed to do, and tracks records of what was done.
+In small or simple networks, AAA authentication can be implemented using the local database. However, in larger or complex networks, AAA authentication should be implemented using server-based AAA. AAA servers can use RADIUS or TACACS+ protocols to communicate with client routers.</description>
+    </item>
+    
+    <item>
+      <title>Modern Network Security Threats</title>
+      <link>/network-security/</link>
+      <pubDate>Mon, 07 Jan 2019 19:05:47 +0100</pubDate>
+      
+      <guid>/network-security/</guid>
+      <description>Modern Network Security Threats   
+We can see a lot of kinds of threats, like viruses, worms, and Trojan. A virus is malicious software attached to another program to execute unwanted actions on an end system. A worm executes arbitrary code and installs copies of itself in the memory of an infected computer, which then infects other hosts. A Trojan horse is an application that was written to look like something else.</description>
+    </item>
     
     <item>
       <title>Friday Read#1</title>
