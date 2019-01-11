@@ -1,7 +1,7 @@
 ---
 title: "Friday Read2"
 date: 2019-01-11T17:34:58+01:00
-draft: true
+draft: false
 ---
 
 <h1 class="title">Friday Read#2 </h1>
