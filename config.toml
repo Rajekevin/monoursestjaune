@@ -5,6 +5,7 @@ copyright = "Rajekevin"
 googleAnalytics = "XXX"
 disqusShortname = "XXX"
 
+
 [Privacy]
 
 [Privacy.disqus]
@@ -24,6 +25,7 @@ disqusShortname = "XXX"
 
 [Params]
     intro = true
+    title = "toto"
     headline = "My BEAR IS YELLOW"
     description = "Hello, I'm Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science "
     github = "https://github.com/rajekevin"
