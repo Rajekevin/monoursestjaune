@@ -4,7 +4,7 @@ languageCode = "en-us"
 copyright = "Rajekevin"
 googleAnalytics = "XXX"
 disqusShortname = "XXX"
-
+pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
 
 [Privacy]
 
@@ -44,7 +44,7 @@ disqusShortname = "XXX"
     exponeaTarget = ""
     exponeaToken = ""
     exponeaTrackVisits = false
-    
+
 [markup]
   [markup.highlight]
     codeFences = true
