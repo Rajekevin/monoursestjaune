@@ -9,6 +9,9 @@ What is Blur function in jQuery ?<br/>
 It is used to remove focus from the selected elements.
 
 Code
-`$(selector).blur(function)`
+```javascript
+$(selector).blur(function)
+```
 
-For more information <a href="https://api.jquery.com/blur/"> Click here </a>  
+
+For more information [Click here](https://api.jquery.com/blur/)

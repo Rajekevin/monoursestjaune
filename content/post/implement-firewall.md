@@ -10,9 +10,9 @@ Why should I  implement firewall ?<br/>
 It prevents unauthorized users from accessing protected network resources.
 
 We can use two methods for implementing firewalls: 
+* Packet filtering firewall (ACL)
+* Stateful firewall (a network firewall that tracks the operating state and characteristics of network connections traversing it)  
 
-<ul class="title">
-    <li> Packet filtering firewall (ACL)</li>
-    <li> Stateful firewall (a network firewall that tracks the operating state and characteristics of network connections traversing it) </li> 
-</ul>   
+
+
 
