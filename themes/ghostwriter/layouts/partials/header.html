@@ -4,11 +4,7 @@
         <meta charset="utf-8">
         <link rel="icon" href="/img/monoursestjaune" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <header>
-            <!-- Hugo assumes that .Title is the name of the section since there is no _index.md content file from which to pull a "title:" field -->
-            <h1>Quotes</h1>
-        </header>
-        <title>  {{ .Title }} | MyBearIsYellow | {{ .Site.Author.name }}</title>
+         <title>  {{ .Title }} | MyBearIsYellow | {{ .Site.Author.name }}</title>
         <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
