@@ -11,16 +11,21 @@ tags : [
 
 When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not  a string right ?
 
-
-`<?php echo $row['description']; ?>`
-
+```PHP
+<?php echo $row['description']; ?>`
+```
 Maybe when you want to display this data, it show  as a string character  : <br/>
-`"<ul><li>Hello, I am PHP</li></ul>"`
 
-Don't worry, call your best elePHPhant 🐘 and use `htmlspecialchars_decode()`
+```HTML
+<ul><li>Hello, I am PHP</li></ul>
+```
+
+Don't worry, call your best elePHPhant 🐘 and use [htmlspecialchars_decode()](https://www.php.net/manual/fr/function.htmlspecialchars-decode.php)
 
 > The htmlspecialchars() function converts some predefined characters to HTML entities
+```PHP
+<?php echo htmlspecialchars($row['description']); ?>
+```
 
-`<?php echo htmlspecialchars($row['description']); ?>`
 
 Hope, you enjoy this post 😉
