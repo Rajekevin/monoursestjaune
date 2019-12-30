@@ -1,0 +1,43 @@
+code[class*="language-"], pre[class*="language-"] {
+    color:
+            #ccc;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+code[class*="language-"], pre[class*="language-"] {
+    white-space: pre-wrap !important;
+}
+.token.boolean, .token.function, .token.number {
+    color:
+            #f08d49;
+}
+.hljs-string{
+    color:white;
+}
+
+ul{
+    color:white;
+}
+
+#topbar {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background-color: deepskyblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

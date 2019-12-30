@@ -103,6 +103,11 @@ pre {
     }
 }
 
+pre[class*="language-"] {
+    background:
+            #2d2d2d;
+}
+
 code {
     padding: 2px 4px;
     font-size: 90%;
@@ -769,3 +774,4 @@ table {
 
     .footer-copyright { padding: 0 10px; }
 }
+

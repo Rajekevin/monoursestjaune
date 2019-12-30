@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
@@ -7,10 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
-    <lastBuildDate>Wed, 09 Jan 2019 18:10:16 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jan 2019 11:35:56 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kill 8080</title>
+      <link>/kill-8080/</link>
+      <pubDate>Thu, 31 Jan 2019 11:35:56 +0100</pubDate>
+      
+      <guid>/kill-8080/</guid>
+      <description>If you are using Windows, it&#39;s can be useful to kill certain port. I will show you, how to kill the process :
+netstat -ano | findstr :8080 taskkill /PID typeyourPIDhere </description>
+    </item>
+    
+    <item>
+      <title>Blur</title>
+      <link>/blur/</link>
+      <pubDate>Wed, 16 Jan 2019 16:20:55 +0100</pubDate>
+      
+      <guid>/blur/</guid>
+      <description>What is Blur function in jQuery ?It is used to remove focus from the selected elements.
+Code
+$(selector).blur(function) For more information Click here</description>
+    </item>
+    
+    <item>
+      <title>Friday Read#2</title>
+      <link>/friday-read-2/</link>
+      <pubDate>Fri, 11 Jan 2019 17:34:58 +0100</pubDate>
+      
+      <guid>/friday-read-2/</guid>
+      <description>This Friday Read#2 is dedicated to : https://dev.to/
+Best website to all article related to software development.</description>
+    </item>
+    
+    <item>
+      <title>Ip Spoofing</title>
+      <link>/ip-spoofing/</link>
+      <pubDate>Thu, 10 Jan 2019 09:53:55 +0100</pubDate>
+      
+      <guid>/ip-spoofing/</guid>
+      <description>IP Spoofing is the process of replacing the source IP address with a fake IP address from the IP packets to hide the real identity of the sender.
+The source address is the address of the computer that the packet an attacker can make it appear that the packet an attacker can make it appear that the packet was sent by a different computer system.</description>
+    </item>
     
     <item>
       <title>Implement Firewall</title>
@@ -18,9 +59,9 @@
       <pubDate>Wed, 09 Jan 2019 18:10:16 +0100</pubDate>
       
       <guid>/implement-firewall/</guid>
-      <description>Implement Firewall Technology Why should I implement firewall ? It prevents unauthorized users from accessing protected network resources.
+      <description>Why should I implement firewall ?It prevents unauthorized users from accessing protected network resources.
 We can use two methods for implementing firewalls:
- Packet filtering firewall (ACL)  Stateful firewall (a network firewall that tracks the operating state and characteristics of network connections traversing it)   </description>
+ Packet filtering firewall (ACL) Stateful firewall (a network firewall that tracks the operating state and characteristics of network connections traversing it)  </description>
     </item>
     
     <item>
@@ -29,7 +70,7 @@ We can use two methods for implementing firewalls:
       <pubDate>Tue, 08 Jan 2019 17:49:07 +0100</pubDate>
       
       <guid>/aaa-protocol/</guid>
-      <description>AAA (Authentication, Authorization, and Accounting) The authentication, authorization, and accounting (AAA) is a protocol for enabling administrative access. AAA controls who is allowed to connect to the network, what they are allowed to do, and tracks records of what was done.
+      <description>The authentication, authorization, and accounting (AAA) is a protocol for enabling administrative access. AAA controls who is allowed to connect to the network, what they are allowed to do, and tracks records of what was done.
 In small or simple networks, AAA authentication can be implemented using the local database. However, in larger or complex networks, AAA authentication should be implemented using server-based AAA. AAA servers can use RADIUS or TACACS+ protocols to communicate with client routers.</description>
     </item>
     
@@ -39,8 +80,8 @@ In small or simple networks, AAA authentication can be implemented using the loc
       <pubDate>Mon, 07 Jan 2019 19:05:47 +0100</pubDate>
       
       <guid>/network-security/</guid>
-      <description>Modern Network Security Threats   
-We can see a lot of kinds of threats, like viruses, worms, and Trojan. A virus is malicious software attached to another program to execute unwanted actions on an end system. A worm executes arbitrary code and installs copies of itself in the memory of an infected computer, which then infects other hosts. A Trojan horse is an application that was written to look like something else.</description>
+      <description>We can see a lot of kinds of threats, like viruses, worms, and Trojan.A virus is malicious software attached to another program to execute unwanted actions on an end system. A worm executes arbitrary code and installs copies of itself in the memory of an infected computer, which then infects other hosts. A Trojan horse is an application that was written to look like something else.
+In addition to these types of threats, there are other categories of threats, such as Reconnaissance attacks &amp;amp; DoS attacks.</description>
     </item>
     
     <item>
@@ -49,7 +90,7 @@ We can see a lot of kinds of threats, like viruses, worms, and Trojan. A virus i
       <pubDate>Fri, 04 Jan 2019 19:35:13 +0100</pubDate>
       
       <guid>/friday-read-1/</guid>
-      <description>Friday Read#1  I would like to present you a beautiful website : https://css-tricks.com/  design by Kylie Timpani &amp;amp; Chris Coyier.
+      <description>I would like to present you a beautiful website : https://css-tricks.com/ design by Kylie Timpani &amp;amp; Chris Coyier.
 This new design looks awesome ! This website shows you all the tricks for Front-End Developpers or all the people who love coding in CSS
 All the article well very documented, with the sample of code to reproduce the step. Very useful, if you want to develop your front-end skills!</description>
     </item>
@@ -60,8 +101,8 @@ All the article well very documented, with the sample of code to reproduce the s
       <pubDate>Thu, 03 Jan 2019 20:07:37 +0100</pubDate>
       
       <guid>/php5-end/</guid>
-      <description>Good Bye PHP5 [14.04.2004-31.12.2018]  14 years of love story with PHP5, now finish, since the new year 2019 ! I started, learned, praticed with this version of PHP. Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease ; marking the end of all support for any version of the ancient PHP 5.x branch 😥
-What does it mean ? It exposes hundreds of millions of websites (who still running on PHP 5.</description>
+      <description>14 years of love story with PHP5, now finish, since the new year 2019 ! I started, learned, praticed with this version of PHP. Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease ; marking the end of all support for any version of the ancient PHP 5.x branch 😥
+It exposes hundreds of millions of websites (who still running on PHP 5.x version), to serious security risks ☠️.</description>
     </item>
     
     <item>
@@ -70,11 +111,10 @@ What does it mean ? It exposes hundreds of millions of websites (who still runni
       <pubDate>Wed, 02 Jan 2019 19:45:06 +0100</pubDate>
       
       <guid>/render-html-tags/</guid>
-      <description>Render HTML Tags  When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not a string right ?
-&amp;lt;?php echo $row[&#39;description&#39;]; ?&amp;gt;
-Maybe when you want to display this data, it show as a string character :  &amp;quot;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Hello, I am PHP&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;quot;
-Don&amp;rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
- The htmlspecialchars() function converts some predefined characters to HTML entities</description>
+      <description>When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not a string right ?
+&amp;lt;?php echo $row[&amp;#39;description&amp;#39;]; ?&amp;gt;` Maybe when you want to display this data, it show as a string character : &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Hello, I am PHP&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; Don&#39;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_decode()
+ The htmlspecialchars() function converts some predefined characters to HTML entities
+ &amp;lt;?php echo htmlspecialchars($row[&amp;#39;description&amp;#39;]); ?</description>
     </item>
     
     <item>
@@ -83,17 +123,10 @@ Don&amp;rsquo;t worry, call your best elePHPhant 🐘 and use htmlspecialchars_d
       <pubDate>Tue, 01 Jan 2019 00:15:48 +0100</pubDate>
       
       <guid>/lets-2019-begin/</guid>
-      <description>Happy New Year 2019 🎆  Yeah first post of the year. Let me wish you a Happy New Year. Big project, big work, big ambition, this year will be exciting!
-What super fun thing am I planning to do in 2019 ?  Read more books 📚  Train more ElePHPhant in PHP 🐘  Starting to interest in Django Framework 🦎   Maintain XPlaneLover✈️ &amp; MyBearIsYellow 🐻 Blog   Find a project to contribute in Open Source regularly  That&amp;rsquo;s the kinda thing, I&amp;rsquo;m gonna to do&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/page/about/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>/page/about/</guid>
-      <description>About Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor in magna lobortis egestas. Suspendisse eu erat tempor, tristique neque eu, convallis nulla. Curabitur vel bibendum lacus, at semper mauris. Suspendisse aliquet commodo ex, sed sagittis metus aliquam id. Maecenas feugiat rutrum lorem vel imperdiet. Nullam ornare lectus ut enim finibus, et porttitor mi tincidunt. Aenean lacinia, leo quis vehicula eleifend, quam libero sagittis erat, at euismod augue mauris et sapien.</description>
+      <description>Yeah first post of the year. Let me wish you a Happy New Year.Big project, big work, big ambition, this year will be exciting!
+That&#39;s the kinda thing, I&#39;m gonna to do&amp;hellip;
+ With Great power comes great responsibility&amp;hellip;
+ </description>
     </item>
     
   </channel>
