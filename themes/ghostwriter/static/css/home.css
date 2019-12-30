@@ -1,6 +1,5 @@
 code[class*="language-"], pre[class*="language-"] {
-    color:
-            #ccc;
+    color: #ccc;
     background: none;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     text-align: left;
@@ -21,8 +20,7 @@ code[class*="language-"], pre[class*="language-"] {
     white-space: pre-wrap !important;
 }
 .token.boolean, .token.function, .token.number {
-    color:
-            #f08d49;
+    color: #f08d49;
 }
 .hljs-string{
     color:white;
