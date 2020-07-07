@@ -264,11 +264,22 @@ table tr { border-bottom: 1px dotted #aeadad; }
     font-size: 14px;
     font-weight: 700;  
     padding: 5px;
-    background-color: #2196F3;
     margin-left: 0px;  
     float: none;
     display: inline-block;
     margin-top: 4px;
+}
+
+/***
+* Personal Custom CSS
+*/
+
+.php{
+    background-color: #2196F3;
+}
+
+.react{
+    background-color: #00d8ff;
 }
 
 .tagButton a :hover{
