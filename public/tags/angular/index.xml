@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on </title>
+    <link>/tags/angular/</link>
+    <description>Recent content in Angular on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Rajekevin</copyright>
+    <lastBuildDate>Mon, 10 May 2021 11:43:11 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular Component Lifecycle Hooks</title>
+      <link>/posts/angular-component-lifecycle-hooks/</link>
+      <pubDate>Mon, 10 May 2021 11:43:11 +0200</pubDate>
+      
+      <guid>/posts/angular-component-lifecycle-hooks/</guid>
+      <description>8 Lifecycle Hooks  ngOnChanges()
+ Used in pretty muck any component that has an input Called whenever an input value changes Is called the first time before ngOnInit  ngOnInit()
+ Used to initialize data in a component Called after input values are set when a component is initialized Added to every component by default by the Angular CLI Called only once  ngDoCheck()
+ Called during all change detection runs A run through the view by Angular to update/detect changes  ngAfterContentInit()</description>
+    </item>
+    
+  </channel>
+</rss>

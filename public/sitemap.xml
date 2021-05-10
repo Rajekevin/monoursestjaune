@@ -1,80 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>/posts/angular-component-lifecycle-hooks/</loc>
+    <lastmod>2021-05-10T11:43:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/</loc>
+    <lastmod>2020-01-01T12:15:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/kill-8080/</loc>
     <lastmod>2019-01-31T11:35:56+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/kill-8080/</loc>
-    <lastmod>2019-01-31T11:35:56+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-01-31T11:35:56+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blur/</loc>
+    <loc>/posts/blur/</loc>
     <lastmod>2019-01-16T16:20:55+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/friday-read-2/</loc>
-    <lastmod>2019-01-11T17:34:58+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ip-spoofing/</loc>
-    <lastmod>2019-01-10T09:53:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/implement-firewall/</loc>
-    <lastmod>2019-01-09T18:10:16+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/aaa-protocol/</loc>
-    <lastmod>2019-01-08T17:49:07+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/network-security/</loc>
-    <lastmod>2019-01-07T19:05:47+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/friday-read-1/</loc>
-    <lastmod>2019-01-04T19:35:13+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/php5-end/</loc>
+    <loc>/posts/php5-end/</loc>
     <lastmod>2019-01-03T20:07:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/render-html-tags/</loc>
+    <lastmod>2019-01-02T19:45:06+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/lets-2019-begin/</loc>
+    <lastmod>2019-01-01T00:15:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/about/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-05-10T11:43:11+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/angular/</loc>
+    <lastmod>2021-05-10T11:43:11+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/php/</loc>
     <lastmod>2019-01-03T20:07:37+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2021-05-10T11:43:11+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-01-03T20:07:37+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/render-html-tags/</loc>
-    <lastmod>2019-01-02T19:45:06+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/lets-2019-begin/</loc>
-    <lastmod>2019-01-01T00:15:48+01:00</lastmod>
+    <lastmod>2021-05-10T11:43:11+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

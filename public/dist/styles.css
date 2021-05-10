@@ -47,27 +47,6 @@ canvas { display: inline-block; }
 template { display: none; }
 [hidden] { display: none; }
 .hljs { display: block; overflow-x: auto; padding: .5em; background: #f0f0f0; }
-
-
-.hljs, .hljs-subst {
-    color:#ccc;
-    background: #2d2d2d;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-
-}
-
 .hljs-comment { color: #888; }
 .hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-meta-keyword,
 .hljs-doctag, .hljs-name { font-weight: bold; }
@@ -285,11 +264,26 @@ table tr { border-bottom: 1px dotted #aeadad; }
     font-size: 14px;
     font-weight: 700;  
     padding: 5px;
-    background-color: #2196F3;
     margin-left: 0px;  
     float: none;
     display: inline-block;
     margin-top: 4px;
+}
+
+/***
+* Personal Custom CSS
+*/
+
+.php{
+    background-color: #2196F3;
+}
+
+.angular{
+    background-color:red;
+}
+
+.react{
+    background-color: #00d8ff;
 }
 
 .tagButton a :hover{
@@ -300,22 +294,3 @@ table tr { border-bottom: 1px dotted #aeadad; }
     background-color:green;
 }
 
-.hljs{
-    color:#ccc;
-    background: #2d2d2d;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-
-}

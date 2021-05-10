@@ -4,23 +4,27 @@
         <meta charset="utf-8">
         <link rel="icon" href="/img/monoursestjaune" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <title>   | MyBearIsYellow | Rajekevin</title>
-        <meta name="description" content="Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science ">
+         <title>  Angular Component Lifecycle Hooks | MyBearIsYellow | Rajekevin</title>
+        <meta name="description" content="8 Lifecycle Hooks  ngOnChanges()
+ Used in pretty muck any component that has an input Called whenever an input value changes Is called the first time before ngOnInit  ngOnInit()
+ Used to initialize data in a component Called after input values are set when a component is initialized Added to every component by default by the Angular CLI Called only once  ngDoCheck()
+ Called during all change detection runs A run through the view by Angular to update/detect changes  ngAfterContentInit()">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.51" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="">
-<meta property="og:description" content="Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science ">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/">
+        <meta property="og:title" content="Angular Component Lifecycle Hooks">
+<meta property="og:description" content="8 Lifecycle Hooks  ngOnChanges()
+ Used in pretty muck any component that has an input Called whenever an input value changes Is called the first time before ngOnInit  ngOnInit()
+ Used to initialize data in a component Called after input values are set when a component is initialized Added to every component by default by the Angular CLI Called only once  ngDoCheck()
+ Called during all change detection runs A run through the view by Angular to update/detect changes  ngAfterContentInit()">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/posts/angular-component-lifecycle-hooks/">
         <link rel="stylesheet" href="/dist/styles.css">
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        
-            <link href="/index.xml" rel="alternate" type="application/rss+xml">
         
         
         
@@ -104,37 +108,115 @@ if (!doNotTrack) {
             <div id="container">
 
 
-<div id="post-index" class="container" itemscope="" itemtype="https://schema.org/Blog">
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Angular Component Lifecycle Hooks</h1>
     
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name">My BEAR IS YELLOW</h1>
+</header>
 
-        <p>Hello, I&#39;m Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science </p>
+        <div class="post-content clearfix">
+    
 
+    
+
+<h1 id="8-lifecycle-hooks">8 Lifecycle Hooks</h1>
+
+<ul>
+<li><p><strong>ngOnChanges()</strong></p>
+
+<ul>
+<li>Used in pretty muck any component that has an input</li>
+<li>Called whenever an input value changes</li>
+<li>Is called the first time before ngOnInit</li>
+</ul></li>
+
+<li><p><strong>ngOnInit()</strong></p>
+
+<ul>
+<li>Used to initialize data in a component</li>
+<li>Called after input values are set when a component is initialized</li>
+<li>Added to every component by default by the Angular CLI</li>
+<li>Called only once</li>
+</ul></li>
+
+<li><p><strong>ngDoCheck()</strong></p>
+
+<ul>
+<li>Called during all change detection runs</li>
+<li>A run through the view by Angular to update/detect changes</li>
+</ul></li>
+
+<li><p><strong>ngAfterContentInit()</strong></p>
+
+<ul>
+<li>Called only once after first ngDocheck()</li>
+<li>Called after the first run through of initializing content
+
+<br /></li>
+</ul></li>
+
+<li><p><strong>ngAfterContentChecked()</strong></p>
+
+<ul>
+<li>Called after every ngDoCheck()</li>
+<li>Waits till after ngAfterContentInit() on first run through</li>
+</ul></li>
+
+<li><p><strong>ngAfterViewInit()</strong></p>
+
+<ul>
+<li>Called after Angular initializes component and child component content.</li>
+<li>Called only once after view is initialized</li>
+</ul></li>
+
+<li><p><strong>ngAfterViewChecked()</strong></p>
+
+<ul>
+<li>Called after all the content is initialized and checked. (Component and child components).</li>
+<li>First call is after ngAfterViewInit()</li>
+<li>Called after every ngAfterContentChecked() call is completed
+
+<br /></li>
+</ul></li>
+
+<li><p><strong>ngOnDestroy</strong></p>
+
+<ul>
+<li>Used to clean up any necessary code when a component is removed from the DOM</li>
+<li>Fairly often used to unsubscribe from things like services</li>
+<li>Called only once just before component is removed from the DOM<br /></li>
+</ul></li>
+</ul>
+
+<h1 id="most-used-ones-are">Most used ones are :</h1>
+
+<ul>
+<li>ngOnChanges()</li>
+<li>ngOnInit()</li>
+<li>ngAfterViewInit()</li>
+<li>ngOnDestroy()<br /></li>
+</ul>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
             
-             
-                              
-                <a class="angular tagButton label label-danger" href="/tags/angular/">angular</a>
             
-                              
-                <a class="php tagButton label label-danger" href="/tags/php/">php</a>
+                
             
-                           
-                     
-        
-    </header>
+        </p>
+    
 
-
-
-    <ol class="post-list">
-        
-        
-    </ol>
-
-    <div class="post-navigation">
+    <div class="share">
         
 
+        
     </div>
+</footer>
+    </article>
 </div>
 
             </div>

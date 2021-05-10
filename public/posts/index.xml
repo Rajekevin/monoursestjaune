@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>/</link>
-    <description>Recent content on </description>
+    <title>Posts on </title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
     <lastBuildDate>Mon, 10 May 2021 11:43:11 +0200</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -85,15 +85,6 @@ What does it mean ? It exposes hundreds of millions of websites (who still runni
       <guid>/posts/lets-2019-begin/</guid>
       <description>Happy New Year 2019 🎆  Yeah first post of the year. Let me wish you a Happy New Year. Big project, big work, big ambition, this year will be exciting!
 What super fun thing am I planning to do in 2019 ?  Read more books 📚  Train more ElePHPhant in PHP 🐘  Starting to interest in Django Framework 🦎   Maintain XPlaneLover✈️ &amp; MyBearIsYellow 🐻 Blog   Find a project to contribute in Open Source regularly  That&amp;rsquo;s the kinda thing, I&amp;rsquo;m gonna to do&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/page/about/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>/page/about/</guid>
-      <description>About Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor in magna lobortis egestas. Suspendisse eu erat tempor, tristique neque eu, convallis nulla. Curabitur vel bibendum lacus, at semper mauris. Suspendisse aliquet commodo ex, sed sagittis metus aliquam id. Maecenas feugiat rutrum lorem vel imperdiet. Nullam ornare lectus ut enim finibus, et porttitor mi tincidunt. Aenean lacinia, leo quis vehicula eleifend, quam libero sagittis erat, at euismod augue mauris et sapien.</description>
     </item>
     
   </channel>
