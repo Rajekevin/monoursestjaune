@@ -278,6 +278,10 @@ table tr { border-bottom: 1px dotted #aeadad; }
     background-color: #2196F3;
 }
 
+.angular{
+    background-color:red;
+}
+
 .react{
     background-color: #00d8ff;
 }
