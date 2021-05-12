@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Rajekevin</copyright>
-    <lastBuildDate>Mon, 10 May 2021 11:43:11 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 12 May 2021 11:32:24 +0200</lastBuildDate>
     
 	<atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Router</title>
+      <link>/posts/angular-router/</link>
+      <pubDate>Wed, 12 May 2021 11:32:24 +0200</pubDate>
+      
+      <guid>/posts/angular-router/</guid>
+      <description>Angular Router   Routing is a mechanism used by Angular framework to manage the &#34;paths&#34; and &#34;routes&#34; of our Angular applications  Routing strategy helps in navigation between various views in our Angular Application  Angular framework comes with &#34;Router&#34; Module which has everything we need to design, develop and implement routes and navigation links   Router is singleton - which means there is ONLY one instance of the router in our Angular Application  The Router module is found in the package @angular/router  We need to setup Router array - every time a request is made, the router will search in the list of array and find the most relevant match  Router has states - which helps us get important information about the current state and data related to routes  </description>
+    </item>
     
     <item>
       <title>Angular Component Lifecycle Hooks</title>
