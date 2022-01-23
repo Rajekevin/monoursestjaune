@@ -75,5 +75,14 @@ What does it mean ? It exposes hundreds of millions of websites (who still runni
 What super fun thing am I planning to do in 2019 ?  Read more books 📚  Train more ElePHPhant in PHP 🐘  Starting to interest in Django Framework 🦎   Maintain XPlaneLover✈️ &amp; MyBearIsYellow 🐻 Blog   Find a project to contribute in Open Source regularly  That&amp;rsquo;s the kinda thing, I&amp;rsquo;m gonna to do&amp;hellip;</description>
     </item>
     
+    <item>
+      <title>Search</title>
+      <link>/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/search/</guid>
+      <description>var lunrIndex, $results, documents; function initLunr() { // retrieve the index file $.getJSON(&#34;../index.json&#34;) .done(function(index) { documents = index; lunrIndex = lunr(function(){ this.ref(&#39;href&#39;) this.field(&#39;content&#39;) this.field(&#34;title&#34;, { boost: 10 }); this.field(&#34;tags&#34;, { boost: 5 }); documents.forEach(function(doc) { try { // console.log(doc.href) this.add(doc) } catch (e) {} }, this) }) }) .fail(function(jqxhr, textStatus, error) { var err = textStatus + &#34;, &#34; + error; console.error(&#34;Error getting Lunr index file:&#34;</description>
+    </item>
+    
   </channel>
 </rss>

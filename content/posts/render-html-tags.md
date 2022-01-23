@@ -5,6 +5,7 @@ draft: false
 tags : [
     "php"
 ]
+type: "post"
 ---
 
 <h1 class="title"> Render HTML Tags </h1>
