@@ -134,11 +134,11 @@ table tr { border-bottom: 1px dotted #aeadad; }
     margin: 0 0 20px; 
     padding: 0 0 20px; 
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     /* text-transform: uppercase;  */
 }
 
-.post-title, .page-title { color:yellow;font-size: 69px; font-weight: 700; margin: 15px 0; text-align: center; text-transform: uppercase; }
+.post-title, .page-title { color:yellow;font-size: 52px; font-weight: 700; margin: 15px 0; text-align: center; text-transform: uppercase; }
 .page-title { margin: 15px 40px; }
 .post-date, .blog-description { color: #aeadad; font-size: 14px; font-weight: 600; line-height: 1; margin: 25px 0 0; }
 .post-date a, .blog-description a { color: #aeadad; }

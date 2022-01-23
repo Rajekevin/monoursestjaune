@@ -65,3 +65,6 @@ pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
     url = "/"
     weight = 1
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "RSS"]

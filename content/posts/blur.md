@@ -2,6 +2,7 @@
 title: "Blur"
 date: 2019-01-16T16:20:55+01:00
 draft: false
+type: "post"
 ---
 <h1 class="title"> Blur</h1>
 

@@ -4,9 +4,9 @@
     {{ partial "intro.html" . }}
 
     <ol class="post-list">
-        {{ $pag := .Paginate  .Data.Pages  }}
-        {{ range $pag.Pages }}
-            {{ partial "post-stub.html" . }}
+
+        {{ range where .Site.Pages "Params.type" "post" }}
+              {{ partial "post-stub.html" . }}
         {{ end }}
 
     </ol>
