@@ -26,8 +26,8 @@ pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
 [Params]
     intro = true
     title = "toto"
-    headline = "My BEAR IS YELLOW"
-    description = "Hello, I'm Rajekevin, a web developper. I write tutorials for bear cup 🐻 in computer science "
+    headline = "<? My BEAR IS YELLOW />"
+    description = "Hello, I'm Rajekevin, a web developper. \n Every programmers can bring variables to life. I started writting my first variable in PHP calling $MyBearIsYellow. Since that the idea 💡 of ​​sharing my knowledge  in computer science has been on my mind."
     github = "https://github.com/rajekevin"
     linkedin = "https://linkedin.com/in/rajekevin/"
     twitter = "https://twitter.com/iamrkvin"
