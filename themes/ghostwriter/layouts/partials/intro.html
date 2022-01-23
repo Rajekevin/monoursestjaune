@@ -7,7 +7,7 @@
          {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}   
              {{ range $key, $value := $taxonomy }}
                               
-                <a class="{{$key}} tagButton label label-danger" href="{{ "/tags/" | relLangURL }}{{ $key | urlize }}/">{{ $key }}</a>
+                <a class="{{$key}} tagButton label label-danger" href="{{ "/tags/" | relLangURL }}{{ $key | urlize }}/">{{ $key | title  }}</a>
             {{ end }}
                            
         {{ end }}             

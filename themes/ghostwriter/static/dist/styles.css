@@ -65,7 +65,7 @@ html, body { height: 100%; }
 body { 
     background:  rgb(30,34,39);
     color: #424242; 
-    font-family: 'Inconsolata', monospace;; 
+    font-family: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     font-size: 18px; 
 }
 h1, h2, h3, h4, h5, h6 { 
@@ -125,7 +125,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .site-logo { display: block; }
 .site-logo img { margin: 0; }
 .site-nav { list-style: none; margin: 28px 0 10px; padding: 0; }
-.site-nav-item { display: inline-block; font-size: 14px; font-weight: 700; margin: 0 10px; }
+.site-nav-item { display: inline-block; font-size: 17px; font-weight: 700; margin: 0 10px; }
 .site-nav-item a:hover { color: yellow; }
 #latest-post { display: none; }
 .post-container { margin: 0 40px; }
@@ -134,7 +134,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
     margin: 0 0 20px; 
     padding: 0 0 20px; 
     text-align: center;
-    font-size:14px;
+    font-size: 17px;
     /* text-transform: uppercase;  */
 }
 
@@ -171,14 +171,14 @@ table tr { border-bottom: 1px dotted #aeadad; }
     display: block; 
     color: #ffffff; 
     padding: 20px 5px; }
-.post-stub a:hover { background: #303030; color: yellow; padding: 20px 12px; }
+.post-stub a:hover { background: #303030; color: yellow; padding: 30px 12px; }
 .post-stub a:hover .post-stub-tag { background: yellow; }
 .post-stub-tag { background: #303030; border-radius: 3px; color: #fff; float: right; font-size: 10px; margin: 7px 0 0; padding: 0 5px; text-transform: uppercase; }
-.post-stub-title { display: inline-block; margin: 0; text-transform: none; }
+.post-stub-title { display: inline-block; margin: 23px; text-transform: none; }
 .post-stub-description { display: inline-block; margin: 0; text-transform: none; }
 .post-stub-date { 
   
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     display: inline-block;
     font-size: 15px;
     padding-top: 5px;
@@ -263,11 +263,11 @@ table tr { border-bottom: 1px dotted #aeadad; }
     color: #fefefe;
     font-size: 14px;
     font-weight: 700;  
-    padding: 5px;
+    padding: 10px;
     margin-left: 0px;  
     float: none;
     display: inline-block;
-    margin-top: 4px;
+    margin-top: 17px;
 }
 
 /***

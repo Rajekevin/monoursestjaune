@@ -4,7 +4,7 @@
         <time class="post-stub-date" datetime="{{ .Date.Format "2006-01-02" }}">
           
                 {{ range $index, $tag := .Params.tags }}
-                <span class="{{.}} tagButton label label-danger" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</span>
+                <span class="{{.|lower }} tagButton label label-danger" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</span>
                  
                 {{ end }}
              {{ dateFormat (default "Jan 2, 2006" .Site.Params.dateFormat) .Date }}</time>

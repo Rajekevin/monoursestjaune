@@ -4,10 +4,11 @@
     {{ partial "intro.html" . }}
 
     <ol class="post-list">
-        {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
+        {{ $pag := .Paginate  .Data.Pages  }}
         {{ range $pag.Pages }}
             {{ partial "post-stub.html" . }}
         {{ end }}
+
     </ol>
 
     <div class="post-navigation">
