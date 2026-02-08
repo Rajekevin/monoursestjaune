@@ -1,0 +1,176 @@
+baseURL: "https://bearisyellow.me/"
+title: "My Bear Is Yellow"
+theme: "PaperMod"
+languageCode: "en-us"
+copyright: "© 2026 Rajekevin"
+
+pagination:
+  pagerSize: 10
+
+enableEmoji: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+ignoreLogs: ['warning-goldmark-raw-html']
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: false
+
+permalinks:
+  posts: "/:contentbasename/"
+
+taxonomies:
+  tag: tags
+  category: categories
+
+menu:
+  main:
+    - name: Articles
+      url: /posts/
+      weight: 1
+    - name: Categories
+      url: /categories/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+    - name: Archive
+      url: /archives/
+      weight: 4
+    - name: Search
+      url: /search/
+      weight: 5
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    style: github-dark
+    tabWidth: 4
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+params:
+  env: production
+  title: "My Bear Is Yellow"
+  description: "Technical blog about web development, programming, and computer science."
+  keywords:
+    - Blog
+    - Development
+    - Programming
+    - Web Development
+    - PHP
+    - JavaScript
+    - Tutorial
+
+  author:
+    name: "Rajekevin"
+    email: "rajekevin@hotmail.fr"
+
+  # ===============================
+  # HOMEPAGE (IMPORTANT)
+  # ===============================
+  homeInfoParams:
+    Title: "MyBearIsYellow 🐻"
+    Content: >
+      Bienvenue sur **MyBearIsYellow**.
+
+      Un blog technique pensé pour les développeurs juniors
+      qui veulent **comprendre vraiment** le code.
+
+      Ici, j’explique pas à pas :
+      - les architectures (MVC, monolithique…)
+      - les bonnes pratiques
+      - les tests unitaires
+      - le *pourquoi*, pas seulement le *comment*
+
+  # Sections affichées sur la homepage
+  mainSections:
+    - posts
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # Features
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: false
+    disableFingerprinting: false
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/rajekevin"
+    - name: twitter
+      url: "https://twitter.com/iamrkvin"
+    - name: linkedin
+      url: "https://linkedin.com/in/rajekevin"
+    - name: email
+      url: "mailto:rajekevin@hotmail.fr"
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  editPost:
+    URL: "https://github.com/Rajekevin/monoursestjaune/tree/master/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+  label:
+    text: "My Bear Is Yellow"
+    iconHeight: 35

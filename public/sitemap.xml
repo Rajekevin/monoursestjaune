@@ -1,63 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/posts/2020/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2020-01-01T12:15:04+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/kill-8080/</loc>
+  </url><url>
+    <loc>http://localhost:1313/2020/</loc>
+    <lastmod>2020-01-01T12:15:04+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2020-01-01T12:15:04+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kill-8080/</loc>
     <lastmod>2019-01-31T11:35:56+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/blur/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blur/</loc>
     <lastmod>2019-01-16T16:20:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/php5-end/</loc>
+  </url><url>
+    <loc>http://localhost:1313/php5-end/</loc>
     <lastmod>2019-01-03T20:07:37+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/render-html-tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/php/</loc>
+    <lastmod>2019-01-03T20:07:37+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2019-01-03T20:07:37+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/render-html-tags/</loc>
     <lastmod>2019-01-02T19:45:06+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/lets-2019-begin/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lets-2019-begin/</loc>
     <lastmod>2019-01-01T00:15:48+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
   </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-01-01T12:15:04+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/php/</loc>
-    <lastmod>2019-01-03T20:07:37+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-01-01T12:15:04+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/search/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-01-03T20:07:37+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
 </urlset>

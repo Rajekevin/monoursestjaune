@@ -2,7 +2,6 @@
 title: "Let's 2019 Begin"
 date: 2019-01-01T00:15:48+01:00
 draft: false
-type: "post"
 ---
 
 
