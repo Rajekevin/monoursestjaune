@@ -97,18 +97,12 @@ params:
   # HOMEPAGE (IMPORTANT)
   # ===============================
   homeInfoParams:
-    Title: "MyBearIsYellow 🐻"
-    Content: >
-      Bienvenue sur **MyBearIsYellow**.
+    Title: "Contactez-moi"
+    Content: |
+      Vous avez des questions ou des idées sur les sujets abordés ? 
+      Que vous soyez développeur ou passionné de tech, n'hésitez pas à me contacter, je serai ravi d’échanger avec vous !
 
-      Un blog technique pensé pour les développeurs juniors
-      qui veulent **comprendre vraiment** le code.
-
-      Ici, j’explique pas à pas :
-      - les architectures (MVC, monolithique…)
-      - les bonnes pratiques
-      - les tests unitaires
-      - le *pourquoi*, pas seulement le *comment*
+      Retrouvez-moi sur les réseaux sociaux pour plus de discussions et d’astuces :
 
   # Sections affichées sur la homepage
   mainSections:
