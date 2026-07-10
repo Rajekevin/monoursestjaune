@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Event-Driven on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/event-driven/</link>
+		<description>Recent content in Event-Driven on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/event-driven/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Le Pattern Observer expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/observer/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/observer/</guid>
+				<description>L&amp;rsquo;Observer Pattern définit une relation un-à-plusieurs : quand un objet change d&amp;rsquo;état, tous ses abonnés sont notifiés automatiquement, sans que l&amp;rsquo;émetteur ait besoin de connaître leur nature exacte. C&amp;rsquo;est le pattern derrière les event listeners et les systèmes pub/sub.</description>
+			</item>
+	</channel>
+</rss>

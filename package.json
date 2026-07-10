@@ -1,0 +1,14 @@
+{
+  "name": "mybearisyellow",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MyBearIsYellow — site Hugo (theme Congo personnalise)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^3.4.19"
+  }
+}

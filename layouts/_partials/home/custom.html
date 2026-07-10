@@ -1,0 +1,111 @@
+{{/* Homepage: hero + categories + recent articles + newsletter */}}
+
+<section class="relative pb-8 pt-6 sm:pt-10">
+  <div class="bear-hero-glow pointer-events-none absolute inset-0 -z-10"></div>
+
+  <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+    <div>
+      <a
+        href="{{ "/notre-histoire" | relLangURL }}"
+        class="mb-5 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/70 px-4 py-1.5 text-sm font-medium text-primary-300 no-underline transition-colors hover:border-primary-700"
+      >
+        <span aria-hidden="true">🐻</span>
+        {{ .Site.Params.tagline }}
+        <span class="text-neutral-500">— pourquoi ce nom ?</span>
+      </a>
+      <h1 class="text-4xl font-extrabold leading-tight text-neutral sm:text-5xl">
+        Les concepts du développement<br class="hidden sm:block" />
+        expliqués <span class="text-primary-400">simplement</span>.
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
+        Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps
+        expliqués avec des exemples concrets — pour comprendre, retenir et
+        réussir vos entretiens techniques.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="{{ "/design-patterns" | relLangURL }}" class="btn-bear-primary">
+          Explorer les concepts
+        </a>
+        <a href="{{ "/preparation-entretien" | relLangURL }}" class="btn-bear-outline">
+          Préparer mes entretiens
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto max-w-md px-8 py-10 sm:px-14">
+      {{/* Floating badges — desktop */}}
+      <div class="pointer-events-none absolute inset-0 z-10 hidden sm:block">
+        <span class="bear-badge absolute left-0 top-0">SOLID</span>
+        <span class="bear-badge absolute right-0 top-0">DDD</span>
+        <span class="bear-badge-primary absolute left-0 top-1/2 -translate-y-1/2">TDD</span>
+        <span class="bear-badge absolute right-0 top-1/2 -translate-y-1/2">SQL</span>
+        <span class="bear-badge absolute bottom-0 left-0">Docker</span>
+        <span class="bear-badge-primary absolute bottom-0 right-0">Kubernetes</span>
+        <span class="bear-badge absolute bottom-0 left-1/2 -translate-x-1/2">Cloud</span>
+      </div>
+
+      {{/* Illustration */}}
+      <img
+        src="{{ "images/hero-bear.png" | relURL }}"
+        alt="Un ours jaune travaille sur son ordinateur, entouré d'icônes de design patterns, bases de données, cloud et DevOps"
+        width="1024"
+        height="768"
+        loading="eager"
+        fetchpriority="high"
+        class="relative z-0 mx-auto w-full rounded-2xl"
+      />
+
+      {{/* Floating badges — mobile */}}
+      <div class="mt-6 flex flex-wrap justify-center gap-2 sm:hidden">
+        <span class="bear-badge">SOLID</span>
+        <span class="bear-badge">DDD</span>
+        <span class="bear-badge-primary">TDD</span>
+        <span class="bear-badge">SQL</span>
+        <span class="bear-badge">Docker</span>
+        <span class="bear-badge-primary">Kubernetes</span>
+        <span class="bear-badge">Cloud</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* Categories */}}
+<section class="py-16">
+  <h2 class="text-2xl font-bold text-neutral">Explorer par catégorie</h2>
+  <p class="mt-2 text-neutral-400">Six domaines. Un seul objectif : comprendre pour de bon.</p>
+
+  {{ $categories := slice
+    (dict "icon" "🏛️" "title" "Architecture logicielle" "desc" "Clean Architecture, DDD, hexagonale, couplage." "url" "/architecture-logicielle")
+    (dict "icon" "🧩" "title" "Design Patterns" "desc" "Singleton, Factory, Strategy, Observer et plus." "url" "/design-patterns")
+    (dict "icon" "🗄️" "title" "Bases de données" "desc" "SQL, index, transactions ACID, NoSQL, Redis." "url" "/bases-de-donnees")
+    (dict "icon" "✅" "title" "Tests" "desc" "TDD, BDD, pyramide des tests, mocks et stubs." "url" "/tests")
+    (dict "icon" "☁️" "title" "Cloud & DevOps" "desc" "Docker, Kubernetes, CI/CD, IaC, scalabilité." "url" "/cloud-devops")
+    (dict "icon" "🎯" "title" "Préparation entretien" "desc" "Les questions posées en entretien technique, expliquées." "url" "/preparation-entretien")
+  }}
+
+  <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range $categories }}
+      {{ $page := site.GetPage .url }}
+      <a href="{{ .url | relLangURL }}" class="bear-card">
+        <span class="text-3xl">{{ .icon }}</span>
+        <span class="bear-card-title">{{ .title }}</span>
+        <span class="bear-card-desc">{{ .desc }}</span>
+        {{ with $page }}
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            {{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}
+          </span>
+        {{ end }}
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+{{/* Recent articles */}}
+<section class="py-16">
+  {{ partial "recent-articles.html" . }}
+</section>
+
+{{/* Newsletter */}}
+<section class="py-16">
+  {{ partial "newsletter.html" . }}
+</section>

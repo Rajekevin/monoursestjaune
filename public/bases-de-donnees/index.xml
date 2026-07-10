@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Bases de données on MyBearIsYellow</title>
+		<link>http://localhost:1313/bases-de-donnees/</link>
+		<description>Recent content in Bases de données on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/bases-de-donnees/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cache Redis</title>
+				<link>http://localhost:1313/bases-de-donnees/cache-redis/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/cache-redis/</guid>
+				<description>Redis est une base clé-valeur en mémoire, utilisée principalement comme cache devant une base relationnelle. Le pattern cache-aside, un TTL bien choisi et une stratégie d&amp;rsquo;invalidation claire sont les trois piliers d&amp;rsquo;un cache Redis fiable.</description>
+			</item>
+			<item>
+				<title>Comment fonctionne une base relationnelle ?</title>
+				<link>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</guid>
+				<description>Une base relationnelle range les données dans des tables reliées entre elles par des clés. Comprendre ce modèle — lignes, colonnes, clés primaires et étrangères — est le prérequis à tout le reste : requêtes, index, transactions.</description>
+			</item>
+			<item>
+				<title>Index BDD</title>
+				<link>http://localhost:1313/bases-de-donnees/index-bdd/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/index-bdd/</guid>
+				<description>Un index permet au moteur de retrouver des lignes sans parcourir toute la table, au prix d&amp;rsquo;un espace disque et d&amp;rsquo;un coût supplémentaire à chaque écriture. Comprendre ce compromis est essentiel pour optimiser des requêtes en entretien comme en production.</description>
+			</item>
+			<item>
+				<title>Isolation transactionnelle</title>
+				<link>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</guid>
+				<description>Plusieurs transactions peuvent s&amp;rsquo;exécuter en même temps sur les mêmes données. Le niveau d&amp;rsquo;isolation choisi détermine ce qu&amp;rsquo;une transaction a le droit de voir des autres transactions en cours — un arbitrage entre cohérence stricte et performance.</description>
+			</item>
+			<item>
+				<title>Normalisation</title>
+				<link>http://localhost:1313/bases-de-donnees/normalisation/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/normalisation/</guid>
+				<description>La normalisation est un ensemble de règles progressives (1NF, 2NF, 3NF) qui éliminent la duplication de données dans une base relationnelle. Elle transforme une table fourre-tout en plusieurs tables cohérentes, reliées par des clés.</description>
+			</item>
+			<item>
+				<title>Réplication</title>
+				<link>http://localhost:1313/bases-de-donnees/replication/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/replication/</guid>
+				<description>La réplication duplique les données d&amp;rsquo;une base sur plusieurs serveurs, pour survivre à une panne et répartir la charge de lecture. Le choix entre réplication synchrone et asynchrone, et entre maître-esclave et maître-maître, détermine le compromis entre cohérence et disponibilité.</description>
+			</item>
+			<item>
+				<title>SQL expliqué simplement</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</guid>
+				<description>SQL est le langage universel pour interroger une base relationnelle. Avec une poignée de mots-clés — SELECT, WHERE, JOIN, GROUP BY — on peut exprimer des questions complexes sur les données sans jamais écrire de boucle.</description>
+			</item>
+			<item>
+				<title>SQL vs NoSQL</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</guid>
+				<description>SQL et NoSQL ne s&amp;rsquo;opposent pas frontalement : ce sont deux familles d&amp;rsquo;outils avec des compromis différents entre cohérence, flexibilité de schéma et scalabilité. Le bon choix dépend de la forme des données et des contraintes de charge, pas d&amp;rsquo;une mode technique.</description>
+			</item>
+			<item>
+				<title>Transactions ACID</title>
+				<link>http://localhost:1313/bases-de-donnees/transactions-acid/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/transactions-acid/</guid>
+				<description>Une transaction regroupe plusieurs opérations en un bloc tout-ou-rien. Les propriétés ACID — Atomicité, Cohérence, Isolation, Durabilité — garantissent qu&amp;rsquo;elle ne laisse jamais la base dans un état incohérent, même en cas de panne ou d&amp;rsquo;accès concurrent.</description>
+			</item>
+	</channel>
+</rss>

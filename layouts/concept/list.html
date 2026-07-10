@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="mt-4 max-w-2xl text-lg text-neutral-400">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}
+    <section class="prose mt-8 max-w-prose dark:prose-invert">
+      {{ . | emojify }}
+    </section>
+  {{ end }}
+
+  <section class="mt-10">
+    {{ partial "article-cards.html" . }}
+  </section>
+
+  {{ partial "pagination.html" . }}
+
+  <section class="mt-16">
+    {{ partial "newsletter.html" . }}
+  </section>
+{{ end }}

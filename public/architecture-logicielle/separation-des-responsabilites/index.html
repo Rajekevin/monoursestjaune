@@ -1,0 +1,1084 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Séparation des responsabilités &middot; MyBearIsYellow</title>
+    <meta name="title" content="Séparation des responsabilités &middot; MyBearIsYellow" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.d46042696de8fa0b52b7f16ead4a5405725ff16a80718fb8fff7455032e722f8.css"
+    integrity="sha256-1GBCaW3o&#43;gtSt/FurUpUBXJf8WqAcY&#43;4//dFUDLnIvg="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.f425dc0437d16a7899ae9a52d6b24bcce59d7f76f156e053f9963809c095c80d.js"
+      integrity="sha256-9CXcBDfRaniZrppS1rJLzOWdf3bxVuBT&#43;ZY4CcCVyA0="
+      data-copy="Copier"
+      data-copied="Copié"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      La séparation des responsabilités consiste à isoler chaque raison de changer dans sa propre unité — classe, module ou couche. Explication, analogie, exemple de code avant/après.
+    "
+  />
+  <meta name="keywords" content="Design Patterns, Architecture logicielle, Bases de données, Tests logiciels, Cloud, DevOps, Entretien technique, PHP, Java, JavaScript" />
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/architecture-logicielle/separation-des-responsabilites/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/architecture-logicielle/separation-des-responsabilites/">
+	<meta property="og:site_name" content="MyBearIsYellow">
+	<meta property="og:title" content="Séparation des responsabilités">
+	<meta property="og:description" content="La séparation des responsabilités consiste à isoler chaque raison de changer dans sa propre unité — classe, module ou couche. Explication, analogie, exemple de code avant/après.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="architecture-logicielle">
+		<meta property="article:published_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:tag" content="Architecture">
+		<meta property="article:tag" content="Solid">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Java">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Séparation des responsabilités">
+	<meta name="twitter:description" content="La séparation des responsabilités consiste à isoler chaque raison de changer dans sa propre unité — classe, module ou couche. Explication, analogie, exemple de code avant/après.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Architecture logicielle",
+    "name": "Séparation des responsabilités",
+    "headline": "Séparation des responsabilités",
+    "description": "La séparation des responsabilités consiste à isoler chaque raison de changer dans sa propre unité — classe, module ou couche. Explication, analogie, exemple de code avant\/après.",
+    "abstract": "Séparer les responsabilités, ce n\u0026rsquo;est pas seulement écrire des petites classes : c\u0026rsquo;est isoler chaque raison de changer dans sa propre unité, que ce soit une classe, un module ou une couche entière du système. Bien fait, un changement métier ne touche qu\u0026rsquo;un seul endroit du code.",
+    "inLanguage": "fr-FR",
+    "url" : "http:\/\/localhost:1313\/architecture-logicielle\/separation-des-responsabilites\/",
+    "author" : {
+      "@type": "Person",
+      "name": "MyBearIsYellow"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-10T00:00:00\u002b00:00",
+    "datePublished": "2026-07-10T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-07-10T00:00:00\u002b00:00",
+    
+    "keywords": ["architecture","solid","php","java"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1064"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "My Bear Is Yellow",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/architecture-logicielle/",
+       "name": "Architecture Logicielle",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Séparation DES Responsabilités",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="MyBearIsYellow" />
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="http://localhost:1313/js/mermaid.bundle.88fecd148a1cbf7bf447a800643054ec2d3e5d4ce01de2fe4a176f4ac4165ae4.js"
+    integrity="sha256-iP7NFIocv3v0R6gAZDBU7C0&#43;XUzgHeL&#43;ShdvSsQWWuQ="
+  ></script>
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-950 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Aller au contenu</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      <a href="/" class="flex flex-shrink-0 items-center gap-1.5 no-underline">
+  <span class="text-2xl leading-none" aria-hidden="true">🐻</span>
+    <span class="text-lg font-bold text-neutral-900 dark:text-neutral">MyBearIs<span class="text-primary-400">Yellow</span></span>
+</a>
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/architecture-logicielle/"
+                      title="Architecture logicielle"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Architecture</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/design-patterns/"
+                      title="Design Patterns"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Design Patterns</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/bases-de-donnees/"
+                      title="Bases de données"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Bases de données</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tests/"
+                      title="Tests"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tests</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/cloud-devops/"
+                      title="Cloud &amp; DevOps"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Cloud &amp; DevOps</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/preparation-entretien/"
+                      title="Préparation entretien"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Entretiens</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Rechercher (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Passer au thème sombre"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Passer au thème clair"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                    </button>
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/architecture-logicielle/"
+                  title="Architecture logicielle"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Architecture</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/design-patterns/"
+                  title="Design Patterns"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Design Patterns</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/bases-de-donnees/"
+                  title="Bases de données"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Bases de données</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tests/"
+                  title="Tests"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tests</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/cloud-devops/"
+                  title="Cloud &amp; DevOps"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Cloud &amp; DevOps</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/preparation-entretien/"
+                  title="Préparation entretien"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Entretiens</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Rechercher (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Passer au thème sombre"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Passer au thème clair"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                </button>
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/"
+      >MyBearIsYellow</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/architecture-logicielle/"
+      >Architecture logicielle</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/architecture-logicielle/separation-des-responsabilites/"
+      >Séparation des responsabilités</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+
+      <div class="mb-5 flex flex-wrap items-center gap-2">
+        
+          <span class="bear-badge-primary">🐻 Architecture logicielle</span>
+        
+        
+          <span class="bear-badge">Niveau : Débutant</span>
+        
+        
+          <span class="bear-badge">5 min de lecture</span>
+        
+      </div>
+
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Séparation des responsabilités
+      </h1>
+
+      
+        <p class="mb-10 rounded-xl border-l-4 border-primary-400 bg-neutral-900/40 px-5 py-4 text-lg leading-relaxed text-neutral-300">
+          Séparer les responsabilités, ce n&rsquo;est pas seulement écrire des petites classes : c&rsquo;est isoler chaque raison de changer dans sa propre unité, que ce soit une classe, un module ou une couche entière du système. Bien fait, un changement métier ne touche qu&rsquo;un seul endroit du code.
+        </p>
+      
+    </header>
+
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Sommaire
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#le-problème">Le problème</a></li>
+    <li><a href="#lidée-générale">L&rsquo;idée générale</a></li>
+    <li><a href="#analogie-du-quotidien">Analogie du quotidien</a></li>
+    <li><a href="#diagramme">Diagramme</a></li>
+    <li><a href="#exemple-de-code">Exemple de code</a>
+      <ul>
+        <li><a href="#php">PHP</a></li>
+        <li><a href="#java">Java</a></li>
+      </ul>
+    </li>
+    <li><a href="#quand-appliquer-la-séparation-des-responsabilités-">Quand appliquer la séparation des responsabilités ?</a></li>
+    <li><a href="#points-importants">Points importants</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="le-problème" class="relative group">Le problème <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#le-probl%c3%a8me" aria-label="Ancre">#</a></span></h2><p>Une classe <code>InscriptionService</code> qui valide les données d&rsquo;un formulaire, calcule un prix, enregistre l&rsquo;utilisateur en base de données et envoie un e-mail de bienvenue fonctionne, au début. Puis le service marketing demande de changer le contenu de l&rsquo;e-mail : il faut rouvrir cette classe. Le service comptabilité change la règle de calcul du prix : il faut rouvrir la même classe. Une nouvelle règle de validation arrive : encore la même classe.</p>
+<p>Chaque équipe, pour des raisons complètement différentes, finit par toucher au même fichier — avec le risque, à chaque modification, de casser une fonctionnalité sans rapport avec le changement demandé. Ce n&rsquo;est pas un problème de taille de fichier : c&rsquo;est un problème de responsabilités mélangées dans une seule unité de code.</p>
+<h2 id="lidée-générale" class="relative group">L&rsquo;idée générale <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lid%c3%a9e-g%c3%a9n%c3%a9rale" aria-label="Ancre">#</a></span></h2><p>La séparation des responsabilités consiste à isoler chaque <strong>raison de changer</strong> dans sa propre unité de code. Une responsabilité n&rsquo;est pas une méthode ni une ligne : c&rsquo;est un motif de changement — une source qui, si elle évolue, force à modifier ce bout de code.</p>
+<p>Le principe le plus connu qui formalise cette idée à l&rsquo;échelle d&rsquo;une classe est le <strong>Single Responsibility Principle</strong> (le S de SOLID, détaillé dans l&rsquo;article 
+      
+    <a href="http://localhost:1313/architecture-logicielle/solid-explique-simplement/">SOLID expliqué simplement</a>) : une classe ne devrait avoir qu&rsquo;une seule raison de changer.</p>
+<p>Mais l&rsquo;idée dépasse largement l&rsquo;échelle d&rsquo;une classe :</p>
+<ul>
+<li><strong>À l&rsquo;échelle d&rsquo;une classe</strong> : <code>InscriptionService</code> devrait être scindé en un validateur, un calculateur de prix, un repository et un service de notification.</li>
+<li><strong>À l&rsquo;échelle d&rsquo;un module</strong> : un module « facturation » ne devrait pas contenir de logique de gestion des stocks — ce sont deux raisons de changer différentes, portées par des équipes différentes.</li>
+<li><strong>À l&rsquo;échelle d&rsquo;une couche applicative</strong> : une couche de présentation (contrôleurs, vues) ne devrait pas contenir de règles métier, et une couche métier ne devrait pas connaître les détails d&rsquo;un format HTTP.</li>
+</ul>
+<p>Séparer les responsabilités, c&rsquo;est donc organiser le code pour qu&rsquo;un changement métier reste localisé — un seul endroit à modifier, un seul test à revoir, un seul risque de régression, au lieu d&rsquo;une onde de choc qui traverse tout le système.</p>
+<h2 id="analogie-du-quotidien" class="relative group">Analogie du quotidien <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analogie-du-quotidien" aria-label="Ancre">#</a></span></h2><p>Un restaurant sépare naturellement ses responsabilités : le cuisinier prépare les plats, le serveur prend les commandes et sert la salle, le caissier encaisse le paiement. Si le restaurant change de fournisseur de légumes, seule la cuisine est concernée. Si le restaurant change son système de caisse, seul le caissier est concerné. Le serveur continue son travail sans rien changer à sa façon de faire.</p>
+<p>Imaginez à l&rsquo;inverse un restaurant où une seule personne cuisine, sert, encaisse et gère les fournisseurs. Le jour où il faut changer le système de caisse, toute l&rsquo;activité s&rsquo;arrête, parce qu&rsquo;une seule personne porte toutes les responsabilités à la fois. Séparer les rôles, ce n&rsquo;est pas juste une question d&rsquo;organisation humaine — c&rsquo;est ce qui permet à chaque partie du système de changer sans bloquer les autres.</p>
+<h2 id="diagramme" class="relative group">Diagramme <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#diagramme" aria-label="Ancre">#</a></span></h2><div class="mermaid" align="center">
+  
+flowchart TD
+    subgraph Avant["Avant : une seule classe, plusieurs responsabilités"]
+        A[InscriptionService] -->|valide| A1[Règles de validation]
+        A -->|calcule| A2[Calcul du prix]
+        A -->|persiste| A3[Accès base de données]
+        A -->|notifie| A4[Envoi d'e-mail]
+    end
+
+    subgraph Apres["Après : une responsabilité par unité"]
+        V[Validateur] --> C[CalculateurPrix]
+        C --> R[UtilisateurRepository]
+        R --> N[ServiceNotification]
+    end
+
+</div>
+
+<h2 id="exemple-de-code" class="relative group">Exemple de code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exemple-de-code" aria-label="Ancre">#</a></span></h2><h3 id="php" class="relative group">PHP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#php" aria-label="Ancre">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// --- AVANT : une classe, quatre responsabilités ---
+</span></span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">InscriptionService</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">inscrire</span><span class="p">(</span><span class="k">array</span> <span class="nv">$donnees</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Responsabilité 1 : validation
+</span></span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nx">str_contains</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="s1">&#39;@&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s1">&#39;E-mail invalide&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Responsabilité 2 : calcul métier
+</span></span></span><span class="line"><span class="cl">        <span class="nv">$prix</span> <span class="o">=</span> <span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;abonnementPremium&#39;</span><span class="p">]</span> <span class="o">?</span> <span class="mf">29.90</span> <span class="o">:</span> <span class="mf">0.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Responsabilité 3 : persistance
+</span></span></span><span class="line"><span class="cl">        <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:host=localhost;dbname=app&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;INSERT INTO utilisateurs (email, prix) VALUES (?, ?)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="nv">$prix</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Responsabilité 4 : notification
+</span></span></span><span class="line"><span class="cl">        <span class="nx">mail</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="s1">&#39;Bienvenue&#39;</span><span class="p">,</span> <span class="s1">&#39;Merci pour votre inscription !&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// --- APRÈS : une responsabilité par classe ---
+</span></span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">ValidateurInscription</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">valider</span><span class="p">(</span><span class="k">array</span> <span class="nv">$donnees</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nx">str_contains</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="s1">&#39;@&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s1">&#39;E-mail invalide&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">CalculateurPrix</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">calculer</span><span class="p">(</span><span class="nx">bool</span> <span class="nv">$premium</span><span class="p">)</span><span class="o">:</span> <span class="nx">float</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$premium</span> <span class="o">?</span> <span class="mf">29.90</span> <span class="o">:</span> <span class="mf">0.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">interface</span> <span class="nx">UtilisateurRepository</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">sauvegarder</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$email</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$prix</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">interface</span> <span class="nx">ServiceNotification</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">envoyerBienvenue</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$email</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">InscriptionService</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">ValidateurInscription</span> <span class="nv">$validateur</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">CalculateurPrix</span> <span class="nv">$calculateur</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">UtilisateurRepository</span> <span class="nv">$repository</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">ServiceNotification</span> <span class="nv">$notifications</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">inscrire</span><span class="p">(</span><span class="k">array</span> <span class="nv">$donnees</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validateur</span><span class="o">-&gt;</span><span class="na">valider</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$prix</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calculateur</span><span class="o">-&gt;</span><span class="na">calculer</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;abonnementPremium&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">repository</span><span class="o">-&gt;</span><span class="na">sauvegarder</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="nv">$prix</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">notifications</span><span class="o">-&gt;</span><span class="na">envoyerBienvenue</span><span class="p">(</span><span class="nv">$donnees</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="java" class="relative group">Java <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#java" aria-label="Ancre">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// --- APRÈS : une responsabilité par classe ---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ValidateurInscription</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">valider</span><span class="p">(</span><span class="n">InscriptionRequest</span><span class="w"> </span><span class="n">donnees</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">donnees</span><span class="p">.</span><span class="na">email</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">donnees</span><span class="p">.</span><span class="na">email</span><span class="p">().</span><span class="na">contains</span><span class="p">(</span><span class="s">&#34;@&#34;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&#34;E-mail invalide&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CalculateurPrix</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculer</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">premium</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">premium</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">29</span><span class="p">.</span><span class="na">90</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">0</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">UtilisateurRepository</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sauvegarder</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">prix</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ServiceNotification</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">envoyerBienvenue</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InscriptionService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">ValidateurInscription</span><span class="w"> </span><span class="n">validateur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CalculateurPrix</span><span class="w"> </span><span class="n">calculateur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UtilisateurRepository</span><span class="w"> </span><span class="n">repository</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">ServiceNotification</span><span class="w"> </span><span class="n">notifications</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">InscriptionService</span><span class="p">(</span><span class="n">ValidateurInscription</span><span class="w"> </span><span class="n">validateur</span><span class="p">,</span><span class="w"> </span><span class="n">CalculateurPrix</span><span class="w"> </span><span class="n">calculateur</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                               </span><span class="n">UtilisateurRepository</span><span class="w"> </span><span class="n">repository</span><span class="p">,</span><span class="w"> </span><span class="n">ServiceNotification</span><span class="w"> </span><span class="n">notifications</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">validateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">validateur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">calculateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repository</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">notifications</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notifications</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">inscrire</span><span class="p">(</span><span class="n">InscriptionRequest</span><span class="w"> </span><span class="n">donnees</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">validateur</span><span class="p">.</span><span class="na">valider</span><span class="p">(</span><span class="n">donnees</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateur</span><span class="p">.</span><span class="na">calculer</span><span class="p">(</span><span class="n">donnees</span><span class="p">.</span><span class="na">premium</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">repository</span><span class="p">.</span><span class="na">sauvegarder</span><span class="p">(</span><span class="n">donnees</span><span class="p">.</span><span class="na">email</span><span class="p">(),</span><span class="w"> </span><span class="n">prix</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">notifications</span><span class="p">.</span><span class="na">envoyerBienvenue</span><span class="p">(</span><span class="n">donnees</span><span class="p">.</span><span class="na">email</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="quand-appliquer-la-séparation-des-responsabilités-" class="relative group">Quand appliquer la séparation des responsabilités ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#quand-appliquer-la-s%c3%a9paration-des-responsabilit%c3%a9s-" aria-label="Ancre">#</a></span></h2><ul>
+<li>Dès qu&rsquo;une classe ou un module mélange des règles métier, de la validation, de la persistance et de la notification dans le même bloc de code.</li>
+<li>Quand des équipes différentes doivent modifier le même fichier pour des raisons complètement indépendantes.</li>
+<li>Quand vous voulez tester une règle métier isolément, sans dépendre d&rsquo;une base de données ou d&rsquo;un service d&rsquo;envoi d&rsquo;e-mails.</li>
+<li>À doser avec discernement sur un petit script ou un prototype : séparer à l&rsquo;excès une logique très simple en cinq classes de trois lignes chacune complique la lecture plus qu&rsquo;elle ne l&rsquo;aide.</li>
+</ul>
+<h2 id="points-importants" class="relative group">Points importants <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#points-importants" aria-label="Ancre">#</a></span></h2><ul>
+<li>Une responsabilité se définit par une raison de changer, pas par une taille de classe : une grande classe cohérente qui ne change que pour une seule raison respecte le principe.</li>
+<li>Le principe s&rsquo;applique à toutes les échelles : classe, module, couche — le symptôme est le même à chaque niveau, un changement qui devrait être local se propage ailleurs.</li>
+<li>Le Single Responsibility Principle (S de SOLID) est la version la plus connue de ce principe, appliquée à l&rsquo;échelle d&rsquo;une classe.</li>
+<li>Trop séparer nuit aussi à la lisibilité : l&rsquo;objectif est d&rsquo;isoler les raisons de changer indépendantes, pas de minimiser artificiellement la taille du code.</li>
+</ul>
+
+
+        
+          <div class="bear-memory not-prose">
+            <p class="bear-memory-title">🐻 À retenir</p>
+            <ul>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Une responsabilité, c&rsquo;est une <strong>raison de changer</strong> — pas une simple méthode ou une simple ligne de code.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Le principe s&rsquo;applique à toutes les échelles : une <strong>classe</strong>, un <strong>module</strong> et une <strong>couche applicative</strong> peuvent tous violer la séparation des responsabilités.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Le symptôme classique d&rsquo;une responsabilité mal séparée : modifier une règle de validation casse, sans lien apparent, l&rsquo;envoi d&rsquo;e-mails.</span></li>
+              
+            </ul>
+          </div>
+        
+
+        
+          <div class="bear-faq not-prose">
+            <h2 class="mb-4 text-2xl font-bold text-neutral">Questions d'entretien</h2>
+            
+              <details class="bear-faq-item">
+                <summary>Quelle est la différence entre le Single Responsibility Principle et la séparation des responsabilités en général ?</summary>
+                <div class="bear-faq-item-body">Le Single Responsibility Principle (le S de SOLID) est la formulation la plus connue de cette idée, appliquée à l&rsquo;échelle d&rsquo;une classe : une classe ne doit avoir qu&rsquo;une seule raison de changer. La séparation des responsabilités est le principe général, qui s&rsquo;applique aussi bien à une classe qu&rsquo;à un module entier, une couche applicative, voire un service dans une architecture distribuée. Le SRP est un cas particulier du principe plus large.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Comment savoir si une classe a trop de responsabilités ?</summary>
+                <div class="bear-faq-item-body">Une bonne heuristique consiste à décrire ce que fait la classe en une phrase, sans utiliser le mot « et ». Si la description devient : « elle valide les données et calcule le prix et envoie un e-mail », c&rsquo;est le signe de plusieurs responsabilités mélangées. Autre indice concret : si des changements demandés par des personnes ou des équipes différentes (le service marketing, le service compta) obligent à modifier la même classe, c&rsquo;est qu&rsquo;elle porte plusieurs responsabilités qui devraient être séparées.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Séparer les responsabilités ne crée-t-il pas trop de petites classes difficiles à suivre ?</summary>
+                <div class="bear-faq-item-body">C&rsquo;est un risque réel si la séparation est appliquée mécaniquement sans discernement — trop de fragmentation rend le flux global difficile à suivre. L&rsquo;objectif n&rsquo;est pas de minimiser la taille des classes, mais d&rsquo;isoler les raisons de changer indépendantes les unes des autres. Une classe cohérente qui ne change que pour une seule raison peut rester assez grande sans poser de problème.</div>
+              </details>
+            
+          </div>
+        
+      </div>
+    </section>
+
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+        <div class="mb-6 flex flex-wrap gap-2">
+          
+            
+              <a href="http://localhost:1313/tags/architecture/" class="bear-tag">#Architecture</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/solid/" class="bear-tag">#Solid</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/php/" class="bear-tag">#Php</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/java/" class="bear-tag">#Java</a>
+            
+          
+        </div>
+      
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/architecture-logicielle/solid-explique-simplement/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >SOLID expliqué simplement</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Qu'est-ce qu'une architecture logicielle ?</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Faire défiler jusqu&#39;au bas de la page"
+            title="Faire défiler jusqu&#39;au bas de la page"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex list-none flex-col sm:flex-row">
+        
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/notre-histoire/"
+                title="Pourquoi MyBearIsYellow ?"
+                
+                
+                ><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >🐻 Pourquoi ce nom ?</span
+                  >
+                </a
+              >
+            
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2026 MyBearIsYellow
+        </p>
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Passer au thème sombre"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Passer au thème clair"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Rechercher"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Fermer (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

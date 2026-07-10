@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="MyBearIsYellow">
+  <!-- Ears -->
+  <circle cx="18" cy="15" r="9" fill="#FACC15" />
+  <circle cx="46" cy="15" r="9" fill="#FACC15" />
+  <!-- Head / badge -->
+  <rect x="8" y="16" width="48" height="40" rx="11" fill="#0B1220" />
+  <!-- Terminal chevron -->
+  <path d="M22 27 L33 37 L22 47" fill="none" stroke="#FACC15" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Cursor -->
+  <rect x="36" y="41" width="12" height="7" rx="2" fill="#FACC15" />
+</svg>

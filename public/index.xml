@@ -1,132 +1,317 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>My Bear Is Yellow</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My Bear Is Yellow</description>
-    <generator>Hugo -- 0.155.2</generator>
-    <language>en-us</language>
-    <managingEditor>rajekevin@hotmail.fr (Rajekevin)</managingEditor>
-    <webMaster>rajekevin@hotmail.fr (Rajekevin)</webMaster>
-    <copyright>2026 Rajekevin</copyright>
-    <lastBuildDate>Wed, 01 Jan 2020 12:15:04 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2020 a new decade</title>
-      <link>http://localhost:1313/2020/</link>
-      <pubDate>Wed, 01 Jan 2020 12:15:04 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/2020/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt; Twenty-twenty new decade, new adventure... &lt;/h1&gt;
-&lt;img src=&#34;http://localhost:1313/img/2020_svg.svg&#34; height=&#34;350px&#34; /&gt;
-&lt;p&gt;New decade will begin !&lt;/p&gt;
-&lt;h3 class=&#34;title&#34;&gt; What super fun thing am I planning to do in twenty-twenty ?&lt;/h3&gt;
-&lt;ul class=&#34;title&#34;&gt;
-    &lt;li&gt; Make reading book a daily habit 📚&lt;/li&gt;
-    &lt;li&gt; Starting to interest in Linux Kernel World 🐧&lt;/li&gt;
-    &lt;li&gt; Contributing some cool open source project on Github 🐱 &lt;/li&gt;
-    &lt;li&gt; Playing chess ♟️&lt;/li&gt; 
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Kill 8080</title>
-      <link>http://localhost:1313/kill-8080/</link>
-      <pubDate>Thu, 31 Jan 2019 11:35:56 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/kill-8080/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt;Kill 8080 port with cmd&lt;/h1&gt;
-&lt;p&gt;If you are using Windows, it&amp;rsquo;s can be useful to kill certain port.
-I will show you, how to kill the process :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -ano &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; findstr :8080
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;taskkill /PID typeyourPIDhere
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>Blur</title>
-      <link>http://localhost:1313/blur/</link>
-      <pubDate>Wed, 16 Jan 2019 16:20:55 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/blur/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt; Blur&lt;/h1&gt;
-&lt;p&gt;What is Blur function in jQuery ?&lt;br/&gt;
-It is used to remove focus from the selected elements.&lt;/p&gt;
-&lt;p&gt;Code&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;blur&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For more information &lt;a href=&#34;https://api.jquery.com/blur/&#34;&gt;Click here&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Good Bye PHP5 😥</title>
-      <link>http://localhost:1313/php5-end/</link>
-      <pubDate>Thu, 03 Jan 2019 20:07:37 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/php5-end/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt;Good Bye PHP5 [14.04.2004-31.12.2018] &lt;/h1&gt;
-&lt;p&gt;14 years of love story with PHP5, now finish, since the new year 2019 !
-&lt;img src=&#34;http://localhost:1313/img/posts/post2/php5.PNG&#34; height=&#34;350px&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;I started, learned, praticed with this version of PHP.
-Now PHP5, since December 31, 2018, security support for PHP 5.6.x is officially cease ; marking the end of all support for any version of the ancient PHP 5.x branch 😥&lt;/p&gt;
-&lt;h2 class=&#34;title&#34; &gt; What does it mean ?&lt;/h2&gt;
-&lt;p&gt;It exposes hundreds of millions of websites (who still running on PHP 5.x version), to serious security risks ☠️.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Render Html Tags</title>
-      <link>http://localhost:1313/render-html-tags/</link>
-      <pubDate>Wed, 02 Jan 2019 19:45:06 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/render-html-tags/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt; Render HTML Tags &lt;/h1&gt;
-&lt;p&gt;When you store HTML tags in your database, you would like to retrieve these datas as HTML Content, not  a string right ?&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-PHP&#34; data-lang=&#34;PHP&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Maybe when you want to display this data, it show  as a string character  : &lt;br/&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-HTML&#34; data-lang=&#34;HTML&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Hello, I am PHP&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Don&amp;rsquo;t worry, call your best elePHPhant 🐘 and use &lt;a href=&#34;https://www.php.net/manual/fr/function.htmlspecialchars-decode.php&#34;&gt;htmlspecialchars_decode()&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The htmlspecialchars() function converts some predefined characters to HTML entities&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Let&#39;s 2019 Begin</title>
-      <link>http://localhost:1313/lets-2019-begin/</link>
-      <pubDate>Tue, 01 Jan 2019 00:15:48 +0100</pubDate><author>rajekevin@hotmail.fr (Rajekevin)</author>
-      <guid>http://localhost:1313/lets-2019-begin/</guid>
-      <description>&lt;h1 class=&#34;title&#34;&gt; Happy New Year 2019 🎆 &lt;/h1&gt;
-&lt;img src=&#34;http://localhost:1313/img/2019_svg.svg&#34; height=&#34;350px&#34; /&gt;
-&lt;p&gt;Yeah first post of the year. Let me wish you a Happy New Year.&lt;br/&gt;
-Big project, big work, big ambition, this year will be exciting!&lt;/p&gt;
-&lt;h3 class=&#34;title&#34;&gt; What super fun thing am I planning to do in 2019 ?&lt;/h3&gt;
-&lt;ul class=&#34;title&#34;&gt;
-    &lt;li&gt; Read more books 📚&lt;/li&gt;
-    &lt;li&gt; Train more ElePHPhant in PHP 🐘&lt;/li&gt;
-    &lt;li&gt; Starting to interest in Django Framework  🦎 &lt;/li&gt;
-    &lt;li&gt; Maintain XPlaneLover✈️  &amp; MyBearIsYellow 🐻 Blog &lt;/li&gt;
-    &lt;li&gt; Find a project to contribute in Open Source regularly&lt;/li&gt;   
-&lt;/ul&gt;   
-&lt;p&gt;That&amp;rsquo;s the kinda thing, I&amp;rsquo;m gonna to do&amp;hellip;&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>MyBearIsYellow</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Architecture hexagonale</title>
+				<link>http://localhost:1313/architecture-logicielle/architecture-hexagonale/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/architecture-hexagonale/</guid>
+				<description>L&amp;rsquo;architecture hexagonale (Ports &amp;amp; Adapters) place le métier au centre et le connecte au monde extérieur via des ports — des interfaces définies par le métier — implémentés par des adaptateurs interchangeables. La base de données, l&amp;rsquo;API REST ou la CLI ne sont que des détails branchés sur ces ports.</description>
+			</item>
+			<item>
+				<title>BDD avec Gherkin</title>
+				<link>http://localhost:1313/tests/bdd-avec-gherkin/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/bdd-avec-gherkin/</guid>
+				<description>Le BDD (Behavior-Driven Development) décrit le comportement attendu d&amp;rsquo;un système en langage naturel structuré, via la syntaxe Gherkin (Given/When/Then), pour que développeurs, testeurs et experts métier partagent une seule source de vérité, exécutable comme un test.</description>
+			</item>
+			<item>
+				<title>Cache Redis</title>
+				<link>http://localhost:1313/bases-de-donnees/cache-redis/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/cache-redis/</guid>
+				<description>Redis est une base clé-valeur en mémoire, utilisée principalement comme cache devant une base relationnelle. Le pattern cache-aside, un TTL bien choisi et une stratégie d&amp;rsquo;invalidation claire sont les trois piliers d&amp;rsquo;un cache Redis fiable.</description>
+			</item>
+			<item>
+				<title>CI/CD</title>
+				<link>http://localhost:1313/cloud-devops/ci-cd/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/ci-cd/</guid>
+				<description>CI/CD désigne l&amp;rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu&amp;rsquo;à la main.</description>
+			</item>
+			<item>
+				<title>Clean Architecture expliquée simplement</title>
+				<link>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</guid>
+				<description>La Clean Architecture organise le code en cercles concentriques : le métier au centre, les détails techniques (base de données, framework, UI) à l&amp;rsquo;extérieur. La règle est simple — les dépendances ne pointent jamais vers l&amp;rsquo;extérieur.</description>
+			</item>
+			<item>
+				<title>Comment fonctionne une base relationnelle ?</title>
+				<link>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</guid>
+				<description>Une base relationnelle range les données dans des tables reliées entre elles par des clés. Comprendre ce modèle — lignes, colonnes, clés primaires et étrangères — est le prérequis à tout le reste : requêtes, index, transactions.</description>
+			</item>
+			<item>
+				<title>Couplage fort vs faible</title>
+				<link>http://localhost:1313/architecture-logicielle/couplage-fort-vs-faible/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/couplage-fort-vs-faible/</guid>
+				<description>Le couplage mesure à quel point un composant dépend d&amp;rsquo;un autre. Un couplage fort rend le système fragile et difficile à faire évoluer ; un couplage faible, obtenu via des interfaces et l&amp;rsquo;injection de dépendance, permet de changer une implémentation sans toucher au code qui l&amp;rsquo;utilise.</description>
+			</item>
+			<item>
+				<title>Docker expliqué simplement</title>
+				<link>http://localhost:1313/cloud-devops/docker-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/docker-explique-simplement/</guid>
+				<description>Docker empaquette une application avec toutes ses dépendances dans un conteneur : un environnement isolé, portable et identique du poste du développeur à la production. Fini le &amp;ldquo;ça marche sur ma machine&amp;rdquo;.</description>
+			</item>
+			<item>
+				<title>Domain Driven Design (DDD)</title>
+				<link>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</guid>
+				<description>Le Domain Driven Design (DDD) est autant une démarche de modélisation métier qu&amp;rsquo;une technique de code. Il propose un vocabulaire partagé avec les experts métier, des frontières explicites entre sous-domaines (bounded context), et des règles précises pour modéliser entités, value objects et agrégats.</description>
+			</item>
+			<item>
+				<title>IaaS, PaaS, SaaS</title>
+				<link>http://localhost:1313/cloud-devops/iaas-paas-saas/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/iaas-paas-saas/</guid>
+				<description>IaaS, PaaS et SaaS sont trois façons de consommer le cloud, qui se distinguent par la part de la stack technique gérée par le fournisseur. Plus on monte dans l&amp;rsquo;abstraction, moins on a de contrôle — mais moins on a aussi à maintenir.</description>
+			</item>
+			<item>
+				<title>Index BDD</title>
+				<link>http://localhost:1313/bases-de-donnees/index-bdd/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/index-bdd/</guid>
+				<description>Un index permet au moteur de retrouver des lignes sans parcourir toute la table, au prix d&amp;rsquo;un espace disque et d&amp;rsquo;un coût supplémentaire à chaque écriture. Comprendre ce compromis est essentiel pour optimiser des requêtes en entretien comme en production.</description>
+			</item>
+			<item>
+				<title>Infrastructure as Code</title>
+				<link>http://localhost:1313/cloud-devops/infrastructure-as-code/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/infrastructure-as-code/</guid>
+				<description>L&amp;rsquo;Infrastructure as Code consiste à décrire l&amp;rsquo;infrastructure cloud (serveurs, réseaux, bases de données) dans des fichiers de configuration versionnés, plutôt que de la configurer manuellement via une console. L&amp;rsquo;infrastructure devient reproductible, relisable et testable comme du code applicatif.</description>
+			</item>
+			<item>
+				<title>Isolation transactionnelle</title>
+				<link>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</guid>
+				<description>Plusieurs transactions peuvent s&amp;rsquo;exécuter en même temps sur les mêmes données. Le niveau d&amp;rsquo;isolation choisi détermine ce qu&amp;rsquo;une transaction a le droit de voir des autres transactions en cours — un arbitrage entre cohérence stricte et performance.</description>
+			</item>
+			<item>
+				<title>Kubernetes expliqué simplement</title>
+				<link>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</guid>
+				<description>Kubernetes est un orchestrateur de conteneurs : il décide où et comment exécuter des conteneurs Docker sur un ensemble de machines, les redémarre automatiquement en cas de panne, et ajuste leur nombre selon la charge.</description>
+			</item>
+			<item>
+				<title>Le Pattern Abstract Factory expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/abstract-factory/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/abstract-factory/</guid>
+				<description>L&amp;rsquo;Abstract Factory va plus loin que la Factory simple : elle garantit qu&amp;rsquo;un ensemble d&amp;rsquo;objets liés entre eux (une famille) reste toujours cohérent, en regroupant plusieurs méthodes de création derrière une seule interface.</description>
+			</item>
+			<item>
+				<title>Le Pattern Adapter expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/adapter/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/adapter/</guid>
+				<description>Le Adapter Pattern permet à deux interfaces incompatibles de fonctionner ensemble, sans modifier ni l&amp;rsquo;une ni l&amp;rsquo;autre. Il s&amp;rsquo;intercale entre le code appelant et une librairie tierce pour traduire les appels d&amp;rsquo;un contrat vers un autre.</description>
+			</item>
+			<item>
+				<title>Le Pattern Builder expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/builder/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/builder/</guid>
+				<description>Le Builder Pattern sépare la construction d&amp;rsquo;un objet complexe en une série d&amp;rsquo;étapes chaînées, chacune configurant une partie de l&amp;rsquo;objet. Il évite les constructeurs à rallonge et rend le code de construction lisible, même avec de nombreux paramètres optionnels.</description>
+			</item>
+			<item>
+				<title>Le Pattern Decorator expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/decorator/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/decorator/</guid>
+				<description>Le Decorator Pattern permet d&amp;rsquo;ajouter dynamiquement des responsabilités à un objet, en l&amp;rsquo;enveloppant dans une ou plusieurs couches qui respectent la même interface. Une alternative à l&amp;rsquo;héritage quand les combinaisons de comportements se multiplient.</description>
+			</item>
+			<item>
+				<title>Le Pattern Dependency Injection expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/dependency-injection/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/dependency-injection/</guid>
+				<description>L&amp;rsquo;injection de dépendances (Dependency Injection) consiste à fournir à un objet ce dont il a besoin depuis l&amp;rsquo;extérieur, plutôt que de le laisser construire lui-même ses dépendances. Un principe simple qui rend le code testable et remplaçable.</description>
+			</item>
+			<item>
+				<title>Le Pattern Factory expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/factory/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/factory/</guid>
+				<description>Le Factory Pattern encapsule la logique de création d&amp;rsquo;un objet dans une méthode ou une classe dédiée, plutôt que de disperser des &lt;code&gt;new&lt;/code&gt; conditionnels dans tout le code. Le client dépend d&amp;rsquo;une interface, jamais des classes concrètes créées derrière.</description>
+			</item>
+			<item>
+				<title>Le Pattern Observer expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/observer/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/observer/</guid>
+				<description>L&amp;rsquo;Observer Pattern définit une relation un-à-plusieurs : quand un objet change d&amp;rsquo;état, tous ses abonnés sont notifiés automatiquement, sans que l&amp;rsquo;émetteur ait besoin de connaître leur nature exacte. C&amp;rsquo;est le pattern derrière les event listeners et les systèmes pub/sub.</description>
+			</item>
+			<item>
+				<title>Le Pattern Repository expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/repository/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/repository/</guid>
+				<description>Le Repository Pattern cache les détails de stockage (SQL, ORM, API externe) derrière une interface orientée métier. Le domaine manipule des objets, pas des requêtes — l&amp;rsquo;implémentation concrète du stockage reste un détail interchangeable.</description>
+			</item>
+			<item>
+				<title>Le Pattern Singleton expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/singleton/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/singleton/</guid>
+				<description>Le Singleton garantit qu&amp;rsquo;une classe n&amp;rsquo;a qu&amp;rsquo;une seule instance, accessible depuis n&amp;rsquo;importe où dans l&amp;rsquo;application. Pratique en apparence, mais c&amp;rsquo;est aussi l&amp;rsquo;un des patterns les plus critiqués : il introduit un état global qui rend le code difficile à tester et à faire évoluer.</description>
+			</item>
+			<item>
+				<title>Le Pattern Strategy expliqué simplement</title>
+				<link>http://localhost:1313/design-patterns/strategy/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/design-patterns/strategy/</guid>
+				<description>Le Strategy Pattern permet de faire varier un comportement indépendamment du code qui l&amp;rsquo;utilise. Au lieu d&amp;rsquo;empiler des &lt;code&gt;if/else&lt;/code&gt;, on encapsule chaque variante dans sa propre classe, interchangeable à tout moment.</description>
+			</item>
+			<item>
+				<title>Mock vs Stub</title>
+				<link>http://localhost:1313/tests/mock-vs-stub/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/mock-vs-stub/</guid>
+				<description>Un stub et un mock remplacent tous deux une vraie dépendance dans un test, mais pour des raisons différentes : le stub fournit des données prêtes à l&amp;rsquo;emploi, le mock vérifie que le code testé a bien effectué certains appels.</description>
+			</item>
+			<item>
+				<title>Monitoring</title>
+				<link>http://localhost:1313/cloud-devops/monitoring/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/monitoring/</guid>
+				<description>Le monitoring consiste à observer en continu l&amp;rsquo;état d&amp;rsquo;un système en production grâce à trois piliers complémentaires — métriques, logs et traces — pour détecter un problème et alerter avant, ou au pire au moment où, les utilisateurs le ressentent.</description>
+			</item>
+			<item>
+				<title>Normalisation</title>
+				<link>http://localhost:1313/bases-de-donnees/normalisation/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/normalisation/</guid>
+				<description>La normalisation est un ensemble de règles progressives (1NF, 2NF, 3NF) qui éliminent la duplication de données dans une base relationnelle. Elle transforme une table fourre-tout en plusieurs tables cohérentes, reliées par des clés.</description>
+			</item>
+			<item>
+				<title>Pourquoi écrire des tests ?</title>
+				<link>http://localhost:1313/tests/pourquoi-ecrire-des-tests/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/pourquoi-ecrire-des-tests/</guid>
+				<description>Écrire des tests coûte du temps immédiat, mais ce temps est un investissement : les tests deviennent un filet de sécurité contre les régressions et une documentation toujours à jour du comportement réel du code.</description>
+			</item>
+			<item>
+				<title>Pyramide des tests</title>
+				<link>http://localhost:1313/tests/pyramide-des-tests/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/pyramide-des-tests/</guid>
+				<description>La pyramide des tests décrit une répartition saine de l&amp;rsquo;effort de test : de nombreux tests unitaires rapides à la base, un nombre plus restreint de tests d&amp;rsquo;intégration au milieu, et très peu de tests end-to-end, lents mais réalistes, au sommet.</description>
+			</item>
+			<item>
+				<title>Qu&#39;est-ce qu&#39;une architecture logicielle ?</title>
+				<link>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</guid>
+				<description>L&amp;rsquo;architecture logicielle, ce n&amp;rsquo;est pas un diagramme ou un framework : c&amp;rsquo;est l&amp;rsquo;ensemble des décisions structurelles qui coûtent cher à changer une fois prises. Comprendre cette notion, c&amp;rsquo;est apprendre à distinguer ce qui est difficile à défaire de ce qui ne l&amp;rsquo;est pas.</description>
+			</item>
+			<item>
+				<title>Qu&#39;est-ce que le Cloud ?</title>
+				<link>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</guid>
+				<description>Le cloud computing, c&amp;rsquo;est louer de la puissance de calcul, du stockage et des services réseau à la demande plutôt que d&amp;rsquo;acheter et de gérer ses propres serveurs. On passe d&amp;rsquo;un investissement fixe à une dépense variable, ajustable en quelques clics.</description>
+			</item>
+			<item>
+				<title>Réplication</title>
+				<link>http://localhost:1313/bases-de-donnees/replication/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/replication/</guid>
+				<description>La réplication duplique les données d&amp;rsquo;une base sur plusieurs serveurs, pour survivre à une panne et répartir la charge de lecture. Le choix entre réplication synchrone et asynchrone, et entre maître-esclave et maître-maître, détermine le compromis entre cohérence et disponibilité.</description>
+			</item>
+			<item>
+				<title>Scalabilité</title>
+				<link>http://localhost:1313/cloud-devops/scalabilite/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/scalabilite/</guid>
+				<description>La scalabilité est la capacité d&amp;rsquo;un système à absorber une charge croissante sans dégrader ses performances. Elle se joue sur deux axes — vertical et horizontal — et repose sur un principe clé : rendre les services sans état pour pouvoir en multiplier les instances.</description>
+			</item>
+			<item>
+				<title>Séparation des responsabilités</title>
+				<link>http://localhost:1313/architecture-logicielle/separation-des-responsabilites/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/separation-des-responsabilites/</guid>
+				<description>Séparer les responsabilités, ce n&amp;rsquo;est pas seulement écrire des petites classes : c&amp;rsquo;est isoler chaque raison de changer dans sa propre unité, que ce soit une classe, un module ou une couche entière du système. Bien fait, un changement métier ne touche qu&amp;rsquo;un seul endroit du code.</description>
+			</item>
+			<item>
+				<title>SOLID expliqué simplement</title>
+				<link>http://localhost:1313/architecture-logicielle/solid-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/architecture-logicielle/solid-explique-simplement/</guid>
+				<description>SOLID est un acronyme regroupant cinq principes de conception orientée objet formulés par Robert C. Martin : Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation et Dependency Inversion. Ensemble, ils visent un seul objectif : pouvoir faire évoluer le code sans le casser.</description>
+			</item>
+			<item>
+				<title>SQL expliqué simplement</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</guid>
+				<description>SQL est le langage universel pour interroger une base relationnelle. Avec une poignée de mots-clés — SELECT, WHERE, JOIN, GROUP BY — on peut exprimer des questions complexes sur les données sans jamais écrire de boucle.</description>
+			</item>
+			<item>
+				<title>SQL vs NoSQL</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</guid>
+				<description>SQL et NoSQL ne s&amp;rsquo;opposent pas frontalement : ce sont deux familles d&amp;rsquo;outils avec des compromis différents entre cohérence, flexibilité de schéma et scalabilité. Le bon choix dépend de la forme des données et des contraintes de charge, pas d&amp;rsquo;une mode technique.</description>
+			</item>
+			<item>
+				<title>TDD expliqué simplement</title>
+				<link>http://localhost:1313/tests/tdd-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/tdd-explique-simplement/</guid>
+				<description>Le TDD (Test-Driven Development) consiste à écrire un test qui échoue avant d&amp;rsquo;écrire le code qui le fait passer, puis à améliorer la structure une fois le comportement validé. Ce cycle court — Red, Green, Refactor — guide la conception au lieu de la vérifier après coup.</description>
+			</item>
+			<item>
+				<title>Test unitaire vs intégration</title>
+				<link>http://localhost:1313/tests/test-unitaire-vs-integration/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/test-unitaire-vs-integration/</guid>
+				<description>Un test unitaire vérifie une seule unité de code en isolation, en général en mockant ses dépendances. Un test d&amp;rsquo;intégration vérifie que plusieurs composants réels — base de données, API, autres classes — collaborent correctement ensemble.</description>
+			</item>
+			<item>
+				<title>Transactions ACID</title>
+				<link>http://localhost:1313/bases-de-donnees/transactions-acid/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/transactions-acid/</guid>
+				<description>Une transaction regroupe plusieurs opérations en un bloc tout-ou-rien. Les propriétés ACID — Atomicité, Cohérence, Isolation, Durabilité — garantissent qu&amp;rsquo;elle ne laisse jamais la base dans un état incohérent, même en cas de panne ou d&amp;rsquo;accès concurrent.</description>
+			</item>
+			<item>
+				<title>Pourquoi MyBearIsYellow ?</title>
+				<link>http://localhost:1313/notre-histoire/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/notre-histoire/</guid>
+				<description>&lt;p&gt;À l&amp;rsquo;origine, notre ours était brun. Un ours brun tout ce qu&amp;rsquo;il y a de plus classique, pas franchement pressé d&amp;rsquo;apprendre quoi que ce soit.&lt;/p&gt;&#xA;&lt;p&gt;Et puis un jour, il a ouvert son premier éditeur de code. Il n&amp;rsquo;a rien compris. Puis un peu. Puis beaucoup. Et à force de creuser chaque concept jusqu&amp;rsquo;à vraiment le comprendre — pas juste le retenir par cœur pour un entretien — quelque chose a changé : son pelage est passé du brun au jaune.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Questions Backend</title>
+				<link>http://localhost:1313/preparation-entretien/questions-backend/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/preparation-entretien/questions-backend/</guid>
+				<description>Les questions qui reviennent le plus souvent dans un entretien technique backend — classées par thème, avec une réponse directe et un lien vers l&amp;rsquo;article complet pour aller plus loin.</description>
+			</item>
+	</channel>
 </rss>

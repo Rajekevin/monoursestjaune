@@ -1,19 +1,1438 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta name=generator content="Hugo 0.155.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>My Bear Is Yellow</title><meta name=keywords content="Blog,Development,Programming,Web Development,PHP,JavaScript,Tutorial"><meta name=description content="Technical blog about web development, programming, and computer science."><meta name=author content="map[email:rajekevin@hotmail.fr name:Rajekevin]"><link rel=canonical href=http://localhost:1313/><link crossorigin=anonymous href=/assets/css/stylesheet.e4e1fc52ce7e4e52be5f575336339ab4fe1579fca0832b2d50ef1f51e4093916.css integrity="sha256-5OH8Us5+TlK+X1dTNjOatP4VefyggystUO8fUeQJORY=" rel="preload stylesheet" as=style><link rel=icon href=http://localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png><link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=http://localhost:1313/index.xml title=rss><link rel=alternate type=application/json href=http://localhost:1313/index.json title=json><link rel=alternate hreflang=en href=http://localhost:1313/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="http://localhost:1313/"><meta property="og:site_name" content="My Bear Is Yellow"><meta property="og:title" content="My Bear Is Yellow"><meta property="og:description" content=" < ? My Bear 🐻 Is Yellow /> Bienvenue sur My Bear 🐻 Is Yellow. Un blog technique pensé pour les développeurs juniors et seniors qui veulent comprendre vraiment le code. 🏷️ Sujets principaux PHP JavaScript Architecture Tests Clean Code "><meta property="og:locale" content="en-us"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Technical blog about web development, programming, and computer science."><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"My Bear Is Yellow","url":"http://localhost:1313/","description":"Technical blog about web development, programming, and computer science.","logo":"http://localhost:1313/favicon.ico","sameAs":["https://github.com/rajekevin","https://twitter.com/iamrkvin","https://linkedin.com/in/rajekevin","mailto:rajekevin@hotmail.fr"]}</script></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=http://localhost:1313/ accesskey=h title="My Bear Is Yellow (Alt + H)">My Bear Is Yellow</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=http://localhost:1313/posts/ title=Articles><span>Articles</span></a></li><li><a href=http://localhost:1313/categories/ title=Categories><span>Categories</span></a></li><li><a href=http://localhost:1313/tags/ title=Tags><span>Tags</span></a></li><li><a href=http://localhost:1313/archives/ title=Archive><span>Archive</span></a></li><li><a href=http://localhost:1313/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><div class=post-content><div class=hero-section><h1 class=hero-brand>&lt; ? My Bear <span class=bear>🐻</span> Is <span class=yellow>Yellow</span> /></h1><p class=hero-text>Bienvenue sur My Bear <span class=bear>🐻</span> Is <span class=yellow>Yellow</span>.</p><p class=hero-text>Un blog technique pensé pour les développeurs juniors et seniors
-qui veulent <strong>comprendre vraiment</strong> le code.</p><h3 id=-sujets-principaux>🏷️ Sujets principaux<a hidden class=anchor aria-hidden=true href=#-sujets-principaux>#</a></h3><div class=tag-line><a class="tag php" href=/tags/php/>PHP</a>
-<a class="tag js" href=/tags/javascript/>JavaScript</a>
-<a class="tag archi" href=/tags/architecture/>Architecture</a>
-<a class="tag tests" href=/tags/tests/>Tests</a>
-<a class="tag clean" href=/tags/clean-code/>Clean Code</a></div></div></div><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Let's 2019 Begin</h2></header><div class=entry-content><p>Happy New Year 2019 🎆 Yeah first post of the year. Let me wish you a Happy New Year. Big project, big work, big ambition, this year will be exciting!
-What super fun thing am I planning to do in 2019 ? Read more books 📚 Train more ElePHPhant in PHP 🐘 Starting to interest in Django Framework 🦎 Maintain XPlaneLover✈️ & MyBearIsYellow 🐻 Blog Find a project to contribute in Open Source regularly That’s the kinda thing, I’m gonna to do…
-...</p></div><footer class=entry-footer><span title='2019-01-01 00:15:48 +0100 CET'>January 1, 2019</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>map[email:rajekevin@hotmail.fr name:Rajekevin]</span></footer><a class=entry-link aria-label="post link to Let's 2019 Begin" href=http://localhost:1313/lets-2019-begin/></a></article><article class="first-entry home-info"><header class=entry-header><h1>Contactez-moi</h1></header><div class=entry-content><p>Vous avez des questions ou des idées sur les sujets abordés ?
-Que vous soyez développeur ou passionné de tech, n&rsquo;hésitez pas à me contacter, je serai ravi d’échanger avec vous !</p><p>Retrouvez-moi sur les réseaux sociaux pour plus de discussions et d’astuces :</p></div><footer class=entry-footer><div class=social-icons><a href=https://github.com/rajekevin target=_blank rel="noopener noreferrer me" title=Github><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a><a href=https://twitter.com/iamrkvin target=_blank rel="noopener noreferrer me" title=Twitter><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg>
-</a><a href=https://linkedin.com/in/rajekevin target=_blank rel="noopener noreferrer me" title=Linkedin><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-</a><a href=mailto:rajekevin@hotmail.fr target=_blank rel="noopener noreferrer me" title=Email><svg viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></footer></article></main><footer class=footer>V2
-<span>© 2026 Rajekevin</span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+	<meta name="generator" content="Hugo 0.164.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>MyBearIsYellow</title>
+    <meta name="title" content="MyBearIsYellow" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.d46042696de8fa0b52b7f16ead4a5405725ff16a80718fb8fff7455032e722f8.css"
+    integrity="sha256-1GBCaW3o&#43;gtSt/FurUpUBXJf8WqAcY&#43;4//dFUDLnIvg="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.f425dc0437d16a7899ae9a52d6b24bcce59d7f76f156e053f9963809c095c80d.js"
+      integrity="sha256-9CXcBDfRaniZrppS1rJLzOWdf3bxVuBT&#43;ZY4CcCVyA0="
+      data-copy="Copier"
+      data-copied="Copié"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Les concepts du développement expliqués simplement : Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps — pour comprendre, retenir et réussir vos entretiens techniques.
+    "
+  />
+  <meta name="keywords" content="Design Patterns, Architecture logicielle, Bases de données, Tests logiciels, Cloud, DevOps, Entretien technique, PHP, Java, JavaScript" />
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/" />
+  
+  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="MyBearIsYellow" />
+  <link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="MyBearIsYellow" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/">
+	<meta property="og:site_name" content="MyBearIsYellow">
+	<meta property="og:title" content="MyBearIsYellow">
+	<meta property="og:description" content="Les concepts du développement expliqués simplement : Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps — pour comprendre, retenir et réussir vos entretiens techniques.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:type" content="website">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="MyBearIsYellow">
+	<meta name="twitter:description" content="Les concepts du développement expliqués simplement : Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps — pour comprendre, retenir et réussir vos entretiens techniques.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "http:\/\/localhost:1313\/",
+    "name": "MyBearIsYellow",
+    "description": "Les concepts du développement expliqués simplement : Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps — pour comprendre, retenir et réussir vos entretiens techniques.",
+    "inLanguage": "fr-FR",
+    "url": "http:\/\/localhost:1313\/",
+    "keywords": ["Design Patterns","Architecture logicielle","Bases de données","Tests logiciels","Cloud","DevOps","Entretien technique","PHP","Java","JavaScript"],
+    "publisher" : {
+      "@type": "Person",
+      "name": "MyBearIsYellow"
+    }
+  }
+  </script>
+
+
+  
+  
+    <meta name="author" content="MyBearIsYellow" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-950 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Aller au contenu</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      <a href="/" class="flex flex-shrink-0 items-center gap-1.5 no-underline">
+  <span class="text-2xl leading-none" aria-hidden="true">🐻</span>
+    <span class="text-lg font-bold text-neutral-900 dark:text-neutral">MyBearIs<span class="text-primary-400">Yellow</span></span>
+</a>
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/architecture-logicielle/"
+                      title="Architecture logicielle"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Architecture</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/design-patterns/"
+                      title="Design Patterns"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Design Patterns</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/bases-de-donnees/"
+                      title="Bases de données"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Bases de données</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tests/"
+                      title="Tests"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tests</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/cloud-devops/"
+                      title="Cloud &amp; DevOps"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Cloud &amp; DevOps</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/preparation-entretien/"
+                      title="Préparation entretien"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Entretiens</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Rechercher (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Passer au thème sombre"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Passer au thème clair"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                    </button>
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/architecture-logicielle/"
+                  title="Architecture logicielle"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Architecture</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/design-patterns/"
+                  title="Design Patterns"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Design Patterns</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/bases-de-donnees/"
+                  title="Bases de données"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Bases de données</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tests/"
+                  title="Tests"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tests</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/cloud-devops/"
+                  title="Cloud &amp; DevOps"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Cloud &amp; DevOps</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/preparation-entretien/"
+                  title="Préparation entretien"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Entretiens</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Rechercher (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Passer au thème sombre"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Passer au thème clair"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                </button>
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  
+  
+    
+
+<section class="relative pb-8 pt-6 sm:pt-10">
+  <div class="bear-hero-glow pointer-events-none absolute inset-0 -z-10"></div>
+
+  <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+    <div>
+      <a
+        href="/notre-histoire"
+        class="mb-5 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/70 px-4 py-1.5 text-sm font-medium text-primary-300 no-underline transition-colors hover:border-primary-700"
+      >
+        <span aria-hidden="true">🐻</span>
+        Comprendre les concepts techniques. Les expliquer simplement.
+        <span class="text-neutral-500">— pourquoi ce nom ?</span>
+      </a>
+      <h1 class="text-4xl font-extrabold leading-tight text-neutral sm:text-5xl">
+        Les concepts du développement<br class="hidden sm:block" />
+        expliqués <span class="text-primary-400">simplement</span>.
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400">
+        Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps
+        expliqués avec des exemples concrets — pour comprendre, retenir et
+        réussir vos entretiens techniques.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/design-patterns" class="btn-bear-primary">
+          Explorer les concepts
+        </a>
+        <a href="/preparation-entretien" class="btn-bear-outline">
+          Préparer mes entretiens
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto max-w-md px-8 py-10 sm:px-14">
+      
+      <div class="pointer-events-none absolute inset-0 z-10 hidden sm:block">
+        <span class="bear-badge absolute left-0 top-0">SOLID</span>
+        <span class="bear-badge absolute right-0 top-0">DDD</span>
+        <span class="bear-badge-primary absolute left-0 top-1/2 -translate-y-1/2">TDD</span>
+        <span class="bear-badge absolute right-0 top-1/2 -translate-y-1/2">SQL</span>
+        <span class="bear-badge absolute bottom-0 left-0">Docker</span>
+        <span class="bear-badge-primary absolute bottom-0 right-0">Kubernetes</span>
+        <span class="bear-badge absolute bottom-0 left-1/2 -translate-x-1/2">Cloud</span>
+      </div>
+
+      
+      <img
+        src="/images/hero-bear.png"
+        alt="Un ours jaune travaille sur son ordinateur, entouré d'icônes de design patterns, bases de données, cloud et DevOps"
+        width="1024"
+        height="768"
+        loading="eager"
+        fetchpriority="high"
+        class="relative z-0 mx-auto w-full rounded-2xl"
+      />
+
+      
+      <div class="mt-6 flex flex-wrap justify-center gap-2 sm:hidden">
+        <span class="bear-badge">SOLID</span>
+        <span class="bear-badge">DDD</span>
+        <span class="bear-badge-primary">TDD</span>
+        <span class="bear-badge">SQL</span>
+        <span class="bear-badge">Docker</span>
+        <span class="bear-badge-primary">Kubernetes</span>
+        <span class="bear-badge">Cloud</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-16">
+  <h2 class="text-2xl font-bold text-neutral">Explorer par catégorie</h2>
+  <p class="mt-2 text-neutral-400">Six domaines. Un seul objectif : comprendre pour de bon.</p>
+
+  
+
+  <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    
+      
+      <a href="/architecture-logicielle" class="bear-card">
+        <span class="text-3xl">🏛️</span>
+        <span class="bear-card-title">Architecture logicielle</span>
+        <span class="bear-card-desc">Clean Architecture, DDD, hexagonale, couplage.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            7 articles
+          </span>
+        
+      </a>
+    
+      
+      <a href="/design-patterns" class="bear-card">
+        <span class="text-3xl">🧩</span>
+        <span class="bear-card-title">Design Patterns</span>
+        <span class="bear-card-desc">Singleton, Factory, Strategy, Observer et plus.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            10 articles
+          </span>
+        
+      </a>
+    
+      
+      <a href="/bases-de-donnees" class="bear-card">
+        <span class="text-3xl">🗄️</span>
+        <span class="bear-card-title">Bases de données</span>
+        <span class="bear-card-desc">SQL, index, transactions ACID, NoSQL, Redis.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            9 articles
+          </span>
+        
+      </a>
+    
+      
+      <a href="/tests" class="bear-card">
+        <span class="text-3xl">✅</span>
+        <span class="bear-card-title">Tests</span>
+        <span class="bear-card-desc">TDD, BDD, pyramide des tests, mocks et stubs.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            6 articles
+          </span>
+        
+      </a>
+    
+      
+      <a href="/cloud-devops" class="bear-card">
+        <span class="text-3xl">☁️</span>
+        <span class="bear-card-title">Cloud &amp; DevOps</span>
+        <span class="bear-card-desc">Docker, Kubernetes, CI/CD, IaC, scalabilité.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            8 articles
+          </span>
+        
+      </a>
+    
+      
+      <a href="/preparation-entretien" class="bear-card">
+        <span class="text-3xl">🎯</span>
+        <span class="bear-card-title">Préparation entretien</span>
+        <span class="bear-card-desc">Les questions posées en entretien technique, expliquées.</span>
+        
+          <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+            1 article
+          </span>
+        
+      </a>
+    
+  </div>
+</section>
+
+
+<section class="py-16">
+  
+  <h2 class="mt-8 text-2xl font-extrabold">Articles récents</h2>
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/architecture-logicielle/architecture-hexagonale/"
+          >Architecture hexagonale</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/architecture/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Architecture</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/clean-architecture/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Clean-Architecture</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/php/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Php</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/java/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Java</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/javascript/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Javascript</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        L&rsquo;architecture hexagonale (Ports &amp; Adapters) place le métier au centre et le connecte au monde extérieur via des ports — des interfaces définies par le métier — implémentés par des adaptateurs interchangeables. La base de données, l&rsquo;API REST ou la CLI ne sont que des détails branchés sur ces ports.
+      </div>
+    
+  </div>
+</article>
+
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/tests/bdd-avec-gherkin/"
+          >BDD avec Gherkin</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/bdd/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Bdd</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/tdd/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Tdd</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/tests/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Tests</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/php/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Php</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        Le BDD (Behavior-Driven Development) décrit le comportement attendu d&rsquo;un système en langage naturel structuré, via la syntaxe Gherkin (Given/When/Then), pour que développeurs, testeurs et experts métier partagent une seule source de vérité, exécutable comme un test.
+      </div>
+    
+  </div>
+</article>
+
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/bases-de-donnees/cache-redis/"
+          >Cache Redis</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/redis/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Redis</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/nosql/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Nosql</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/bases-de-donnees/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Bases-De-Donnees</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/php/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Php</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        Redis est une base clé-valeur en mémoire, utilisée principalement comme cache devant une base relationnelle. Le pattern cache-aside, un TTL bien choisi et une stratégie d&rsquo;invalidation claire sont les trois piliers d&rsquo;un cache Redis fiable.
+      </div>
+    
+  </div>
+</article>
+
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/cloud-devops/ci-cd/"
+          >CI/CD</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/ci-cd/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Ci-Cd</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/devops/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Devops</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/docker/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Docker</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/cloud/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Cloud</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        CI/CD désigne l&rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu&rsquo;à la main.
+      </div>
+    
+  </div>
+</article>
+
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/"
+          >Clean Architecture expliquée simplement</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/architecture/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Architecture</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/clean-architecture/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Clean-Architecture</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/php/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Php</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/java/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Java</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/ddd/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Ddd</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        La Clean Architecture organise le code en cercles concentriques : le métier au centre, les détails techniques (base de données, framework, UI) à l&rsquo;extérieur. La règle est simple — les dépendances ne pointent jamais vers l&rsquo;extérieur.
+      </div>
+    
+  </div>
+</article>
+
+  
+    <article class="mt-6 flex max-w-prose flex-row">
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/"
+          >Comment fonctionne une base relationnelle ?</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Temps de lecture">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/sql/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Sql</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/bases-de-donnees/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Bases-De-Donnees</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/postgresql/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Postgresql</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/mysql/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Mysql</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        Une base relationnelle range les données dans des tables reliées entre elles par des clés. Comprendre ce modèle — lignes, colonnes, clés primaires et étrangères — est le prérequis à tout le reste : requêtes, index, transactions.
+      </div>
+    
+  </div>
+</article>
+
+  
+
+
+</section>
+
+
+<section class="py-16">
+  
+
+
+  <div class="bear-newsletter">
+    <div>
+      <p class="text-lg font-bold text-neutral">🐻 Un concept par semaine, dans votre boîte mail</p>
+      <p class="mt-1 max-w-md text-sm text-neutral-400">
+        Pas de spam, pas de blabla : un concept technique expliqué simplement,
+        chaque semaine.
+      </p>
+    </div>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/MasterSinge"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/MasterSinge', 'popupwindow')"
+      class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+    >
+      <label for="bd-email" class="sr-only">Adresse e-mail</label>
+      <input type="email" name="email" id="bd-email" placeholder="vous@exemple.com" required />
+      <input type="hidden" value="1" name="embed" />
+      <button type="submit" class="btn-bear-primary whitespace-nowrap">S'abonner</button>
+    </form>
+  </div>
+
+
+</section>
+
+  
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Faire défiler jusqu&#39;au bas de la page"
+            title="Faire défiler jusqu&#39;au bas de la page"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex list-none flex-col sm:flex-row">
+        
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/notre-histoire/"
+                title="Pourquoi MyBearIsYellow ?"
+                
+                
+                ><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >🐻 Pourquoi ce nom ?</span
+                  >
+                </a
+              >
+            
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2026 MyBearIsYellow
+        </p>
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Passer au thème sombre"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Passer au thème clair"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Rechercher"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Fermer (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

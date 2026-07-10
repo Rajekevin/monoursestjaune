@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Préparation entretien on MyBearIsYellow</title>
+		<link>http://localhost:1313/preparation-entretien/</link>
+		<description>Recent content in Préparation entretien on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<atom:link href="http://localhost:1313/preparation-entretien/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Questions Backend</title>
+				<link>http://localhost:1313/preparation-entretien/questions-backend/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/preparation-entretien/questions-backend/</guid>
+				<description>Les questions qui reviennent le plus souvent dans un entretien technique backend — classées par thème, avec une réponse directe et un lien vers l&amp;rsquo;article complet pour aller plus loin.</description>
+			</item>
+	</channel>
+</rss>

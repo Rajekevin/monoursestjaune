@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Bdd on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/bdd/</link>
+		<description>Recent content in Bdd on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/bdd/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BDD avec Gherkin</title>
+				<link>http://localhost:1313/tests/bdd-avec-gherkin/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/bdd-avec-gherkin/</guid>
+				<description>Le BDD (Behavior-Driven Development) décrit le comportement attendu d&amp;rsquo;un système en langage naturel structuré, via la syntaxe Gherkin (Given/When/Then), pour que développeurs, testeurs et experts métier partagent une seule source de vérité, exécutable comme un test.</description>
+			</item>
+			<item>
+				<title>Pyramide des tests</title>
+				<link>http://localhost:1313/tests/pyramide-des-tests/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/tests/pyramide-des-tests/</guid>
+				<description>La pyramide des tests décrit une répartition saine de l&amp;rsquo;effort de test : de nombreux tests unitaires rapides à la base, un nombre plus restreint de tests d&amp;rsquo;intégration au milieu, et très peu de tests end-to-end, lents mais réalistes, au sommet.</description>
+			</item>
+	</channel>
+</rss>

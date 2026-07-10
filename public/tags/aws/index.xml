@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Aws on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/aws/</link>
+		<description>Recent content in Aws on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IaaS, PaaS, SaaS</title>
+				<link>http://localhost:1313/cloud-devops/iaas-paas-saas/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/iaas-paas-saas/</guid>
+				<description>IaaS, PaaS et SaaS sont trois façons de consommer le cloud, qui se distinguent par la part de la stack technique gérée par le fournisseur. Plus on monte dans l&amp;rsquo;abstraction, moins on a de contrôle — mais moins on a aussi à maintenir.</description>
+			</item>
+			<item>
+				<title>Infrastructure as Code</title>
+				<link>http://localhost:1313/cloud-devops/infrastructure-as-code/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/infrastructure-as-code/</guid>
+				<description>L&amp;rsquo;Infrastructure as Code consiste à décrire l&amp;rsquo;infrastructure cloud (serveurs, réseaux, bases de données) dans des fichiers de configuration versionnés, plutôt que de la configurer manuellement via une console. L&amp;rsquo;infrastructure devient reproductible, relisable et testable comme du code applicatif.</description>
+			</item>
+			<item>
+				<title>Qu&#39;est-ce que le Cloud ?</title>
+				<link>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</guid>
+				<description>Le cloud computing, c&amp;rsquo;est louer de la puissance de calcul, du stockage et des services réseau à la demande plutôt que d&amp;rsquo;acheter et de gérer ses propres serveurs. On passe d&amp;rsquo;un investissement fixe à une dépense variable, ajustable en quelques clics.</description>
+			</item>
+	</channel>
+</rss>

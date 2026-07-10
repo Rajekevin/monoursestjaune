@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ci-Cd on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/ci-cd/</link>
+		<description>Recent content in Ci-Cd on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CI/CD</title>
+				<link>http://localhost:1313/cloud-devops/ci-cd/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/ci-cd/</guid>
+				<description>CI/CD désigne l&amp;rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu&amp;rsquo;à la main.</description>
+			</item>
+			<item>
+				<title>Docker expliqué simplement</title>
+				<link>http://localhost:1313/cloud-devops/docker-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/cloud-devops/docker-explique-simplement/</guid>
+				<description>Docker empaquette une application avec toutes ses dépendances dans un conteneur : un environnement isolé, portable et identique du poste du développeur à la production. Fini le &amp;ldquo;ça marche sur ma machine&amp;rdquo;.</description>
+			</item>
+	</channel>
+</rss>

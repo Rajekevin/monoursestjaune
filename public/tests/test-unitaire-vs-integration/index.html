@@ -1,0 +1,1069 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Test unitaire vs intégration &middot; MyBearIsYellow</title>
+    <meta name="title" content="Test unitaire vs intégration &middot; MyBearIsYellow" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.d46042696de8fa0b52b7f16ead4a5405725ff16a80718fb8fff7455032e722f8.css"
+    integrity="sha256-1GBCaW3o&#43;gtSt/FurUpUBXJf8WqAcY&#43;4//dFUDLnIvg="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.f425dc0437d16a7899ae9a52d6b24bcce59d7f76f156e053f9963809c095c80d.js"
+      integrity="sha256-9CXcBDfRaniZrppS1rJLzOWdf3bxVuBT&#43;ZY4CcCVyA0="
+      data-copy="Copier"
+      data-copied="Copié"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Un test unitaire isole une seule unité de code, un test d&#39;intégration vérifie que plusieurs composants collaborent correctement. Périmètre, vitesse, ce qu&#39;on mock ou non.
+    "
+  />
+  <meta name="keywords" content="Design Patterns, Architecture logicielle, Bases de données, Tests logiciels, Cloud, DevOps, Entretien technique, PHP, Java, JavaScript" />
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/tests/test-unitaire-vs-integration/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/tests/test-unitaire-vs-integration/">
+	<meta property="og:site_name" content="MyBearIsYellow">
+	<meta property="og:title" content="Test unitaire vs intégration">
+	<meta property="og:description" content="Un test unitaire isole une seule unité de code, un test d&#39;intégration vérifie que plusieurs composants collaborent correctement. Périmètre, vitesse, ce qu&#39;on mock ou non.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="tests">
+		<meta property="article:published_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:tag" content="Tests">
+		<meta property="article:tag" content="Unit-Testing">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Javascript">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Test unitaire vs intégration">
+	<meta name="twitter:description" content="Un test unitaire isole une seule unité de code, un test d&#39;intégration vérifie que plusieurs composants collaborent correctement. Périmètre, vitesse, ce qu&#39;on mock ou non.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Tests",
+    "name": "Test unitaire vs intégration",
+    "headline": "Test unitaire vs intégration",
+    "description": "Un test unitaire isole une seule unité de code, un test d\u0027intégration vérifie que plusieurs composants collaborent correctement. Périmètre, vitesse, ce qu\u0027on mock ou non.",
+    "abstract": "Un test unitaire vérifie une seule unité de code en isolation, en général en mockant ses dépendances. Un test d\u0026rsquo;intégration vérifie que plusieurs composants réels — base de données, API, autres classes — collaborent correctement ensemble.",
+    "inLanguage": "fr-FR",
+    "url" : "http:\/\/localhost:1313\/tests\/test-unitaire-vs-integration\/",
+    "author" : {
+      "@type": "Person",
+      "name": "MyBearIsYellow"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-10T00:00:00\u002b00:00",
+    "datePublished": "2026-07-10T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-07-10T00:00:00\u002b00:00",
+    
+    "keywords": ["tests","unit-testing","php","javascript"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1011"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "My Bear Is Yellow",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/tests/",
+       "name": "Tests",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Test Unitaire vs Intégration",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="MyBearIsYellow" />
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="http://localhost:1313/js/mermaid.bundle.88fecd148a1cbf7bf447a800643054ec2d3e5d4ce01de2fe4a176f4ac4165ae4.js"
+    integrity="sha256-iP7NFIocv3v0R6gAZDBU7C0&#43;XUzgHeL&#43;ShdvSsQWWuQ="
+  ></script>
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-950 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Aller au contenu</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      <a href="/" class="flex flex-shrink-0 items-center gap-1.5 no-underline">
+  <span class="text-2xl leading-none" aria-hidden="true">🐻</span>
+    <span class="text-lg font-bold text-neutral-900 dark:text-neutral">MyBearIs<span class="text-primary-400">Yellow</span></span>
+</a>
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/architecture-logicielle/"
+                      title="Architecture logicielle"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Architecture</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/design-patterns/"
+                      title="Design Patterns"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Design Patterns</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/bases-de-donnees/"
+                      title="Bases de données"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Bases de données</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tests/"
+                      title="Tests"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tests</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/cloud-devops/"
+                      title="Cloud &amp; DevOps"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Cloud &amp; DevOps</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/preparation-entretien/"
+                      title="Préparation entretien"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Entretiens</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Rechercher (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Passer au thème sombre"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Passer au thème clair"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                    </button>
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/architecture-logicielle/"
+                  title="Architecture logicielle"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Architecture</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/design-patterns/"
+                  title="Design Patterns"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Design Patterns</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/bases-de-donnees/"
+                  title="Bases de données"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Bases de données</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tests/"
+                  title="Tests"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tests</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/cloud-devops/"
+                  title="Cloud &amp; DevOps"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Cloud &amp; DevOps</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/preparation-entretien/"
+                  title="Préparation entretien"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Entretiens</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Rechercher (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Passer au thème sombre"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Passer au thème clair"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                </button>
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/"
+      >MyBearIsYellow</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/tests/"
+      >Tests</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/tests/test-unitaire-vs-integration/"
+      >Test unitaire vs intégration</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+
+      <div class="mb-5 flex flex-wrap items-center gap-2">
+        
+          <span class="bear-badge-primary">🐻 Tests</span>
+        
+        
+          <span class="bear-badge">Niveau : Intermédiaire</span>
+        
+        
+          <span class="bear-badge">5 min de lecture</span>
+        
+      </div>
+
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Test unitaire vs intégration
+      </h1>
+
+      
+        <p class="mb-10 rounded-xl border-l-4 border-primary-400 bg-neutral-900/40 px-5 py-4 text-lg leading-relaxed text-neutral-300">
+          Un test unitaire vérifie une seule unité de code en isolation, en général en mockant ses dépendances. Un test d&rsquo;intégration vérifie que plusieurs composants réels — base de données, API, autres classes — collaborent correctement ensemble.
+        </p>
+      
+    </header>
+
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Sommaire
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#le-problème">Le problème</a></li>
+    <li><a href="#lidée-générale">L&rsquo;idée générale</a></li>
+    <li><a href="#analogie-du-quotidien">Analogie du quotidien</a></li>
+    <li><a href="#diagramme">Diagramme</a></li>
+    <li><a href="#exemple-de-code">Exemple de code</a>
+      <ul>
+        <li><a href="#php">PHP</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
+      </ul>
+    </li>
+    <li><a href="#quand-utiliser-lun-ou-lautre-">Quand utiliser l&rsquo;un ou l&rsquo;autre ?</a></li>
+    <li><a href="#points-importants">Points importants</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="le-problème" class="relative group">Le problème <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#le-probl%c3%a8me" aria-label="Ancre">#</a></span></h2><p>Une équipe teste une fonction <code>calculerRemise()</code> en isolation : elle passe toujours. Pourtant, en production, la remise ne s&rsquo;applique jamais correctement — parce que la requête SQL qui récupère le statut fidélité du client renvoie la mauvaise colonne. Le test unitaire n&rsquo;a rien vu, car il ne testait que la logique de calcul, pas la façon dont les composants s&rsquo;assemblent réellement.</p>
+<p>À l&rsquo;inverse, une suite composée uniquement de tests qui démarrent une vraie base de données et font de vrais appels HTTP devient si lente que personne ne la lance avant de pousser son code, et les retours d&rsquo;échec arrivent des heures plus tard, noyés dans le bruit d&rsquo;une pipeline CI. Le périmètre du test — ce qu&rsquo;il isole et ce qu&rsquo;il laisse réel — n&rsquo;est jamais un détail anodin.</p>
+<h2 id="lidée-générale" class="relative group">L&rsquo;idée générale <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lid%c3%a9e-g%c3%a9n%c3%a9rale" aria-label="Ancre">#</a></span></h2><p>Un <strong>test unitaire</strong> vérifie une seule unité de code (une fonction, une méthode, une classe) en l&rsquo;isolant complètement de ses dépendances. Toute dépendance externe — base de données, appel réseau, système de fichiers, horloge — est remplacée par un mock ou un stub. Le test unitaire répond à une question précise : <em>cette logique, prise isolément, se comporte-t-elle comme prévu ?</em></p>
+<p>Un <strong>test d&rsquo;intégration</strong> vérifie que plusieurs composants réels collaborent correctement entre eux. Il peut faire appel à une vraie base de données (souvent une base de test dédiée), un vrai client HTTP contre un serveur de test, ou plusieurs classes réelles qui interagissent sans mock. Il répond à une autre question : <em>ces composants, assemblés ensemble, produisent-ils le résultat attendu ?</em></p>
+<p>Les deux ne s&rsquo;opposent pas — ils couvrent des risques différents :</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+					<th>Test unitaire</th>
+					<th>Test d&rsquo;intégration</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Périmètre</td>
+					<td>Une seule unité</td>
+					<td>Plusieurs composants réels</td>
+			</tr>
+			<tr>
+					<td>Dépendances</td>
+					<td>Mockées / stubbées</td>
+					<td>Réelles (ou proches du réel)</td>
+			</tr>
+			<tr>
+					<td>Vitesse</td>
+					<td>Très rapide (millisecondes)</td>
+					<td>Plus lent (connexions réelles)</td>
+			</tr>
+			<tr>
+					<td>Détecte</td>
+					<td>Erreurs de logique isolée</td>
+					<td>Erreurs d&rsquo;assemblage, de configuration, de contrat</td>
+			</tr>
+			<tr>
+					<td>Débogage en cas d&rsquo;échec</td>
+					<td>Précis, cause évidente</td>
+					<td>Plus large, cause à identifier parmi plusieurs composants</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="analogie-du-quotidien" class="relative group">Analogie du quotidien <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analogie-du-quotidien" aria-label="Ancre">#</a></span></h2><p>Tester unitairement, c&rsquo;est vérifier chaque pièce détachée d&rsquo;un meuble en kit séparément : la vis tient-elle la charge prévue, la planche a-t-elle les bonnes dimensions. Tester en intégration, c&rsquo;est monter réellement deux ou trois pièces ensemble et vérifier qu&rsquo;elles s&rsquo;assemblent sans jeu ni porte-à-faux.</p>
+<p>Vérifier chaque vis isolément est rapide et précis, mais ne garantit pas que le meuble entier tiendra debout une fois monté — un plan de perçage mal aligné entre deux pièces, chacune parfaite individuellement, peut rendre l&rsquo;assemblage impossible. C&rsquo;est exactement ce qu&rsquo;un test d&rsquo;intégration détecte et qu&rsquo;un test unitaire, par construction, ne peut pas voir.</p>
+<h2 id="diagramme" class="relative group">Diagramme <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#diagramme" aria-label="Ancre">#</a></span></h2><div class="mermaid" align="center">
+  
+flowchart TB
+    subgraph Unitaire["Test unitaire"]
+        direction LR
+        U1[ServiceRemise] -.mock.-> U2[[RepositoryClient - mocké]]
+    end
+    subgraph Integration["Test d'intégration"]
+        direction LR
+        I1[ServiceRemise] --> I2[RepositoryClient réel]
+        I2 --> I3[(Base de données de test)]
+    end
+
+</div>
+
+<h2 id="exemple-de-code" class="relative group">Exemple de code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exemple-de-code" aria-label="Ancre">#</a></span></h2><h3 id="php" class="relative group">PHP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#php" aria-label="Ancre">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// --- Code métier ---
+</span></span></span><span class="line"><span class="cl"><span class="k">interface</span> <span class="nx">ClientRepository</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">estFidele</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$clientId</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">ServiceRemise</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="k">private</span> <span class="nx">ClientRepository</span> <span class="nv">$repository</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">calculer</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$clientId</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">float</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">repository</span><span class="o">-&gt;</span><span class="na">estFidele</span><span class="p">(</span><span class="nv">$clientId</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">?</span> <span class="nv">$montant</span> <span class="o">*</span> <span class="mf">0.9</span>
+</span></span><span class="line"><span class="cl">            <span class="o">:</span> <span class="nv">$montant</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">PHPUnit\Framework\TestCase</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// --- Test UNITAIRE : le repository est mocké, aucune vraie base de données ---
+</span></span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">ServiceRemiseUnitTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">testClientFideleObtientUneRemise</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$repository</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createStub</span><span class="p">(</span><span class="nx">ClientRepository</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$repository</span><span class="o">-&gt;</span><span class="na">method</span><span class="p">(</span><span class="s1">&#39;estFidele&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">willReturn</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ServiceRemise</span><span class="p">(</span><span class="nv">$repository</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">90.0</span><span class="p">,</span> <span class="nv">$service</span><span class="o">-&gt;</span><span class="na">calculer</span><span class="p">(</span><span class="nx">clientId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">montant</span><span class="o">:</span> <span class="mf">100.0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// --- Test D&#39;INTÉGRATION : le repository réel interroge une vraie base de test ---
+</span></span></span><span class="line"><span class="cl"><span class="k">final</span> <span class="k">class</span> <span class="nc">ServiceRemiseIntegrationTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nx">PDO</span> <span class="nv">$pdo</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setUp</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;sqlite::memory:&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="s1">&#39;CREATE TABLE clients (id INTEGER, fidele INTEGER)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="s1">&#39;INSERT INTO clients VALUES (1, 1)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">testCalculDeRemiseAvecUneVraieBaseDeDonnees</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PdoClientRepository</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ServiceRemise</span><span class="p">(</span><span class="nv">$repository</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">90.0</span><span class="p">,</span> <span class="nv">$service</span><span class="o">-&gt;</span><span class="na">calculer</span><span class="p">(</span><span class="nx">clientId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">montant</span><span class="o">:</span> <span class="mf">100.0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="javascript" class="relative group">JavaScript <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#javascript" aria-label="Ancre">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// --- Code métier ---
+</span></span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">ServiceRemise</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">(</span><span class="nx">clientRepository</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">clientRepository</span> <span class="o">=</span> <span class="nx">clientRepository</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">calculer</span><span class="p">(</span><span class="nx">clientId</span><span class="p">,</span> <span class="nx">montant</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">estFidele</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">clientRepository</span><span class="p">.</span><span class="nx">estFidele</span><span class="p">(</span><span class="nx">clientId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">estFidele</span> <span class="o">?</span> <span class="nx">montant</span> <span class="o">*</span> <span class="mf">0.9</span> <span class="o">:</span> <span class="nx">montant</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">ServiceRemise</span> <span class="p">};</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// --- Test UNITAIRE : le repository est mocké avec Jest ---
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">ServiceRemise</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./serviceRemise&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">test</span><span class="p">(</span><span class="s2">&#34;un client fidèle obtient une remise (unitaire, repository mocké)&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">repositoryMocke</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">estFidele</span><span class="o">:</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">().</span><span class="nx">mockResolvedValue</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ServiceRemise</span><span class="p">(</span><span class="nx">repositoryMocke</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">service</span><span class="p">.</span><span class="nx">calculer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">expect</span><span class="p">(</span><span class="nx">total</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// --- Test D&#39;INTÉGRATION : appel réel à une base SQLite en mémoire ---
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">ServiceRemise</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./serviceRemise&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">SqlClientRepository</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./sqlClientRepository&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">openTestDatabase</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./testDb&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">test</span><span class="p">(</span><span class="s2">&#34;un client fidèle obtient une remise (intégration, vraie base de données)&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">openTestDatabase</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="s2">&#34;INSERT INTO clients (id, fidele) VALUES (1, 1)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SqlClientRepository</span><span class="p">(</span><span class="nx">db</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ServiceRemise</span><span class="p">(</span><span class="nx">repository</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">service</span><span class="p">.</span><span class="nx">calculer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">expect</span><span class="p">(</span><span class="nx">total</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h2 id="quand-utiliser-lun-ou-lautre-" class="relative group">Quand utiliser l&rsquo;un ou l&rsquo;autre ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#quand-utiliser-lun-ou-lautre-" aria-label="Ancre">#</a></span></h2><ul>
+<li>Test unitaire : pour vérifier une logique métier isolée (calcul, validation, transformation) rapidement et souvent — à chaque sauvegarde ou en pré-commit.</li>
+<li>Test d&rsquo;intégration : pour vérifier qu&rsquo;une requête SQL est correcte, qu&rsquo;un appel HTTP respecte le bon format, ou que plusieurs classes s&rsquo;assemblent sans erreur de configuration.</li>
+<li>Une suite saine combine les deux : beaucoup de tests unitaires rapides pour la logique, un nombre plus restreint de tests d&rsquo;intégration pour les points de jonction critiques.</li>
+<li>Évitez de mocker une dépendance dans un test qui a justement pour but de vérifier que cette dépendance fonctionne correctement en conditions réelles — ce serait un test d&rsquo;intégration déguisé en test unitaire, qui ne teste plus rien d&rsquo;utile.</li>
+</ul>
+<h2 id="points-importants" class="relative group">Points importants <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#points-importants" aria-label="Ancre">#</a></span></h2><ul>
+<li>Un test unitaire rapide (millisecondes) peut tourner par centaines à chaque sauvegarde de fichier ; un test d&rsquo;intégration, plus lent, tourne plus souvent en pré-push ou en CI.</li>
+<li>Un échec de test unitaire pointe précisément vers la logique cassée ; un échec de test d&rsquo;intégration demande d&rsquo;investiguer parmi plusieurs composants pour trouver la cause.</li>
+<li>Le périmètre d&rsquo;un test (ce qu&rsquo;il mocke, ce qu&rsquo;il laisse réel) doit toujours être un choix conscient, pas un hasard d&rsquo;implémentation.</li>
+<li>Ni l&rsquo;un ni l&rsquo;autre ne remplace les tests end-to-end, qui vérifient le système complet du point de vue de l&rsquo;utilisateur final — les trois niveaux forment la pyramide des tests.</li>
+</ul>
+
+
+        
+          <div class="bear-memory not-prose">
+            <p class="bear-memory-title">🐻 À retenir</p>
+            <ul>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Un test unitaire isole <strong>une seule unité</strong> et mocke ses dépendances externes ; un test d&rsquo;intégration vérifie que <strong>plusieurs composants réels</strong> collaborent correctement.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Plus un test se rapproche de la réalité (vraie base de données, vrai réseau), plus il est <strong>lent et fragile</strong> — c&rsquo;est le compromis central des tests d&rsquo;intégration.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Un test unitaire qui mocke tout répond à <em>&lsquo;ma logique est-elle correcte ?&rsquo;</em> ; un test d&rsquo;intégration répond à <em>&lsquo;mes composants s&rsquo;assemblent-ils correctement ?&rsquo;</em> — les deux questions sont différentes et complémentaires.</span></li>
+              
+            </ul>
+          </div>
+        
+
+        
+          <div class="bear-faq not-prose">
+            <h2 class="mb-4 text-2xl font-bold text-neutral">Questions d'entretien</h2>
+            
+              <details class="bear-faq-item">
+                <summary>Quelle différence entre un test unitaire et un test d&#39;intégration ?</summary>
+                <div class="bear-faq-item-body">Un test unitaire isole une seule unité de code (une fonction, une classe) en remplaçant ses dépendances par des mocks ou des stubs — il est rapide et vérifie une logique en isolation. Un test d&rsquo;intégration exécute plusieurs composants réels ensemble (par exemple une classe et une vraie base de données) pour vérifier qu&rsquo;ils collaborent correctement — il est plus lent mais détecte des problèmes qu&rsquo;un test unitaire, avec ses dépendances mockées, ne peut pas voir.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Pourquoi ne pas se contenter de tests d&#39;intégration, plus proches de la réalité ?</summary>
+                <div class="bear-faq-item-body">Les tests d&rsquo;intégration sont plus lents (vraie base de données, vrai réseau) et plus difficiles à déboguer quand ils échouent, car l&rsquo;échec peut venir de n&rsquo;importe quel composant impliqué. Les tests unitaires, rapides et ciblés, permettent d&rsquo;identifier un bug précisément et de faire tourner des centaines de cas en quelques secondes — un luxe impossible avec uniquement des tests d&rsquo;intégration.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Comment décider si une dépendance doit être mockée ou utilisée réellement dans un test ?</summary>
+                <div class="bear-faq-item-body">Ça dépend de ce que le test cherche à vérifier. Si l&rsquo;objectif est d&rsquo;isoler une logique métier précise, on mocke tout ce qui n&rsquo;est pas cette logique (base de données, appels réseau, horloge système). Si l&rsquo;objectif est de vérifier que l&rsquo;intégration entre deux composants fonctionne réellement — par exemple qu&rsquo;une requête SQL est correcte — alors utiliser la vraie dépendance (ou une version proche, comme une base de test) est justement le but du test.</div>
+              </details>
+            
+          </div>
+        
+      </div>
+    </section>
+
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+        <div class="mb-6 flex flex-wrap gap-2">
+          
+            
+              <a href="http://localhost:1313/tags/tests/" class="bear-tag">#Tests</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/unit-testing/" class="bear-tag">#Unit-Testing</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/php/" class="bear-tag">#Php</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/javascript/" class="bear-tag">#Javascript</a>
+            
+          
+        </div>
+      
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/tests/tdd-explique-simplement/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >TDD expliqué simplement</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Faire défiler jusqu&#39;au bas de la page"
+            title="Faire défiler jusqu&#39;au bas de la page"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex list-none flex-col sm:flex-row">
+        
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/notre-histoire/"
+                title="Pourquoi MyBearIsYellow ?"
+                
+                
+                ><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >🐻 Pourquoi ce nom ?</span
+                  >
+                </a
+              >
+            
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2026 MyBearIsYellow
+        </p>
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Passer au thème sombre"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Passer au thème clair"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Rechercher"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Fermer (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

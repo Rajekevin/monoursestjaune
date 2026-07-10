@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mysql on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/mysql/</link>
+		<description>Recent content in Mysql on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Comment fonctionne une base relationnelle ?</title>
+				<link>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</guid>
+				<description>Une base relationnelle range les données dans des tables reliées entre elles par des clés. Comprendre ce modèle — lignes, colonnes, clés primaires et étrangères — est le prérequis à tout le reste : requêtes, index, transactions.</description>
+			</item>
+			<item>
+				<title>Normalisation</title>
+				<link>http://localhost:1313/bases-de-donnees/normalisation/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/normalisation/</guid>
+				<description>La normalisation est un ensemble de règles progressives (1NF, 2NF, 3NF) qui éliminent la duplication de données dans une base relationnelle. Elle transforme une table fourre-tout en plusieurs tables cohérentes, reliées par des clés.</description>
+			</item>
+			<item>
+				<title>Réplication</title>
+				<link>http://localhost:1313/bases-de-donnees/replication/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/replication/</guid>
+				<description>La réplication duplique les données d&amp;rsquo;une base sur plusieurs serveurs, pour survivre à une panne et répartir la charge de lecture. Le choix entre réplication synchrone et asynchrone, et entre maître-esclave et maître-maître, détermine le compromis entre cohérence et disponibilité.</description>
+			</item>
+			<item>
+				<title>SQL expliqué simplement</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</guid>
+				<description>SQL est le langage universel pour interroger une base relationnelle. Avec une poignée de mots-clés — SELECT, WHERE, JOIN, GROUP BY — on peut exprimer des questions complexes sur les données sans jamais écrire de boucle.</description>
+			</item>
+	</channel>
+</rss>

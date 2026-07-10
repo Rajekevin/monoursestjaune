@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Nosql on MyBearIsYellow</title>
+		<link>http://localhost:1313/tags/nosql/</link>
+		<description>Recent content in Nosql on MyBearIsYellow</description>
+		<generator>Hugo</generator>
+		<language>fr-FR</language>
+		
+			<managingEditor>rajekevin@hotmail.fr (MyBearIsYellow)</managingEditor>
+		
+		
+			<webMaster>rajekevin@hotmail.fr (MyBearIsYellow)</webMaster>
+		
+		
+			<copyright>© 2026 MyBearIsYellow</copyright>
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cache Redis</title>
+				<link>http://localhost:1313/bases-de-donnees/cache-redis/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/cache-redis/</guid>
+				<description>Redis est une base clé-valeur en mémoire, utilisée principalement comme cache devant une base relationnelle. Le pattern cache-aside, un TTL bien choisi et une stratégie d&amp;rsquo;invalidation claire sont les trois piliers d&amp;rsquo;un cache Redis fiable.</description>
+			</item>
+			<item>
+				<title>SQL vs NoSQL</title>
+				<link>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
+				<guid>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</guid>
+				<description>SQL et NoSQL ne s&amp;rsquo;opposent pas frontalement : ce sont deux familles d&amp;rsquo;outils avec des compromis différents entre cohérence, flexibilité de schéma et scalabilité. Le bon choix dépend de la forme des données et des contraintes de charge, pas d&amp;rsquo;une mode technique.</description>
+			</item>
+	</channel>
+</rss>

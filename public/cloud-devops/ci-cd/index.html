@@ -1,0 +1,995 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>CI/CD &middot; MyBearIsYellow</title>
+    <meta name="title" content="CI/CD &middot; MyBearIsYellow" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.d46042696de8fa0b52b7f16ead4a5405725ff16a80718fb8fff7455032e722f8.css"
+    integrity="sha256-1GBCaW3o&#43;gtSt/FurUpUBXJf8WqAcY&#43;4//dFUDLnIvg="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.f425dc0437d16a7899ae9a52d6b24bcce59d7f76f156e053f9963809c095c80d.js"
+      integrity="sha256-9CXcBDfRaniZrppS1rJLzOWdf3bxVuBT&#43;ZY4CcCVyA0="
+      data-copy="Copier"
+      data-copied="Copié"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      L&#39;intégration continue et le déploiement continu automatisent les tests, la validation et la mise en production du code à chaque changement. Explication, analogie, diagramme et pipeline GitHub Actions.
+    "
+  />
+  <meta name="keywords" content="Design Patterns, Architecture logicielle, Bases de données, Tests logiciels, Cloud, DevOps, Entretien technique, PHP, Java, JavaScript" />
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/cloud-devops/ci-cd/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/cloud-devops/ci-cd/">
+	<meta property="og:site_name" content="MyBearIsYellow">
+	<meta property="og:title" content="CI/CD">
+	<meta property="og:description" content="L&#39;intégration continue et le déploiement continu automatisent les tests, la validation et la mise en production du code à chaque changement. Explication, analogie, diagramme et pipeline GitHub Actions.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="cloud-devops">
+		<meta property="article:published_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-10T00:00:00+00:00">
+		<meta property="article:tag" content="Ci-Cd">
+		<meta property="article:tag" content="Devops">
+		<meta property="article:tag" content="Docker">
+		<meta property="article:tag" content="Cloud">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="CI/CD">
+	<meta name="twitter:description" content="L&#39;intégration continue et le déploiement continu automatisent les tests, la validation et la mise en production du code à chaque changement. Explication, analogie, diagramme et pipeline GitHub Actions.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Cloud \u0026 DevOps",
+    "name": "CI\/CD",
+    "headline": "CI\/CD",
+    "description": "L\u0027intégration continue et le déploiement continu automatisent les tests, la validation et la mise en production du code à chaque changement. Explication, analogie, diagramme et pipeline GitHub Actions.",
+    "abstract": "CI\/CD désigne l\u0026rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu\u0026rsquo;à la main.",
+    "inLanguage": "fr-FR",
+    "url" : "http:\/\/localhost:1313\/cloud-devops\/ci-cd\/",
+    "author" : {
+      "@type": "Person",
+      "name": "MyBearIsYellow"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-10T00:00:00\u002b00:00",
+    "datePublished": "2026-07-10T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-07-10T00:00:00\u002b00:00",
+    
+    "keywords": ["ci-cd","devops","docker","cloud"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "846"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "My Bear Is Yellow",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/cloud-devops/",
+       "name": "Cloud \u0026 Dev Ops",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Ci Cd",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="MyBearIsYellow" />
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="http://localhost:1313/js/mermaid.bundle.88fecd148a1cbf7bf447a800643054ec2d3e5d4ce01de2fe4a176f4ac4165ae4.js"
+    integrity="sha256-iP7NFIocv3v0R6gAZDBU7C0&#43;XUzgHeL&#43;ShdvSsQWWuQ="
+  ></script>
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-950 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Aller au contenu</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      <a href="/" class="flex flex-shrink-0 items-center gap-1.5 no-underline">
+  <span class="text-2xl leading-none" aria-hidden="true">🐻</span>
+    <span class="text-lg font-bold text-neutral-900 dark:text-neutral">MyBearIs<span class="text-primary-400">Yellow</span></span>
+</a>
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/architecture-logicielle/"
+                      title="Architecture logicielle"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Architecture</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/design-patterns/"
+                      title="Design Patterns"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Design Patterns</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/bases-de-donnees/"
+                      title="Bases de données"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Bases de données</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tests/"
+                      title="Tests"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tests</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/cloud-devops/"
+                      title="Cloud &amp; DevOps"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Cloud &amp; DevOps</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/preparation-entretien/"
+                      title="Préparation entretien"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Entretiens</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Rechercher (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Passer au thème sombre"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Passer au thème clair"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                      </span>
+                    </button>
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/architecture-logicielle/"
+                  title="Architecture logicielle"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Architecture</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/design-patterns/"
+                  title="Design Patterns"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Design Patterns</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/bases-de-donnees/"
+                  title="Bases de données"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Bases de données</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tests/"
+                  title="Tests"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tests</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/cloud-devops/"
+                  title="Cloud &amp; DevOps"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Cloud &amp; DevOps</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/preparation-entretien/"
+                  title="Préparation entretien"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Entretiens</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Rechercher (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span>
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Passer au thème sombre"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Passer au thème clair"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+                  </span>
+                </button>
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/"
+      >MyBearIsYellow</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/cloud-devops/"
+      >Cloud &amp; DevOps</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/cloud-devops/ci-cd/"
+      >CI/CD</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+
+      <div class="mb-5 flex flex-wrap items-center gap-2">
+        
+          <span class="bear-badge-primary">🐻 Cloud &amp; DevOps</span>
+        
+        
+          <span class="bear-badge">Niveau : Intermédiaire</span>
+        
+        
+          <span class="bear-badge">4 min de lecture</span>
+        
+      </div>
+
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        CI/CD
+      </h1>
+
+      
+        <p class="mb-10 rounded-xl border-l-4 border-primary-400 bg-neutral-900/40 px-5 py-4 text-lg leading-relaxed text-neutral-300">
+          CI/CD désigne l&rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu&rsquo;à la main.
+        </p>
+      
+    </header>
+
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Sommaire
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#le-problème">Le problème</a></li>
+    <li><a href="#lidée-générale">L&rsquo;idée générale</a></li>
+    <li><a href="#analogie-du-quotidien">Analogie du quotidien</a></li>
+    <li><a href="#diagramme">Diagramme</a></li>
+    <li><a href="#exemple-de-code">Exemple de code</a></li>
+    <li><a href="#quand-utiliser-le-cicd-">Quand utiliser le CI/CD ?</a></li>
+    <li><a href="#points-importants">Points importants</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="le-problème" class="relative group">Le problème <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#le-probl%c3%a8me" aria-label="Ancre">#</a></span></h2><p>Sans automatisation, mettre du code en production suit un rituel manuel et fragile : un développeur récupère les changements, lance les tests à la main (ou les oublie), compile le projet, se connecte au serveur et copie les fichiers, redémarre le service, et croise les doigts. Chaque étape oubliée ou mal exécutée est une source potentielle de bug en production. Et plus l&rsquo;équipe grandit, plus ce rituel devient un goulot d&rsquo;étranglement : une seule personne qui sait &ldquo;comment on déploie&rdquo; devient un point de défaillance critique.</p>
+<p>Le second problème est la détection tardive des régressions. Si les tests ne sont exécutés qu&rsquo;une fois par semaine, ou seulement avant une mise en production, un bug introduit le lundi peut n&rsquo;être découvert que le vendredi — après avoir été mélangé au travail de plusieurs autres développeurs, rendant sa cause beaucoup plus difficile à isoler.</p>
+<h2 id="lidée-générale" class="relative group">L&rsquo;idée générale <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lid%c3%a9e-g%c3%a9n%c3%a9rale" aria-label="Ancre">#</a></span></h2><p>CI/CD désigne l&rsquo;automatisation du chemin entre l&rsquo;écriture du code et sa mise en production, découpée en plusieurs pratiques complémentaires :</p>
+<ul>
+<li><strong>Continuous Integration (intégration continue)</strong> : à chaque commit poussé, un pipeline automatisé compile le projet et exécute les tests. L&rsquo;objectif est de détecter une régression immédiatement, pas plus tard.</li>
+<li><strong>Continuous Delivery (livraison continue)</strong> : le pipeline va plus loin et prépare automatiquement un artefact prêt à être déployé (image Docker, package versionné), mais le déclenchement final vers la production reste une décision humaine.</li>
+<li><strong>Continuous Deployment (déploiement continu)</strong> : dernière étape de l&rsquo;automatisation — chaque changement qui passe l&rsquo;intégralité du pipeline est déployé en production sans validation manuelle.</li>
+</ul>
+<p>Un pipeline CI/CD typique enchaîne plusieurs étapes séquentielles : récupération du code, installation des dépendances, analyse statique (linting), tests unitaires, tests d&rsquo;intégration, build de l&rsquo;artefact, puis déploiement. Chaque étape doit pouvoir faire échouer le pipeline pour empêcher qu&rsquo;un code défaillant progresse plus loin dans la chaîne.</p>
+<h2 id="analogie-du-quotidien" class="relative group">Analogie du quotidien <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analogie-du-quotidien" aria-label="Ancre">#</a></span></h2><p>Le CI/CD, c&rsquo;est comme une chaîne de contrôle qualité dans une usine automobile. Sans contrôle continu, on assemble toutes les pièces d&rsquo;une voiture et on ne teste qu&rsquo;à la toute fin, en espérant que tout fonctionne — si un défaut est détecté sur le moteur, il faut potentiellement démonter toute la carrosserie déjà assemblée pour y accéder, un coût énorme.</p>
+<p>Avec un contrôle qualité continu, chaque pièce est vérifiée dès qu&rsquo;elle est montée : le moteur est testé avant que la carrosserie ne soit posée dessus, les freins sont vérifiés avant que les roues ne soient recouvertes. Un défaut est détecté au plus tôt, là où il coûte le moins cher à corriger — exactement le principe du <em>fail fast</em> en CI/CD.</p>
+<h2 id="diagramme" class="relative group">Diagramme <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#diagramme" aria-label="Ancre">#</a></span></h2><div class="mermaid" align="center">
+  
+flowchart LR
+    Commit[Commit poussé] --> Lint[Analyse statique]
+    Lint -->|OK| Test[Tests unitaires + intégration]
+    Lint -->|échec| Fail1[Pipeline stoppé]
+    Test -->|OK| Build[Build de l'image Docker]
+    Test -->|échec| Fail2[Pipeline stoppé]
+    Build --> Registry[Publication sur le registre d'images]
+    Registry --> Staging[Déploiement en staging]
+    Staging --> Approve{Validation manuelle ?}
+    Approve -->|Livraison continue| Manuel[Déclenchement manuel en production]
+    Approve -->|Déploiement continu| Auto[Déploiement automatique en production]
+
+</div>
+
+<h2 id="exemple-de-code" class="relative group">Exemple de code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exemple-de-code" aria-label="Ancre">#</a></span></h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># .github/workflows/ci-cd.yml — pipeline GitHub Actions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">CI/CD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">main]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">main]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">test</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Installer Node.js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-node@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;20&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;npm&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Installer les dépendances</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">npm ci</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Analyse statique</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">npm run lint</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Tests unitaires</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">npm test -- --coverage</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build-and-deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">github.ref == &#39;refs/heads/main&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Connexion au registre d&#39;images</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">docker/login-action@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.actor }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build et publication de l&#39;image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">docker/build-push-action@v5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/monorg/mon-api:${{ github.sha }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Déployer sur le cluster de production</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">          kubectl set image deployment/mon-api \
+</span></span></span><span class="line"><span class="cl"><span class="sd">            api=ghcr.io/monorg/mon-api:${{ github.sha }} \
+</span></span></span><span class="line"><span class="cl"><span class="sd">            --record</span><span class="w">
+</span></span></span></code></pre></div><h2 id="quand-utiliser-le-cicd-" class="relative group">Quand utiliser le CI/CD ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#quand-utiliser-le-cicd-" aria-label="Ancre">#</a></span></h2><ul>
+<li>Dès qu&rsquo;une équipe compte plus d&rsquo;une personne : la détection immédiate des conflits et des régressions justifie à elle seule l&rsquo;investissement initial.</li>
+<li>Quand la fréquence de mise en production doit augmenter sans augmenter le risque associé à chaque déploiement.</li>
+<li>Le déploiement continu complet (sans validation manuelle) convient bien aux équipes avec une couverture de tests solide et des mécanismes de rollback automatisés ; à l&rsquo;inverse, la livraison continue avec validation manuelle reste préférable pour des systèmes critiques où une supervision humaine finale est requise (santé, finance réglementée, par exemple).</li>
+</ul>
+<h2 id="points-importants" class="relative group">Points importants <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#points-importants" aria-label="Ancre">#</a></span></h2><ul>
+<li>Un pipeline CI/CD n&rsquo;a de valeur que si les tests qu&rsquo;il exécute sont fiables et suffisamment complets : automatiser un pipeline qui ne teste presque rien donne une fausse impression de sécurité.</li>
+<li>La vitesse du pipeline compte autant que sa fiabilité : un pipeline qui prend 45 minutes décourage les commits fréquents et ralentit toute l&rsquo;équipe — la parallélisation des étapes indépendantes (lint et tests en parallèle, par exemple) est une optimisation courante.</li>
+<li>Les secrets (identifiants de déploiement, clés d&rsquo;API) ne doivent jamais être en clair dans le pipeline : les plateformes CI/CD fournissent un stockage de secrets dédié, chiffré et injecté au runtime.</li>
+<li>Le CI/CD est indissociable de l&rsquo;Infrastructure as Code : décrire l&rsquo;infrastructure cible dans des fichiers versionnés permet au pipeline de déployer de façon reproductible, sans configuration manuelle du serveur cible.</li>
+</ul>
+
+
+        
+          <div class="bear-memory not-prose">
+            <p class="bear-memory-title">🐻 À retenir</p>
+            <ul>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Intégration continue (CI) = automatiser build + tests à chaque commit. Déploiement continu (CD) = automatiser aussi la mise en production, sans intervention humaine.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span><strong>Livraison continue</strong> (continuous delivery) diffère du <strong>déploiement continu</strong> (continuous deployment) par une seule étape : une validation manuelle avant la mise en production, ou son absence totale.</span></li>
+              
+                <li><span class="mt-1 text-primary-400">●</span><span>Un pipeline CI/CD doit échouer vite et clairement (<em>fail fast</em>) : plus une erreur est détectée tôt dans le pipeline, moins elle coûte cher à corriger.</span></li>
+              
+            </ul>
+          </div>
+        
+
+        
+          <div class="bear-faq not-prose">
+            <h2 class="mb-4 text-2xl font-bold text-neutral">Questions d'entretien</h2>
+            
+              <details class="bear-faq-item">
+                <summary>Quelle différence entre intégration continue, livraison continue et déploiement continu ?</summary>
+                <div class="bear-faq-item-body">L&rsquo;intégration continue (CI) automatise la compilation et les tests à chaque commit poussé, pour détecter les régressions au plus tôt. La livraison continue (continuous delivery) va plus loin : le code est automatiquement préparé pour être déployé en production, mais la mise en ligne elle-même reste déclenchée manuellement. Le déploiement continu (continuous deployment) automatise cette dernière étape aussi : chaque commit qui passe les tests est déployé en production sans intervention humaine.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Pourquoi l&#39;intégration continue est-elle importante en équipe ?</summary>
+                <div class="bear-faq-item-body">Parce qu&rsquo;elle détecte les conflits et les régressions immédiatement après un commit, plutôt que des jours ou des semaines plus tard quand plusieurs branches divergentes doivent être fusionnées. Plus l&rsquo;intervalle entre l&rsquo;écriture du code et la détection d&rsquo;un problème est court, moins la correction coûte cher — un bug détecté en CI se corrige en minutes, le même bug détecté en production peut coûter des heures d&rsquo;investigation et impacter des utilisateurs réels.</div>
+              </details>
+            
+              <details class="bear-faq-item">
+                <summary>Comment sécuriser un pipeline de déploiement continu pour éviter de casser la production ?</summary>
+                <div class="bear-faq-item-body">Plusieurs mécanismes se combinent : une suite de tests automatisés suffisamment complète pour attraper les régressions avant le déploiement, des déploiements progressifs (canary release, blue-green deployment) qui limitent l&rsquo;impact d&rsquo;un problème à une fraction du trafic, des health checks automatiques après déploiement, et un rollback automatique si les métriques se dégradent. L&rsquo;objectif est de rendre l&rsquo;échec d&rsquo;un déploiement rare et surtout peu coûteux à corriger.</div>
+              </details>
+            
+          </div>
+        
+      </div>
+    </section>
+
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+        <div class="mb-6 flex flex-wrap gap-2">
+          
+            
+              <a href="http://localhost:1313/tags/ci-cd/" class="bear-tag">#Ci-Cd</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/devops/" class="bear-tag">#Devops</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/docker/" class="bear-tag">#Docker</a>
+            
+          
+            
+              <a href="http://localhost:1313/tags/cloud/" class="bear-tag">#Cloud</a>
+            
+          
+        </div>
+      
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/cloud-devops/docker-explique-simplement/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Docker expliqué simplement</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-10 00:00:00 &#43;0000 UTC">10 juillet 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Faire défiler jusqu&#39;au bas de la page"
+            title="Faire défiler jusqu&#39;au bas de la page"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex list-none flex-col sm:flex-row">
+        
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/notre-histoire/"
+                title="Pourquoi MyBearIsYellow ?"
+                
+                
+                ><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >🐻 Pourquoi ce nom ?</span
+                  >
+                </a
+              >
+            
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2026 MyBearIsYellow
+        </p>
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Passer au thème sombre"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Passer au thème clair"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Rechercher"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Fermer (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{{/* Buttondown embed subscribe form — no API key required, only the account username */}}
+{{ $username := .Site.Params.newsletter.buttondownUsername }}
+{{ if $username }}
+  <div class="bear-newsletter">
+    <div>
+      <p class="text-lg font-bold text-neutral">🐻 Un concept par semaine, dans votre boîte mail</p>
+      <p class="mt-1 max-w-md text-sm text-neutral-400">
+        Pas de spam, pas de blabla : un concept technique expliqué simplement,
+        chaque semaine.
+      </p>
+    </div>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/{{ $username }}"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/{{ $username }}', 'popupwindow')"
+      class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+    >
+      <label for="bd-email" class="sr-only">Adresse e-mail</label>
+      <input type="email" name="email" id="bd-email" placeholder="vous@exemple.com" required />
+      <input type="hidden" value="1" name="embed" />
+      <button type="submit" class="btn-bear-primary whitespace-nowrap">S'abonner</button>
+    </form>
+  </div>
+{{ end }}

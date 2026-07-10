@@ -1,56 +1,30 @@
 baseURL: "https://bearisyellow.me/"
-title: "My Bear Is Yellow"
-theme: "PaperMod"
-languageCode: "en-us"
-copyright: "© 2026 Rajekevin"
+title: "MyBearIsYellow"
+theme: "congo"
+locale: "fr-FR"
+defaultContentLanguage: "fr"
+disableLanguages: ["en"]
+copyright: "© 2026 MyBearIsYellow"
 
-pagination:
-  pagerSize: 10
+languages:
+  fr:
+    label: "Français"
+    weight: 1
 
 enableEmoji: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+summaryLength: 40
 
-ignoreLogs: ['warning-goldmark-raw-html']
+pagination:
+  pagerSize: 12
+
+ignoreLogs: ["warning-goldmark-raw-html"]
 
 minify:
   disableXML: true
-  minifyOutput: true
-
-privacy:
-  disqus:
-    disable: true
-  googleAnalytics:
-    anonymizeIP: true
-    respectDoNotTrack: true
-    useSessionStorage: false
-
-permalinks:
-  posts: "/:contentbasename/"
-
-taxonomies:
-  tag: tags
-  category: categories
-
-menu:
-  main:
-    - name: Articles
-      url: /posts/
-      weight: 1
-    - name: Categories
-      url: /categories/
-      weight: 2
-    - name: Tags
-      url: /tags/
-      weight: 3
-    - name: Archive
-      url: /archives/
-      weight: 4
-    - name: Search
-      url: /search/
-      weight: 5
 
 outputs:
   home:
@@ -63,11 +37,10 @@ markup:
     anchorLineNos: false
     codeFences: true
     guessSyntax: false
-    lineNos: true
-    lineNumbersInTable: true
+    lineNos: false
     noClasses: false
     style: github-dark
-    tabWidth: 4
+    tabWidth: 2
   goldmark:
     renderer:
       unsafe: true
@@ -76,81 +49,137 @@ markup:
     ordered: false
     startLevel: 2
 
+taxonomies:
+  tag: tags
+
+sitemap:
+  excludedKinds: ["taxonomy", "term"]
+
+privacy:
+  vimeo:
+    enableDNT: true
+  x:
+    enableDNT: true
+  youTube:
+    privacyEnhanced: true
+
+menu:
+  main:
+    - name: "Architecture"
+      pageRef: "/architecture-logicielle"
+      weight: 1
+    - name: "Design Patterns"
+      pageRef: "/design-patterns"
+      weight: 2
+    - name: "Bases de données"
+      pageRef: "/bases-de-donnees"
+      weight: 3
+    - name: "Tests"
+      pageRef: "/tests"
+      weight: 4
+    - name: "Cloud & DevOps"
+      pageRef: "/cloud-devops"
+      weight: 5
+    - name: "Entretiens"
+      pageRef: "/preparation-entretien"
+      weight: 6
+    - name: "Recherche"
+      params:
+        action: "search"
+        icon: "search"
+        showName: false
+      weight: 7
+    - name: "Apparence"
+      params:
+        action: "appearance"
+        icon: "moon"
+        showName: false
+      weight: 8
+
+  footer:
+    - name: "🐻 Pourquoi ce nom ?"
+      pageRef: "/notre-histoire"
+      weight: 1
+
 params:
   env: production
-  title: "My Bear Is Yellow"
-  description: "Technical blog about web development, programming, and computer science."
+  title: "MyBearIsYellow"
+  mainSections:
+    - concept
+    - interview-hub
+  description: "Les concepts du développement expliqués simplement : Design Patterns, Architecture, Bases de données, Tests, Cloud et DevOps — pour comprendre, retenir et réussir vos entretiens techniques."
+  tagline: "Comprendre les concepts techniques. Les expliquer simplement."
   keywords:
-    - Blog
-    - Development
-    - Programming
-    - Web Development
+    - Design Patterns
+    - Architecture logicielle
+    - Bases de données
+    - Tests logiciels
+    - Cloud
+    - DevOps
+    - Entretien technique
     - PHP
+    - Java
     - JavaScript
-    - Tutorial
 
   author:
-    name: "Rajekevin"
+    name: "MyBearIsYellow"
     email: "rajekevin@hotmail.fr"
 
-  # ===============================
-  # HOMEPAGE (IMPORTANT)
-  # ===============================
-  homeInfoParams:
-    Title: "Contactez-moi"
-    Content: |
-      Vous avez des questions ou des idées sur les sujets abordés ? 
-      Que vous soyez développeur ou passionné de tech, n'hésitez pas à me contacter, je serai ravi d’échanger avec vous !
+  colorScheme: "bear"
+  defaultAppearance: "dark"
+  autoSwitchAppearance: false
 
-      Retrouvez-moi sur les réseaux sociaux pour plus de discussions et d’astuces :
+  enableSearch: true
+  enableCodeCopy: true
+  enableImageLazyLoading: true
+  enableImageWebp: true
+  enableQuicklink: true
 
-  # Sections affichées sur la homepage
-  mainSections:
-    - posts
+  fingerprintAlgorithm: "sha256"
 
-  defaultTheme: auto
-  disableThemeToggle: false
+  header:
+    layout: "hybrid"
+    showTitle: true
 
-  # Features
-  ShowReadingTime: true
-  ShowShareButtons: false
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: false
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: true
-  tocopen: false
+  footer:
+    showCopyright: true
+    showThemeAttribution: false
+    showAppearanceSwitcher: true
+    showScrollToTop: true
 
-  assets:
-    disableHLJS: false
-    disableFingerprinting: false
+  homepage:
+    layout: "custom"
+    showRecent: true
+    recentLimit: 6
 
-  socialIcons:
-    - name: github
-      url: "https://github.com/rajekevin"
-    - name: twitter
-      url: "https://twitter.com/iamrkvin"
-    - name: linkedin
-      url: "https://linkedin.com/in/rajekevin"
-    - name: email
-      url: "mailto:rajekevin@hotmail.fr"
+  article:
+    showDate: true
+    showDateUpdated: false
+    showAuthor: false
+    showBreadcrumbs: true
+    showDraftLabel: true
+    showEdit: false
+    showHeadingAnchors: true
+    showPagination: true
+    showReadingTime: true
+    showTableOfContents: true
+    showTaxonomies: true
+    showWordCount: false
+    showComments: false
 
-  cover:
-    hidden: false
-    hiddenInList: false
-    hiddenInSingle: false
+  list:
+    showBreadcrumbs: true
+    showSummary: true
+    showTableOfContents: false
+    showTaxonomies: true
+    groupByYear: false
+    paginationWidth: 1
 
-  editPost:
-    URL: "https://github.com/Rajekevin/monoursestjaune/tree/master/content"
-    Text: "Suggest Changes"
-    appendFilePath: true
+  taxonomy:
+    showTermCount: true
+
+  newsletter:
+    buttondownUsername: "MasterSinge"
 
   fuseOpts:
     isCaseSensitive: false
@@ -158,13 +187,17 @@ params:
     location: 0
     distance: 1000
     threshold: 0.4
-    minMatchCharLength: 0
+    minMatchCharLength: 2
     keys:
       - title
       - permalink
       - summary
       - content
 
-  label:
-    text: "My Bear Is Yellow"
-    iconHeight: 35
+  socialIcons:
+    - name: github
+      url: "https://github.com/rajekevin"
+    - name: linkedin
+      url: "https://linkedin.com/in/rajekevin"
+    - name: email
+      url: "mailto:rajekevin@hotmail.fr"

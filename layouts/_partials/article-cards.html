@@ -1,0 +1,24 @@
+{{/* Grid of article cards — used by concept/list.html, taxonomy.html and term.html */}}
+{{ $pages := .Pages }}
+{{ if $pages }}
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range $pages }}
+      <a href="{{ .Permalink }}" class="bear-card">
+        {{ with .Params.category }}
+          <span class="text-xs font-semibold uppercase tracking-wide text-primary-400">{{ . }}</span>
+        {{ end }}
+        <span class="bear-card-title">{{ .Title | emojify }}</span>
+        {{ with (.Params.summary | default .Summary) }}
+          <span class="bear-card-desc line-clamp-3">{{ . | plainify }}</span>
+        {{ end }}
+        <span class="mt-1 flex flex-wrap items-center gap-2 text-xs text-neutral-500">
+          {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
+          {{ if and .Params.difficulty (ne .ReadingTime 0) }}<span>&middot;</span>{{ end }}
+          {{ if ne .ReadingTime 0 }}<span>{{ .ReadingTime }} min</span>{{ end }}
+        </span>
+      </a>
+    {{ end }}
+  </div>
+{{ else }}
+  <p class="mt-10 text-neutral-400"><em>{{ i18n "list.no_articles" | emojify }}</em></p>
+{{ end }}
