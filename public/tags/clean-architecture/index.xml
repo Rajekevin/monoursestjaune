@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Clean-Architecture on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/clean-architecture/</link>
+		<link>http://localhost:49552/tags/clean-architecture/</link>
 		<description>Recent content in Clean-Architecture on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,33 +18,33 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Architecture hexagonale</title>
-				<link>http://localhost:1313/architecture-logicielle/architecture-hexagonale/</link>
+				<link>http://localhost:49552/architecture-logicielle/architecture-hexagonale/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/architecture-hexagonale/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/architecture-hexagonale/</guid>
 				<description>L&amp;rsquo;architecture hexagonale (Ports &amp;amp; Adapters) place le métier au centre et le connecte au monde extérieur via des ports — des interfaces définies par le métier — implémentés par des adaptateurs interchangeables. La base de données, l&amp;rsquo;API REST ou la CLI ne sont que des détails branchés sur ces ports.</description>
 			</item>
 			<item>
 				<title>Clean Architecture expliquée simplement</title>
-				<link>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</link>
+				<link>http://localhost:49552/architecture-logicielle/clean-architecture-expliquee-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/clean-architecture-expliquee-simplement/</guid>
 				<description>La Clean Architecture organise le code en cercles concentriques : le métier au centre, les détails techniques (base de données, framework, UI) à l&amp;rsquo;extérieur. La règle est simple — les dépendances ne pointent jamais vers l&amp;rsquo;extérieur.</description>
 			</item>
 			<item>
 				<title>Domain Driven Design (DDD)</title>
-				<link>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</link>
+				<link>http://localhost:49552/architecture-logicielle/domain-driven-design-ddd/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/domain-driven-design-ddd/</guid>
 				<description>Le Domain Driven Design (DDD) est autant une démarche de modélisation métier qu&amp;rsquo;une technique de code. Il propose un vocabulaire partagé avec les experts métier, des frontières explicites entre sous-domaines (bounded context), et des règles précises pour modéliser entités, value objects et agrégats.</description>
 			</item>
 			<item>
 				<title>Qu&#39;est-ce qu&#39;une architecture logicielle ?</title>
-				<link>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</link>
+				<link>http://localhost:49552/architecture-logicielle/quest-ce-quune-architecture-logicielle/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/quest-ce-quune-architecture-logicielle/</guid>
 				<description>L&amp;rsquo;architecture logicielle, ce n&amp;rsquo;est pas un diagramme ou un framework : c&amp;rsquo;est l&amp;rsquo;ensemble des décisions structurelles qui coûtent cher à changer une fois prises. Comprendre cette notion, c&amp;rsquo;est apprendre à distinguer ce qui est difficile à défaire de ce qui ne l&amp;rsquo;est pas.</description>
 			</item>
 	</channel>

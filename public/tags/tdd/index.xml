@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tdd on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/tdd/</link>
+		<link>http://localhost:49552/tags/tdd/</link>
 		<description>Recent content in Tdd on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,19 +18,19 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>BDD avec Gherkin</title>
-				<link>http://localhost:1313/tests/bdd-avec-gherkin/</link>
+				<link>http://localhost:49552/tests/bdd-avec-gherkin/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/tests/bdd-avec-gherkin/</guid>
+				<guid>http://localhost:49552/tests/bdd-avec-gherkin/</guid>
 				<description>Le BDD (Behavior-Driven Development) décrit le comportement attendu d&amp;rsquo;un système en langage naturel structuré, via la syntaxe Gherkin (Given/When/Then), pour que développeurs, testeurs et experts métier partagent une seule source de vérité, exécutable comme un test.</description>
 			</item>
 			<item>
 				<title>TDD expliqué simplement</title>
-				<link>http://localhost:1313/tests/tdd-explique-simplement/</link>
+				<link>http://localhost:49552/tests/tdd-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/tests/tdd-explique-simplement/</guid>
+				<guid>http://localhost:49552/tests/tdd-explique-simplement/</guid>
 				<description>Le TDD (Test-Driven Development) consiste à écrire un test qui échoue avant d&amp;rsquo;écrire le code qui le fait passer, puis à améliorer la structure une fois le comportement validé. Ce cycle court — Red, Green, Refactor — guide la conception au lieu de la vérifier après coup.</description>
 			</item>
 	</channel>

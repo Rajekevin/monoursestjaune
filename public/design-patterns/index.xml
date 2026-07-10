@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Design Patterns on MyBearIsYellow</title>
-		<link>http://localhost:1313/design-patterns/</link>
+		<link>http://localhost:49552/design-patterns/</link>
 		<description>Recent content in Design Patterns on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,75 +18,75 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/design-patterns/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Le Pattern Abstract Factory expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/abstract-factory/</link>
+				<link>http://localhost:49552/design-patterns/abstract-factory/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/abstract-factory/</guid>
+				<guid>http://localhost:49552/design-patterns/abstract-factory/</guid>
 				<description>L&amp;rsquo;Abstract Factory va plus loin que la Factory simple : elle garantit qu&amp;rsquo;un ensemble d&amp;rsquo;objets liés entre eux (une famille) reste toujours cohérent, en regroupant plusieurs méthodes de création derrière une seule interface.</description>
 			</item>
 			<item>
 				<title>Le Pattern Adapter expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/adapter/</link>
+				<link>http://localhost:49552/design-patterns/adapter/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/adapter/</guid>
+				<guid>http://localhost:49552/design-patterns/adapter/</guid>
 				<description>Le Adapter Pattern permet à deux interfaces incompatibles de fonctionner ensemble, sans modifier ni l&amp;rsquo;une ni l&amp;rsquo;autre. Il s&amp;rsquo;intercale entre le code appelant et une librairie tierce pour traduire les appels d&amp;rsquo;un contrat vers un autre.</description>
 			</item>
 			<item>
 				<title>Le Pattern Builder expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/builder/</link>
+				<link>http://localhost:49552/design-patterns/builder/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/builder/</guid>
+				<guid>http://localhost:49552/design-patterns/builder/</guid>
 				<description>Le Builder Pattern sépare la construction d&amp;rsquo;un objet complexe en une série d&amp;rsquo;étapes chaînées, chacune configurant une partie de l&amp;rsquo;objet. Il évite les constructeurs à rallonge et rend le code de construction lisible, même avec de nombreux paramètres optionnels.</description>
 			</item>
 			<item>
 				<title>Le Pattern Decorator expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/decorator/</link>
+				<link>http://localhost:49552/design-patterns/decorator/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/decorator/</guid>
+				<guid>http://localhost:49552/design-patterns/decorator/</guid>
 				<description>Le Decorator Pattern permet d&amp;rsquo;ajouter dynamiquement des responsabilités à un objet, en l&amp;rsquo;enveloppant dans une ou plusieurs couches qui respectent la même interface. Une alternative à l&amp;rsquo;héritage quand les combinaisons de comportements se multiplient.</description>
 			</item>
 			<item>
 				<title>Le Pattern Dependency Injection expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/dependency-injection/</link>
+				<link>http://localhost:49552/design-patterns/dependency-injection/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/dependency-injection/</guid>
+				<guid>http://localhost:49552/design-patterns/dependency-injection/</guid>
 				<description>L&amp;rsquo;injection de dépendances (Dependency Injection) consiste à fournir à un objet ce dont il a besoin depuis l&amp;rsquo;extérieur, plutôt que de le laisser construire lui-même ses dépendances. Un principe simple qui rend le code testable et remplaçable.</description>
 			</item>
 			<item>
 				<title>Le Pattern Factory expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/factory/</link>
+				<link>http://localhost:49552/design-patterns/factory/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/factory/</guid>
+				<guid>http://localhost:49552/design-patterns/factory/</guid>
 				<description>Le Factory Pattern encapsule la logique de création d&amp;rsquo;un objet dans une méthode ou une classe dédiée, plutôt que de disperser des &lt;code&gt;new&lt;/code&gt; conditionnels dans tout le code. Le client dépend d&amp;rsquo;une interface, jamais des classes concrètes créées derrière.</description>
 			</item>
 			<item>
 				<title>Le Pattern Observer expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/observer/</link>
+				<link>http://localhost:49552/design-patterns/observer/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/observer/</guid>
+				<guid>http://localhost:49552/design-patterns/observer/</guid>
 				<description>L&amp;rsquo;Observer Pattern définit une relation un-à-plusieurs : quand un objet change d&amp;rsquo;état, tous ses abonnés sont notifiés automatiquement, sans que l&amp;rsquo;émetteur ait besoin de connaître leur nature exacte. C&amp;rsquo;est le pattern derrière les event listeners et les systèmes pub/sub.</description>
 			</item>
 			<item>
 				<title>Le Pattern Repository expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/repository/</link>
+				<link>http://localhost:49552/design-patterns/repository/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/repository/</guid>
+				<guid>http://localhost:49552/design-patterns/repository/</guid>
 				<description>Le Repository Pattern cache les détails de stockage (SQL, ORM, API externe) derrière une interface orientée métier. Le domaine manipule des objets, pas des requêtes — l&amp;rsquo;implémentation concrète du stockage reste un détail interchangeable.</description>
 			</item>
 			<item>
 				<title>Le Pattern Singleton expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/singleton/</link>
+				<link>http://localhost:49552/design-patterns/singleton/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/singleton/</guid>
+				<guid>http://localhost:49552/design-patterns/singleton/</guid>
 				<description>Le Singleton garantit qu&amp;rsquo;une classe n&amp;rsquo;a qu&amp;rsquo;une seule instance, accessible depuis n&amp;rsquo;importe où dans l&amp;rsquo;application. Pratique en apparence, mais c&amp;rsquo;est aussi l&amp;rsquo;un des patterns les plus critiqués : il introduit un état global qui rend le code difficile à tester et à faire évoluer.</description>
 			</item>
 			<item>
 				<title>Le Pattern Strategy expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/strategy/</link>
+				<link>http://localhost:49552/design-patterns/strategy/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/strategy/</guid>
+				<guid>http://localhost:49552/design-patterns/strategy/</guid>
 				<description>Le Strategy Pattern permet de faire varier un comportement indépendamment du code qui l&amp;rsquo;utilise. Au lieu d&amp;rsquo;empiler des &lt;code&gt;if/else&lt;/code&gt;, on encapsule chaque variante dans sa propre classe, interchangeable à tout moment.</description>
 			</item>
 	</channel>

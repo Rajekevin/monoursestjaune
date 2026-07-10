@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Kubernetes on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/kubernetes/</link>
+		<link>http://localhost:49552/tags/kubernetes/</link>
 		<description>Recent content in Kubernetes on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,19 +18,19 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Kubernetes expliqué simplement</title>
-				<link>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</link>
+				<link>http://localhost:49552/cloud-devops/kubernetes-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</guid>
+				<guid>http://localhost:49552/cloud-devops/kubernetes-explique-simplement/</guid>
 				<description>Kubernetes est un orchestrateur de conteneurs : il décide où et comment exécuter des conteneurs Docker sur un ensemble de machines, les redémarre automatiquement en cas de panne, et ajuste leur nombre selon la charge.</description>
 			</item>
 			<item>
 				<title>Scalabilité</title>
-				<link>http://localhost:1313/cloud-devops/scalabilite/</link>
+				<link>http://localhost:49552/cloud-devops/scalabilite/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/cloud-devops/scalabilite/</guid>
+				<guid>http://localhost:49552/cloud-devops/scalabilite/</guid>
 				<description>La scalabilité est la capacité d&amp;rsquo;un système à absorber une charge croissante sans dégrader ses performances. Elle se joue sur deux axes — vertical et horizontal — et repose sur un principe clé : rendre les services sans état pour pouvoir en multiplier les instances.</description>
 			</item>
 	</channel>

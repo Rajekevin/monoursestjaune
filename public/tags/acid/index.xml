@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Acid on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/acid/</link>
+		<link>http://localhost:49552/tags/acid/</link>
 		<description>Recent content in Acid on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,19 +18,19 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/acid/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/acid/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Isolation transactionnelle</title>
-				<link>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</link>
+				<link>http://localhost:49552/bases-de-donnees/isolation-transactionnelle/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</guid>
+				<guid>http://localhost:49552/bases-de-donnees/isolation-transactionnelle/</guid>
 				<description>Plusieurs transactions peuvent s&amp;rsquo;exécuter en même temps sur les mêmes données. Le niveau d&amp;rsquo;isolation choisi détermine ce qu&amp;rsquo;une transaction a le droit de voir des autres transactions en cours — un arbitrage entre cohérence stricte et performance.</description>
 			</item>
 			<item>
 				<title>Transactions ACID</title>
-				<link>http://localhost:1313/bases-de-donnees/transactions-acid/</link>
+				<link>http://localhost:49552/bases-de-donnees/transactions-acid/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/bases-de-donnees/transactions-acid/</guid>
+				<guid>http://localhost:49552/bases-de-donnees/transactions-acid/</guid>
 				<description>Une transaction regroupe plusieurs opérations en un bloc tout-ou-rien. Les propriétés ACID — Atomicité, Cohérence, Isolation, Durabilité — garantissent qu&amp;rsquo;elle ne laisse jamais la base dans un état incohérent, même en cas de panne ou d&amp;rsquo;accès concurrent.</description>
 			</item>
 	</channel>

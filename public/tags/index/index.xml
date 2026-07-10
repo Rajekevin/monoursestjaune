@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Index on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/index/</link>
+		<link>http://localhost:49552/tags/index/</link>
 		<description>Recent content in Index on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,12 +18,12 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/index/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/index/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Index BDD</title>
-				<link>http://localhost:1313/bases-de-donnees/index-bdd/</link>
+				<link>http://localhost:49552/bases-de-donnees/index-bdd/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/bases-de-donnees/index-bdd/</guid>
+				<guid>http://localhost:49552/bases-de-donnees/index-bdd/</guid>
 				<description>Un index permet au moteur de retrouver des lignes sans parcourir toute la table, au prix d&amp;rsquo;un espace disque et d&amp;rsquo;un coût supplémentaire à chaque écriture. Comprendre ce compromis est essentiel pour optimiser des requêtes en entretien comme en production.</description>
 			</item>
 	</channel>

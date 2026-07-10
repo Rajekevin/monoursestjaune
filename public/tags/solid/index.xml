@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Solid on MyBearIsYellow</title>
-		<link>http://localhost:1313/tags/solid/</link>
+		<link>http://localhost:49552/tags/solid/</link>
 		<description>Recent content in Solid on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,54 +18,54 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/solid/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:49552/tags/solid/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Couplage fort vs faible</title>
-				<link>http://localhost:1313/architecture-logicielle/couplage-fort-vs-faible/</link>
+				<link>http://localhost:49552/architecture-logicielle/couplage-fort-vs-faible/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/couplage-fort-vs-faible/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/couplage-fort-vs-faible/</guid>
 				<description>Le couplage mesure à quel point un composant dépend d&amp;rsquo;un autre. Un couplage fort rend le système fragile et difficile à faire évoluer ; un couplage faible, obtenu via des interfaces et l&amp;rsquo;injection de dépendance, permet de changer une implémentation sans toucher au code qui l&amp;rsquo;utilise.</description>
 			</item>
 			<item>
 				<title>Le Pattern Decorator expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/decorator/</link>
+				<link>http://localhost:49552/design-patterns/decorator/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/decorator/</guid>
+				<guid>http://localhost:49552/design-patterns/decorator/</guid>
 				<description>Le Decorator Pattern permet d&amp;rsquo;ajouter dynamiquement des responsabilités à un objet, en l&amp;rsquo;enveloppant dans une ou plusieurs couches qui respectent la même interface. Une alternative à l&amp;rsquo;héritage quand les combinaisons de comportements se multiplient.</description>
 			</item>
 			<item>
 				<title>Le Pattern Dependency Injection expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/dependency-injection/</link>
+				<link>http://localhost:49552/design-patterns/dependency-injection/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/dependency-injection/</guid>
+				<guid>http://localhost:49552/design-patterns/dependency-injection/</guid>
 				<description>L&amp;rsquo;injection de dépendances (Dependency Injection) consiste à fournir à un objet ce dont il a besoin depuis l&amp;rsquo;extérieur, plutôt que de le laisser construire lui-même ses dépendances. Un principe simple qui rend le code testable et remplaçable.</description>
 			</item>
 			<item>
 				<title>Le Pattern Strategy expliqué simplement</title>
-				<link>http://localhost:1313/design-patterns/strategy/</link>
+				<link>http://localhost:49552/design-patterns/strategy/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/design-patterns/strategy/</guid>
+				<guid>http://localhost:49552/design-patterns/strategy/</guid>
 				<description>Le Strategy Pattern permet de faire varier un comportement indépendamment du code qui l&amp;rsquo;utilise. Au lieu d&amp;rsquo;empiler des &lt;code&gt;if/else&lt;/code&gt;, on encapsule chaque variante dans sa propre classe, interchangeable à tout moment.</description>
 			</item>
 			<item>
 				<title>Qu&#39;est-ce qu&#39;une architecture logicielle ?</title>
-				<link>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</link>
+				<link>http://localhost:49552/architecture-logicielle/quest-ce-quune-architecture-logicielle/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/quest-ce-quune-architecture-logicielle/</guid>
 				<description>L&amp;rsquo;architecture logicielle, ce n&amp;rsquo;est pas un diagramme ou un framework : c&amp;rsquo;est l&amp;rsquo;ensemble des décisions structurelles qui coûtent cher à changer une fois prises. Comprendre cette notion, c&amp;rsquo;est apprendre à distinguer ce qui est difficile à défaire de ce qui ne l&amp;rsquo;est pas.</description>
 			</item>
 			<item>
 				<title>Séparation des responsabilités</title>
-				<link>http://localhost:1313/architecture-logicielle/separation-des-responsabilites/</link>
+				<link>http://localhost:49552/architecture-logicielle/separation-des-responsabilites/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/separation-des-responsabilites/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/separation-des-responsabilites/</guid>
 				<description>Séparer les responsabilités, ce n&amp;rsquo;est pas seulement écrire des petites classes : c&amp;rsquo;est isoler chaque raison de changer dans sa propre unité, que ce soit une classe, un module ou une couche entière du système. Bien fait, un changement métier ne touche qu&amp;rsquo;un seul endroit du code.</description>
 			</item>
 			<item>
 				<title>SOLID expliqué simplement</title>
-				<link>http://localhost:1313/architecture-logicielle/solid-explique-simplement/</link>
+				<link>http://localhost:49552/architecture-logicielle/solid-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:1313/architecture-logicielle/solid-explique-simplement/</guid>
+				<guid>http://localhost:49552/architecture-logicielle/solid-explique-simplement/</guid>
 				<description>SOLID est un acronyme regroupant cinq principes de conception orientée objet formulés par Robert C. Martin : Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation et Dependency Inversion. Ensemble, ils visent un seul objectif : pouvoir faire évoluer le code sans le casser.</description>
 			</item>
 	</channel>
