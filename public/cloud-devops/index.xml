@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Cloud &amp; DevOps on MyBearIsYellow</title>
-		<link>http://localhost:49552/cloud-devops/</link>
+		<link>http://localhost:1313/cloud-devops/</link>
 		<description>Recent content in Cloud &amp; DevOps on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,61 +18,61 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:49552/cloud-devops/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/cloud-devops/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>CI/CD</title>
-				<link>http://localhost:49552/cloud-devops/ci-cd/</link>
+				<link>http://localhost:1313/cloud-devops/ci-cd/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/ci-cd/</guid>
+				<guid>http://localhost:1313/cloud-devops/ci-cd/</guid>
 				<description>CI/CD désigne l&amp;rsquo;automatisation du chemin entre un commit de code et sa mise en production : compilation, tests, validation, puis déploiement, exécutés automatiquement à chaque changement plutôt qu&amp;rsquo;à la main.</description>
 			</item>
 			<item>
 				<title>Docker expliqué simplement</title>
-				<link>http://localhost:49552/cloud-devops/docker-explique-simplement/</link>
+				<link>http://localhost:1313/cloud-devops/docker-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/docker-explique-simplement/</guid>
+				<guid>http://localhost:1313/cloud-devops/docker-explique-simplement/</guid>
 				<description>Docker empaquette une application avec toutes ses dépendances dans un conteneur : un environnement isolé, portable et identique du poste du développeur à la production. Fini le &amp;ldquo;ça marche sur ma machine&amp;rdquo;.</description>
 			</item>
 			<item>
 				<title>IaaS, PaaS, SaaS</title>
-				<link>http://localhost:49552/cloud-devops/iaas-paas-saas/</link>
+				<link>http://localhost:1313/cloud-devops/iaas-paas-saas/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/iaas-paas-saas/</guid>
+				<guid>http://localhost:1313/cloud-devops/iaas-paas-saas/</guid>
 				<description>IaaS, PaaS et SaaS sont trois façons de consommer le cloud, qui se distinguent par la part de la stack technique gérée par le fournisseur. Plus on monte dans l&amp;rsquo;abstraction, moins on a de contrôle — mais moins on a aussi à maintenir.</description>
 			</item>
 			<item>
 				<title>Infrastructure as Code</title>
-				<link>http://localhost:49552/cloud-devops/infrastructure-as-code/</link>
+				<link>http://localhost:1313/cloud-devops/infrastructure-as-code/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/infrastructure-as-code/</guid>
+				<guid>http://localhost:1313/cloud-devops/infrastructure-as-code/</guid>
 				<description>L&amp;rsquo;Infrastructure as Code consiste à décrire l&amp;rsquo;infrastructure cloud (serveurs, réseaux, bases de données) dans des fichiers de configuration versionnés, plutôt que de la configurer manuellement via une console. L&amp;rsquo;infrastructure devient reproductible, relisable et testable comme du code applicatif.</description>
 			</item>
 			<item>
 				<title>Kubernetes expliqué simplement</title>
-				<link>http://localhost:49552/cloud-devops/kubernetes-explique-simplement/</link>
+				<link>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/kubernetes-explique-simplement/</guid>
+				<guid>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</guid>
 				<description>Kubernetes est un orchestrateur de conteneurs : il décide où et comment exécuter des conteneurs Docker sur un ensemble de machines, les redémarre automatiquement en cas de panne, et ajuste leur nombre selon la charge.</description>
 			</item>
 			<item>
 				<title>Monitoring</title>
-				<link>http://localhost:49552/cloud-devops/monitoring/</link>
+				<link>http://localhost:1313/cloud-devops/monitoring/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/monitoring/</guid>
+				<guid>http://localhost:1313/cloud-devops/monitoring/</guid>
 				<description>Le monitoring consiste à observer en continu l&amp;rsquo;état d&amp;rsquo;un système en production grâce à trois piliers complémentaires — métriques, logs et traces — pour détecter un problème et alerter avant, ou au pire au moment où, les utilisateurs le ressentent.</description>
 			</item>
 			<item>
 				<title>Qu&#39;est-ce que le Cloud ?</title>
-				<link>http://localhost:49552/cloud-devops/quest-ce-que-le-cloud/</link>
+				<link>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/quest-ce-que-le-cloud/</guid>
+				<guid>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</guid>
 				<description>Le cloud computing, c&amp;rsquo;est louer de la puissance de calcul, du stockage et des services réseau à la demande plutôt que d&amp;rsquo;acheter et de gérer ses propres serveurs. On passe d&amp;rsquo;un investissement fixe à une dépense variable, ajustable en quelques clics.</description>
 			</item>
 			<item>
 				<title>Scalabilité</title>
-				<link>http://localhost:49552/cloud-devops/scalabilite/</link>
+				<link>http://localhost:1313/cloud-devops/scalabilite/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/cloud-devops/scalabilite/</guid>
+				<guid>http://localhost:1313/cloud-devops/scalabilite/</guid>
 				<description>La scalabilité est la capacité d&amp;rsquo;un système à absorber une charge croissante sans dégrader ses performances. Elle se joue sur deux axes — vertical et horizontal — et repose sur un principe clé : rendre les services sans état pour pouvoir en multiplier les instances.</description>
 			</item>
 	</channel>

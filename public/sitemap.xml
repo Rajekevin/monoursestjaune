@@ -8,41 +8,14 @@
   
     
       <url>
-            <loc>http://localhost:49552/architecture-logicielle/architecture-hexagonale/</loc>
+            <loc>http://localhost:1313/architecture-logicielle/architecture-hexagonale/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/architecture-logicielle/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/bases-de-donnees/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/tests/bdd-avec-gherkin/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/bases-de-donnees/cache-redis/</loc>
+            <loc>http://localhost:1313/architecture-logicielle/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -51,14 +24,7 @@
   
     
       <url>
-            <loc>http://localhost:49552/cloud-devops/ci-cd/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/architecture-logicielle/clean-architecture-expliquee-simplement/</loc>
+            <loc>http://localhost:1313/bases-de-donnees/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -69,21 +35,14 @@
   
     
       <url>
-            <loc>http://localhost:49552/cloud-devops/</loc>
+            <loc>http://localhost:1313/tests/bdd-avec-gherkin/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/architecture-logicielle/couplage-fort-vs-faible/</loc>
+            <loc>http://localhost:1313/bases-de-donnees/cache-redis/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -92,52 +51,14 @@
   
     
       <url>
-            <loc>http://localhost:49552/design-patterns/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/cloud-devops/docker-explique-simplement/</loc>
+            <loc>http://localhost:1313/cloud-devops/ci-cd/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/architecture-logicielle/domain-driven-design-ddd/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/cloud-devops/iaas-paas-saas/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/bases-de-donnees/index-bdd/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/cloud-devops/infrastructure-as-code/</loc>
+            <loc>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -148,7 +69,30 @@
   
     
       <url>
-            <loc>http://localhost:49552/bases-de-donnees/isolation-transactionnelle/</loc>
+            <loc>http://localhost:1313/cloud-devops/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/bases-de-donnees/comment-fonctionne-une-base-relationnelle/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/architecture-logicielle/couplage-fort-vs-faible/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/design-patterns/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -161,98 +105,14 @@
   
     
       <url>
-            <loc>http://localhost:49552/cloud-devops/kubernetes-explique-simplement/</loc>
+            <loc>http://localhost:1313/cloud-devops/docker-explique-simplement/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/design-patterns/abstract-factory/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/adapter/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/builder/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/decorator/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/dependency-injection/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/factory/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/observer/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/repository/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/singleton/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/design-patterns/strategy/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/tests/mock-vs-stub/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/cloud-devops/monitoring/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/</loc>
+            <loc>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -261,7 +121,34 @@
   
     
       <url>
-            <loc>http://localhost:49552/bases-de-donnees/normalisation/</loc>
+            <loc>http://localhost:1313/cloud-devops/iaas-paas-saas/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/bases-de-donnees/index-bdd/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/cloud-devops/infrastructure-as-code/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/bases-de-donnees/isolation-transactionnelle/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -273,108 +160,99 @@
     
   
     
-  
-    
       <url>
-            <loc>http://localhost:49552/tests/pourquoi-ecrire-des-tests/</loc>
+            <loc>http://localhost:1313/cloud-devops/kubernetes-explique-simplement/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/tests/pyramide-des-tests/</loc>
+            <loc>http://localhost:1313/design-patterns/abstract-factory/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/architecture-logicielle/quest-ce-quune-architecture-logicielle/</loc>
+            <loc>http://localhost:1313/design-patterns/adapter/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/cloud-devops/quest-ce-que-le-cloud/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/bases-de-donnees/replication/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/cloud-devops/scalabilite/</loc>
+            <loc>http://localhost:1313/design-patterns/builder/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/architecture-logicielle/separation-des-responsabilites/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/architecture-logicielle/solid-explique-simplement/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/bases-de-donnees/sql-explique-simplement/</loc>
+            <loc>http://localhost:1313/design-patterns/decorator/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/bases-de-donnees/sql-vs-nosql/</loc>
-            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:49552/tests/tdd-explique-simplement/</loc>
+            <loc>http://localhost:1313/design-patterns/dependency-injection/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/tests/test-unitaire-vs-integration/</loc>
+            <loc>http://localhost:1313/design-patterns/factory/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
+      <url>
+            <loc>http://localhost:1313/design-patterns/observer/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
   
     
       <url>
-            <loc>http://localhost:49552/tests/</loc>
+            <loc>http://localhost:1313/design-patterns/repository/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/design-patterns/singleton/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/design-patterns/strategy/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/mock-vs-stub/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/cloud-devops/monitoring/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -383,7 +261,43 @@
   
     
       <url>
-            <loc>http://localhost:49552/bases-de-donnees/transactions-acid/</loc>
+            <loc>http://localhost:1313/bases-de-donnees/normalisation/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/pourquoi-ecrire-des-tests/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/pyramide-des-tests/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/architecture-logicielle/quest-ce-quune-architecture-logicielle/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/cloud-devops/quest-ce-que-le-cloud/</loc>
             <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
@@ -392,19 +306,105 @@
   
     
       <url>
-            <loc>http://localhost:49552/notre-histoire/</loc>
+            <loc>http://localhost:1313/bases-de-donnees/replication/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/cloud-devops/scalabilite/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/preparation-entretien/</loc>
+            <loc>http://localhost:1313/architecture-logicielle/separation-des-responsabilites/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/architecture-logicielle/solid-explique-simplement/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/bases-de-donnees/sql-explique-simplement/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:49552/preparation-entretien/questions-backend/</loc>
+            <loc>http://localhost:1313/bases-de-donnees/sql-vs-nosql/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/tdd-explique-simplement/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/test-unitaire-vs-integration/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/tests/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/bases-de-donnees/transactions-acid/</loc>
+            <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/notre-histoire/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/preparation-entretien/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/preparation-entretien/questions-backend/</loc>
           </url>
     
   

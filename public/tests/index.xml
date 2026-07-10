@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tests on MyBearIsYellow</title>
-		<link>http://localhost:49552/tests/</link>
+		<link>http://localhost:1313/tests/</link>
 		<description>Recent content in Tests on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,47 +18,47 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:49552/tests/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tests/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>BDD avec Gherkin</title>
-				<link>http://localhost:49552/tests/bdd-avec-gherkin/</link>
+				<link>http://localhost:1313/tests/bdd-avec-gherkin/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/bdd-avec-gherkin/</guid>
+				<guid>http://localhost:1313/tests/bdd-avec-gherkin/</guid>
 				<description>Le BDD (Behavior-Driven Development) décrit le comportement attendu d&amp;rsquo;un système en langage naturel structuré, via la syntaxe Gherkin (Given/When/Then), pour que développeurs, testeurs et experts métier partagent une seule source de vérité, exécutable comme un test.</description>
 			</item>
 			<item>
 				<title>Mock vs Stub</title>
-				<link>http://localhost:49552/tests/mock-vs-stub/</link>
+				<link>http://localhost:1313/tests/mock-vs-stub/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/mock-vs-stub/</guid>
+				<guid>http://localhost:1313/tests/mock-vs-stub/</guid>
 				<description>Un stub et un mock remplacent tous deux une vraie dépendance dans un test, mais pour des raisons différentes : le stub fournit des données prêtes à l&amp;rsquo;emploi, le mock vérifie que le code testé a bien effectué certains appels.</description>
 			</item>
 			<item>
 				<title>Pourquoi écrire des tests ?</title>
-				<link>http://localhost:49552/tests/pourquoi-ecrire-des-tests/</link>
+				<link>http://localhost:1313/tests/pourquoi-ecrire-des-tests/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/pourquoi-ecrire-des-tests/</guid>
+				<guid>http://localhost:1313/tests/pourquoi-ecrire-des-tests/</guid>
 				<description>Écrire des tests coûte du temps immédiat, mais ce temps est un investissement : les tests deviennent un filet de sécurité contre les régressions et une documentation toujours à jour du comportement réel du code.</description>
 			</item>
 			<item>
 				<title>Pyramide des tests</title>
-				<link>http://localhost:49552/tests/pyramide-des-tests/</link>
+				<link>http://localhost:1313/tests/pyramide-des-tests/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/pyramide-des-tests/</guid>
+				<guid>http://localhost:1313/tests/pyramide-des-tests/</guid>
 				<description>La pyramide des tests décrit une répartition saine de l&amp;rsquo;effort de test : de nombreux tests unitaires rapides à la base, un nombre plus restreint de tests d&amp;rsquo;intégration au milieu, et très peu de tests end-to-end, lents mais réalistes, au sommet.</description>
 			</item>
 			<item>
 				<title>TDD expliqué simplement</title>
-				<link>http://localhost:49552/tests/tdd-explique-simplement/</link>
+				<link>http://localhost:1313/tests/tdd-explique-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/tdd-explique-simplement/</guid>
+				<guid>http://localhost:1313/tests/tdd-explique-simplement/</guid>
 				<description>Le TDD (Test-Driven Development) consiste à écrire un test qui échoue avant d&amp;rsquo;écrire le code qui le fait passer, puis à améliorer la structure une fois le comportement validé. Ce cycle court — Red, Green, Refactor — guide la conception au lieu de la vérifier après coup.</description>
 			</item>
 			<item>
 				<title>Test unitaire vs intégration</title>
-				<link>http://localhost:49552/tests/test-unitaire-vs-integration/</link>
+				<link>http://localhost:1313/tests/test-unitaire-vs-integration/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/tests/test-unitaire-vs-integration/</guid>
+				<guid>http://localhost:1313/tests/test-unitaire-vs-integration/</guid>
 				<description>Un test unitaire vérifie une seule unité de code en isolation, en général en mockant ses dépendances. Un test d&amp;rsquo;intégration vérifie que plusieurs composants réels — base de données, API, autres classes — collaborent correctement ensemble.</description>
 			</item>
 	</channel>

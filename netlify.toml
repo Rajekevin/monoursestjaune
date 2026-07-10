@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build:css && hugo --gc --minify"
+  command = "npm install && npm run build:css && hugo --gc --minify --baseURL \"$URL\""
   publish = "public"
 
 [build.environment]

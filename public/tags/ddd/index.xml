@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Ddd on MyBearIsYellow</title>
-		<link>http://localhost:49552/tags/ddd/</link>
+		<link>http://localhost:1313/tags/ddd/</link>
 		<description>Recent content in Ddd on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,26 +18,26 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:49552/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Clean Architecture expliquée simplement</title>
-				<link>http://localhost:49552/architecture-logicielle/clean-architecture-expliquee-simplement/</link>
+				<link>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/architecture-logicielle/clean-architecture-expliquee-simplement/</guid>
+				<guid>http://localhost:1313/architecture-logicielle/clean-architecture-expliquee-simplement/</guid>
 				<description>La Clean Architecture organise le code en cercles concentriques : le métier au centre, les détails techniques (base de données, framework, UI) à l&amp;rsquo;extérieur. La règle est simple — les dépendances ne pointent jamais vers l&amp;rsquo;extérieur.</description>
 			</item>
 			<item>
 				<title>Domain Driven Design (DDD)</title>
-				<link>http://localhost:49552/architecture-logicielle/domain-driven-design-ddd/</link>
+				<link>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/architecture-logicielle/domain-driven-design-ddd/</guid>
+				<guid>http://localhost:1313/architecture-logicielle/domain-driven-design-ddd/</guid>
 				<description>Le Domain Driven Design (DDD) est autant une démarche de modélisation métier qu&amp;rsquo;une technique de code. Il propose un vocabulaire partagé avec les experts métier, des frontières explicites entre sous-domaines (bounded context), et des règles précises pour modéliser entités, value objects et agrégats.</description>
 			</item>
 			<item>
 				<title>Le Pattern Repository expliqué simplement</title>
-				<link>http://localhost:49552/design-patterns/repository/</link>
+				<link>http://localhost:1313/design-patterns/repository/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/design-patterns/repository/</guid>
+				<guid>http://localhost:1313/design-patterns/repository/</guid>
 				<description>Le Repository Pattern cache les détails de stockage (SQL, ORM, API externe) derrière une interface orientée métier. Le domaine manipule des objets, pas des requêtes — l&amp;rsquo;implémentation concrète du stockage reste un détail interchangeable.</description>
 			</item>
 	</channel>

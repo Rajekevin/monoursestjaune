@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Oop on MyBearIsYellow</title>
-		<link>http://localhost:49552/tags/oop/</link>
+		<link>http://localhost:1313/tags/oop/</link>
 		<description>Recent content in Oop on MyBearIsYellow</description>
 		<generator>Hugo</generator>
 		<language>fr-FR</language>
@@ -18,33 +18,33 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:49552/tags/oop/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/oop/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Le Pattern Abstract Factory expliqué simplement</title>
-				<link>http://localhost:49552/design-patterns/abstract-factory/</link>
+				<link>http://localhost:1313/design-patterns/abstract-factory/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/design-patterns/abstract-factory/</guid>
+				<guid>http://localhost:1313/design-patterns/abstract-factory/</guid>
 				<description>L&amp;rsquo;Abstract Factory va plus loin que la Factory simple : elle garantit qu&amp;rsquo;un ensemble d&amp;rsquo;objets liés entre eux (une famille) reste toujours cohérent, en regroupant plusieurs méthodes de création derrière une seule interface.</description>
 			</item>
 			<item>
 				<title>Le Pattern Builder expliqué simplement</title>
-				<link>http://localhost:49552/design-patterns/builder/</link>
+				<link>http://localhost:1313/design-patterns/builder/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/design-patterns/builder/</guid>
+				<guid>http://localhost:1313/design-patterns/builder/</guid>
 				<description>Le Builder Pattern sépare la construction d&amp;rsquo;un objet complexe en une série d&amp;rsquo;étapes chaînées, chacune configurant une partie de l&amp;rsquo;objet. Il évite les constructeurs à rallonge et rend le code de construction lisible, même avec de nombreux paramètres optionnels.</description>
 			</item>
 			<item>
 				<title>Le Pattern Factory expliqué simplement</title>
-				<link>http://localhost:49552/design-patterns/factory/</link>
+				<link>http://localhost:1313/design-patterns/factory/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/design-patterns/factory/</guid>
+				<guid>http://localhost:1313/design-patterns/factory/</guid>
 				<description>Le Factory Pattern encapsule la logique de création d&amp;rsquo;un objet dans une méthode ou une classe dédiée, plutôt que de disperser des &lt;code&gt;new&lt;/code&gt; conditionnels dans tout le code. Le client dépend d&amp;rsquo;une interface, jamais des classes concrètes créées derrière.</description>
 			</item>
 			<item>
 				<title>Le Pattern Singleton expliqué simplement</title>
-				<link>http://localhost:49552/design-patterns/singleton/</link>
+				<link>http://localhost:1313/design-patterns/singleton/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><author>rajekevin@hotmail.fr (MyBearIsYellow)</author>
-				<guid>http://localhost:49552/design-patterns/singleton/</guid>
+				<guid>http://localhost:1313/design-patterns/singleton/</guid>
 				<description>Le Singleton garantit qu&amp;rsquo;une classe n&amp;rsquo;a qu&amp;rsquo;une seule instance, accessible depuis n&amp;rsquo;importe où dans l&amp;rsquo;application. Pratique en apparence, mais c&amp;rsquo;est aussi l&amp;rsquo;un des patterns les plus critiqués : il introduit un état global qui rend le code difficile à tester et à faire évoluer.</description>
 			</item>
 	</channel>
