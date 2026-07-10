@@ -1,14 +1,34 @@
 ---
 title: "Pourquoi MyBearIsYellow ?"
-description: "L'histoire derrière le nom : un ours brun qui a changé de couleur le jour où il a commencé à coder."
+description: "L'histoire derrière le nom : un ours brun qui a changé de couleur en apprenant à comprendre le développement moderne."
+date: 2026-07-10
+draft: false
 ---
 
-À l'origine, notre ours était brun. Un ours brun tout ce qu'il y a de plus classique, pas franchement pressé d'apprendre quoi que ce soit.
+# Pourquoi MyBearIsYellow ?
 
-Et puis un jour, il a ouvert son premier éditeur de code. Il n'a rien compris. Puis un peu. Puis beaucoup. Et à force de creuser chaque concept jusqu'à vraiment le comprendre — pas juste le retenir par cœur pour un entretien — quelque chose a changé : son pelage est passé du brun au jaune.
+Au départ, notre ours était brun.
 
-Pas une mutation magique. Plutôt une image : comprendre vraiment un sujet, c'est ce qui le fait "s'allumer" dans votre tête. Le jaune, c'est cette étincelle-là — celle qui reste quand on referme l'onglet et qu'on est encore capable d'expliquer le concept à quelqu'un d'autre, ou de le dérouler tranquillement en entretien.
+Un ours comme les autres : curieux, mais parfois perdu face à toutes ces notions qui semblent évidentes une fois qu'on les maîtrise. Architecture, design patterns, tests, cloud, bases de données… Beaucoup de concepts à découvrir, beaucoup de termes à comprendre.
 
-C'est cette idée qui donne son nom au site : **My Bear Is Yellow**. Un ours curieux, qui prend le temps d'expliquer simplement ce qui semble compliqué — pas un mascotte pour faire joli, un guide.
+Puis il a commencé à coder.
 
-S'il a changé de couleur en apprenant, vous pouvez changer la vôtre aussi. 🐻
+Pas simplement à copier des solutions trouvées ici ou là, mais à chercher ce qui se cache derrière chaque idée.
+
+Pourquoi utiliser ce pattern ?  
+Pourquoi tester de cette manière ?  
+Pourquoi choisir cette architecture plutôt qu'une autre ?
+
+Petit à petit, quelque chose a changé.
+
+Son pelage est devenu jaune.
+
+Le jaune représente cette petite étincelle qui apparaît quand un concept devient vraiment clair. Ce moment où l'on ne connaît plus seulement une définition, mais où l'on est capable d'expliquer une idée, de l'appliquer et de la transmettre à son tour.
+
+MyBearIsYellow est né de cette idée : apprendre autrement.
+
+Ici, l'objectif n'est pas d'accumuler des dizaines de technologies ou de réciter des réponses d'entretien. L'objectif est de comprendre les fondamentaux du développement moderne avec des explications simples, des exemples concrets et une approche orientée pratique.
+
+Parce qu'un développeur ne progresse pas uniquement en écrivant du code.
+
+Il progresse quand il comprend pourquoi il l'écrit.

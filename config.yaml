@@ -97,7 +97,7 @@ menu:
       weight: 8
 
   footer:
-    - name: "🐻 Pourquoi ce nom ?"
+    - name: "🐻 Pourquoi notre ours est jaune ?"
       pageRef: "/notre-histoire"
       weight: 1
 
