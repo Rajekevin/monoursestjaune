@@ -84,12 +84,16 @@
   }}
 
   <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-    {{ range $categories }}
-      {{ $page := site.GetPage .url }}
-      <a href="{{ .url | relLangURL }}" class="bear-card">
-        <span class="text-3xl">{{ .icon }}</span>
-        <span class="bear-card-title">{{ .title }}</span>
-        <span class="bear-card-desc">{{ .desc }}</span>
+    {{ range $index, $category := $categories }}
+      {{ $page := site.GetPage $category.url }}
+      <a
+        href="{{ $category.url | relLangURL }}"
+        class="bear-card bear-reveal"
+        style="transition-delay: {{ mul $index 75 }}ms"
+      >
+        <span class="text-3xl">{{ $category.icon }}</span>
+        <span class="bear-card-title">{{ $category.title }}</span>
+        <span class="bear-card-desc">{{ $category.desc }}</span>
         {{ with $page }}
           <span class="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
             {{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}
@@ -101,11 +105,11 @@
 </section>
 
 {{/* Recent articles */}}
-<section class="py-16">
+<section class="bear-reveal py-16">
   {{ partial "recent-articles.html" . }}
 </section>
 
 {{/* Newsletter */}}
-<section class="py-16">
+<section class="bear-reveal py-16">
   {{ partial "newsletter.html" . }}
 </section>

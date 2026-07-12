@@ -100,6 +100,12 @@ menu:
     - name: "🐻 Pourquoi notre ours est jaune ?"
       pageRef: "/notre-histoire"
       weight: 1
+    - name: "Mentions légales"
+      pageRef: "/mentions-legales"
+      weight: 2
+    - name: "Politique de confidentialité"
+      pageRef: "/politique-de-confidentialite"
+      weight: 3
 
 params:
   env: production
