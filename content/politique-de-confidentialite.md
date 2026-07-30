@@ -4,30 +4,39 @@ description: "Comment MyBearIsYellow traite vos données personnelles."
 date: 2026-07-30
 ---
 
-Cette page explique quelles données sont collectées sur MyBearIsYellow, pourquoi, et comment les faire modifier ou supprimer.
+Cette page explique quelles données sont collectées sur **MyBearIsYellow** et pourquoi, conformément au Règlement Général sur la Protection des Données (RGPD).
 
-## Quelles données sont collectées ?
+## Responsable du traitement
 
-- **Newsletter** : si vous vous inscrivez à la newsletter, votre adresse email est collectée et transmise à notre prestataire d'envoi d'emails, [Buttondown](https://buttondown.com), uniquement pour vous envoyer les articles par email. Aucune autre information n'est demandée à l'inscription.
-- **Navigation** : ce site ne dépose pas de cookie de suivi publicitaire. Une préférence d'affichage (mode clair/sombre) est enregistrée localement dans votre navigateur (`localStorage`), sans jamais être transmise à un serveur.
+Le responsable du traitement est l'éditeur du site, identifié dans les [mentions légales](/mentions-legales/), joignable à [rajekevin@hotmail.fr](mailto:rajekevin@hotmail.fr).
 
-## Pourquoi ces données sont collectées
+## Newsletter
 
-L'adresse email récoltée via la newsletter sert exclusivement à l'envoi des articles auxquels vous vous êtes inscrit. Elle n'est ni revendue, ni partagée avec un tiers à des fins commerciales.
+Si vous vous inscrivez à la newsletter, votre adresse email est collectée et traitée par **Buttondown**, notre prestataire d'envoi d'emails, sur la base de votre consentement.
 
-## Combien de temps ces données sont conservées
+- **Finalité :** vous envoyer les nouveaux articles et actualités du blog.
+- **Durée de conservation :** jusqu'à votre désinscription.
+- **Désinscription :** un lien de désabonnement est présent dans chaque email envoyé.
+- **Sous-traitant :** [Buttondown](https://buttondown.com/) — voir leur [politique de confidentialité](https://buttondown.com/privacy).
 
-Votre adresse email est conservée tant que vous restez inscrit à la newsletter. Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email envoyé.
+## Préférence d'affichage
+
+Le choix entre mode clair et mode sombre est enregistré localement dans votre navigateur (`localStorage`) et n'est jamais transmis à un serveur.
+
+## Hébergement et données techniques
+
+Le site est hébergé par **Netlify, Inc.**, qui peut collecter automatiquement des données techniques de navigation (adresse IP, type de navigateur, pages visitées) dans le cadre du fonctionnement normal de l'hébergement, notamment à des fins de sécurité et de performance. Voir la [politique de confidentialité de Netlify](https://www.netlify.com/privacy/).
+
+## Cookies et traceurs
+
+Ce site n'utilise **aucun outil d'analyse d'audience ni cookie publicitaire ou de suivi**. Aucune bannière de consentement n'est donc affichée. Si cela devait changer (ajout d'un outil de mesure d'audience par exemple), cette page sera mise à jour en conséquence.
 
 ## Vos droits
 
-Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour l'exercer, écrivez à [rajekevin@hotmail.fr](mailto:rajekevin@hotmail.fr).
+Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données, ainsi que d'un droit d'opposition et de limitation du traitement. Vous pouvez exercer ces droits en écrivant à [rajekevin@hotmail.fr](mailto:rajekevin@hotmail.fr).
 
-## Hébergement et sous-traitants
-
-- **Hébergement du site** : Netlify, Inc. (États-Unis).
-- **Newsletter** : Buttondown (États-Unis).
+Vous disposez également du droit d'introduire une réclamation auprès de la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
 
 ## Modifications
 
-Cette politique peut être mise à jour si le fonctionnement du site évolue (ajout d'un outil d'analyse d'audience, par exemple). La date de dernière mise à jour est indiquée en haut de cette page.
+Cette politique de confidentialité peut être mise à jour. La date de dernière modification figure en haut de cette page.
