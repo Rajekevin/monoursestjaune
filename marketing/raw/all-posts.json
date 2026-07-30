@@ -1,0 +1,922 @@
+[
+  {
+    "type": "lancement",
+    "category_label": "Lancement",
+    "hook": "On a lancé MyBearIsYellow 🐻",
+    "body": "L'idée de départ : arrêter d'apprendre les concepts techniques par cœur pour un entretien, et vraiment les comprendre.\n\nChaque fiche suit la même trame : le problème concret, l'idée générale, une analogie, un schéma, du code, et les questions qu'on vous pose vraiment en entretien.\n\nArchitecture logicielle, Design Patterns, Bases de données, Tests, Cloud & DevOps : 40 fiches déjà en ligne, gratuites, en français.",
+    "link": "https://www.mybearisyellow.me",
+    "hashtags": [
+      "DeveloppeurWeb",
+      "SoftwareEngineering",
+      "TechFrance",
+      "EntretienTechnique"
+    ],
+    "date": "2026-08-04",
+    "index": 1
+  },
+  {
+    "slug": "quest-ce-quune-architecture-logicielle",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Comment savoir si une décision technique est \"architecturale\" ou pas ? Une seule question suffit.",
+    "body": "Pas besoin de diagramme UML ni de titre ronflant. La question à se poser avant toute décision structurante : si on se trompe, combien ça coûte de revenir en arrière ?\n\nRenommer une méthode, changer un for en foreach : réversible en quelques minutes, c'est du design. Choisir comment deux services communiquent, ou si un modèle de données est partagé entre équipes : ça peut coûter des semaines à défaire, c'est de l'architecture.\n\nLa distinction n'a rien d'universel — elle dépend du contexte réel du projet. Mais elle donne un réflexe simple à appliquer avant de foncer sur un new StripeClient() en plein milieu d'un contrôleur.",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "SoftwareEngineering",
+      "CleanCode",
+      "DeveloppeurWeb",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/quest-ce-quune-architecture-logicielle/",
+    "date": "2026-08-06",
+    "index": 2
+  },
+  {
+    "slug": "singleton",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Un Singleton codé en dur et une instance \"singleton\" gérée par un conteneur d'injection de dépendances : ce n'est pas du tout la même chose.",
+    "body": "Le premier impose l'unicité dans le code lui-même — constructeur privé, accès statique global — impossible à remplacer par un mock en test. Le second reste un objet ordinaire, injectable, testable : seule sa portée est configurée comme singleton par le conteneur (Spring, Symfony...), qui pourrait tout aussi bien lui donner un scope différent sans changer une ligne de code métier.\n\nLe vrai reproche fait au Singleton classique, ce n'est pas le pattern en lui-même : c'est l'état global caché qu'il introduit, avec des dépendances invisibles entre des parties du code qui semblent indépendantes.\n\nSignal d'alerte assez fiable en entretien comme en revue de code : si vos tests unitaires doivent réinitialiser un état statique entre deux exécutions, un Singleton est probablement en cause quelque part.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "EntretienTechnique",
+      "PHP",
+      "Java"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/singleton/",
+    "date": "2026-08-08",
+    "index": 3
+  },
+  {
+    "slug": "pourquoi-ecrire-des-tests",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Écrire des tests, c'est installer des détecteurs de fumée dans une maison.",
+    "body": "Les poser prend du temps et ne rend la maison ni plus grande ni plus belle. Mais le jour où un départ de feu se déclare, c'est le détecteur — pas la vigilance humaine — qui alerte à temps pour agir avant que les dégâts deviennent irréversibles.\n\nSans détecteur, la maison peut très bien fonctionner des années sans incident. Le problème n'est pas la probabilité qu'un incident arrive un jour donné, c'est le coût le jour où il arrive sans qu'on l'ait vu venir.\n\nUn point qu'on oublie souvent en entretien : un test ne prouve jamais l'absence de bug en général. Il prouve seulement qu'un comportement précis, pour une entrée précise, produit la sortie attendue. Le vrai coût des tests, ce n'est pas de les écrire — c'est de ne pas les avoir le jour où il faut modifier le code en confiance.",
+    "hashtags": [
+      "Tests",
+      "CleanCode",
+      "SoftwareEngineering",
+      "DeveloppeurWeb",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/pourquoi-ecrire-des-tests/",
+    "date": "2026-08-11",
+    "index": 4
+  },
+  {
+    "slug": "comment-fonctionne-une-base-relationnelle",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question d'entretien qui a l'air facile : quelle différence entre une clé primaire et une clé étrangère ?",
+    "body": "La clé primaire identifie une ligne de façon unique dans sa table. Elle ne peut jamais être nulle, jamais dupliquée — et une table n'en a qu'une seule.\n\nLa clé étrangère, c'est différent : c'est une colonne qui pointe vers la clé primaire d'une AUTRE table, pour créer une relation. Une table peut en avoir plusieurs.\n\nCe qui surprend souvent : une relation en base relationnelle n'a rien de magique. \"commande.client_id\" ne contient rien d'autre que la valeur de l'id d'un client qui existe déjà ailleurs. Pas de lien caché, juste une colonne qui référence une valeur.\n\nSi le client déménage, on corrige une seule fiche dans la table clients. Toutes ses commandes restent valides sans qu'on ait à toucher une seule ligne de plus.",
+    "hashtags": [
+      "BasesDeDonnees",
+      "SQL",
+      "PostgreSQL",
+      "DeveloppeurWeb",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/comment-fonctionne-une-base-relationnelle/",
+    "date": "2026-08-13",
+    "index": 5
+  },
+  {
+    "slug": "quest-ce-que-le-cloud",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "CAPEX vs OPEX, la vraie bascule du cloud, en 30 secondes.",
+    "body": "Avant le cloud, on achetait des serveurs : un coût fixe, amorti sur plusieurs années, dimensionné pour le pic de trafic le plus haut qu'on pouvait imaginer — même si ce pic n'arrive qu'à Noël et que le serveur tourne à 5 % le reste de l'année.\n\nLe cloud transforme ça en coût variable : on paie à la seconde ce qu'on consomme réellement. Ce n'est pas juste \"le serveur de quelqu'un d'autre\", c'est surtout l'élasticité — la capacité d'ajuster les ressources à la demande, automatiquement, en quelques minutes plutôt qu'en quelques semaines.\n\nLe piège que beaucoup découvrent trop tard : une ressource oubliée mais jamais éteinte continue d'être facturée. Un serveur physique, on le voit tourner dans un coin du datacenter. Sur le cloud, ce coût-là reste invisible jusqu'à la facture.",
+    "hashtags": [
+      "CloudComputing",
+      "DevOps",
+      "Backend",
+      "TechFrance",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/quest-ce-que-le-cloud/",
+    "date": "2026-08-15",
+    "index": 6
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Question aux devs qui me suivent 👇",
+    "body": "Quel concept technique vous a pris le plus de temps à VRAIMENT comprendre — pas juste réciter pour un entretien ?\n\nPour moi c'était les niveaux d'isolation transactionnelle en SQL. J'ai dû me planter en prod pour vraiment intégrer la différence entre Read Committed et Repeatable Read.\n\nDites-moi en commentaire, ça m'intéresse pour les prochains sujets à couvrir sur MyBearIsYellow 🐻",
+    "link": null,
+    "hashtags": [
+      "BasesDeDonnees",
+      "SQL",
+      "DeveloppeurWeb",
+      "Backend"
+    ],
+    "date": "2026-08-18",
+    "index": 7
+  },
+  {
+    "slug": "architecture-hexagonale",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Port primaire, port secondaire : si vous confondez les deux en entretien, ça se voit tout de suite.",
+    "body": "L'architecture hexagonale (Ports & Adapters, formalisée par Alistair Cockburn en 2005) tient sur une image simple : une prise électrique murale. Elle définit un contrat standard, sans savoir ce qu'on va y brancher — une lampe, un chargeur, un aspirateur.\n\nUn port primaire, c'est ce qui pilote le métier : un contrôleur HTTP ou une commande CLI qui déclenche une action. Un port secondaire, c'est l'inverse : le métier qui appelle l'extérieur, pour persister une donnée ou envoyer un e-mail, sans jamais connaître l'implémentation réelle derrière.\n\nLe nombre six dans \"hexagonale\" n'a rien de spécial, au passage — Cockburn voulait juste assez de faces pour montrer qu'un métier peut avoir plusieurs ports, pas seulement une entrée et une sortie comme le suggérerait un rectangle.",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "CleanCode",
+      "SoftwareEngineering",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/architecture-hexagonale/",
+    "date": "2026-08-20",
+    "index": 8
+  },
+  {
+    "slug": "factory",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Si vous retrouvez le même bloc if ($type === 'email') { ... } elseif ($type === 'sms') { ... } copié-collé à cinq endroits du code, vous avez besoin d'une Factory.",
+    "body": "Le Factory Pattern déplace cette logique de décision dans un seul endroit dédié : une méthode ou une classe dont le seul travail est de créer le bon objet selon un paramètre. Le code appelant ne fait plus jamais new EmailNotification() lui-même — il demande une notification de type email, sans savoir quelle classe concrète il reçoit en retour.\n\nLe jour où un nouveau canal apparaît (WhatsApp, par exemple), un seul endroit à modifier, pas cinq.\n\nUn point que beaucoup ratent en entretien : Factory viole en partie le principe ouvert/fermé, puisqu'ajouter un type oblige à modifier le switch. C'est un compromis assumé — concentrer la modification en un point identifié, plutôt que la disperser partout.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "PHP",
+      "Java",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/factory/",
+    "date": "2026-08-22",
+    "index": 9
+  },
+  {
+    "slug": "tdd-explique-simplement",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Question piège sur le TDD : pourquoi faut-il VOIR le test échouer avant d'écrire le code, l'étape Red ?",
+    "body": "La réponse n'est pas \"parce que c'est la règle\". Voir le test échouer d'abord prouve que le test teste réellement quelque chose : s'il passait déjà sans code de production, il ne vérifierait rien d'utile, ou testerait le mauvais fichier.\n\nC'est une vérification du test lui-même, avant de lui faire confiance pour valider le futur code.\n\nDeuxième piège fréquent : le TDD garantit-il un code sans bug ? Non. Il structure la façon d'écrire le code et produit une bonne couverture par construction, mais il ne protège que contre les cas que les tests couvrent explicitement. Un dev qui oublie un cas limite au moment d'écrire le test aura un code TDD... qui ne le couvre pas non plus.",
+    "hashtags": [
+      "TDD",
+      "Tests",
+      "EntretienTechnique",
+      "CleanCode",
+      "SoftwareEngineering"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/tdd-explique-simplement/",
+    "date": "2026-08-25",
+    "index": 10
+  },
+  {
+    "slug": "sql-explique-simplement",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "DELETE et TRUNCATE suppriment tous les deux des lignes. Les confondre en entretien (ou en prod) coûte cher.",
+    "body": "DELETE est une commande DML : elle supprime ligne par ligne, peut être filtrée avec un WHERE, déclenche les triggers, et peut être annulée avec un ROLLBACK dans une transaction.\n\nTRUNCATE est une commande DDL : elle vide toute la table d'un coup, réinitialise le compteur d'auto-incrément, ne se filtre pas, et n'est généralement pas journalisée ligne par ligne — donc beaucoup plus rapide sur un gros volume, mais moins flexible et souvent impossible à annuler selon le moteur.\n\nLa bonne réponse en entretien n'est pas de réciter la définition, c'est de dire QUAND utiliser l'un plutôt que l'autre : DELETE pour un nettoyage ciblé et réversible, TRUNCATE pour vider une table de logs qu'on sait pouvoir sacrifier entièrement.",
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "Backend",
+      "EntretienTechnique",
+      "MySQL"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/sql-explique-simplement/",
+    "date": "2026-08-27",
+    "index": 11
+  },
+  {
+    "slug": "iaas-paas-saas",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Question piège classique en entretien DevOps : Kubernetes, c'est du IaaS ou du PaaS ?",
+    "body": "La réponse honnête : ni vraiment l'un ni vraiment l'autre. Un cluster managé (EKS, GKE) est fourni comme un service, ce qui se rapproche du PaaS. Mais vous continuez à gérer vous-même les conteneurs, leur configuration et leur déploiement — ce qui garde une bonne part de responsabilité côté IaaS.\n\nOn parle parfois de CaaS (Container as a Service) pour désigner ce niveau intermédiaire. Si un candidat répond \"PaaS\" sans nuancer, c'est souvent le signe qu'il récite une définition plutôt qu'il ne comprend la logique derrière.\n\nLa vraie question derrière IaaS, PaaS et SaaS, ce n'est pas le vocabulaire : c'est \"qui gère quoi\", et jusqu'où on est prêt à déléguer du contrôle contre moins de charge opérationnelle.",
+    "hashtags": [
+      "Kubernetes",
+      "CloudComputing",
+      "DevOps",
+      "EntretienTechnique",
+      "TechFrance"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/iaas-paas-saas/",
+    "date": "2026-08-29",
+    "index": 12
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Sondage rapide 🐻",
+    "body": "En entretien technique, la question qui vous stresse le plus c'est plutôt :\n\n🔵 \"Explique-moi SOLID\"\n🟡 \"Explique-moi une transaction SQL\"\n🟢 \"Différence entre REST et SOAP\"\n⚪ \"Comment tu optimiserais cette API ?\"\n\nDites-moi en commentaire, je fais un post détaillé sur celle qui revient le plus.",
+    "link": null,
+    "hashtags": [
+      "EntretienTechnique",
+      "DeveloppeurWeb",
+      "Backend",
+      "TechFrance"
+    ],
+    "date": "2026-09-01",
+    "index": 13
+  },
+  {
+    "slug": "domain-driven-design-ddd",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Un \"Client\" en facturation et un \"Client\" en support technique ne sont pas le même objet. Et c'est très bien comme ça.",
+    "body": "Un système qui grossit accumule presque toujours des mots ambigus. Le mot \"Client\" finit par désigner un compte de facturation pour une équipe, un contact commercial pour une autre, un utilisateur connecté pour une troisième — et une classe unique de 40 attributs que plus personne ne comprend vraiment.\n\nLe Domain Driven Design ne cherche pas à unifier ce mot de force. Il découpe le système en bounded contexts, des frontières explicites à l'intérieur desquelles un mot a un sens unique et précis. \"Client\" peut légitimement vouloir dire deux choses différentes en Facturation et en Support, tant que chaque contexte reste cohérent avec lui-même.\n\nC'est exactement comme le mot \"pièce\" : un architecte, un comptable et un déménageur n'en ont pas la même définition, et aucun des trois n'a tort.",
+    "hashtags": [
+      "DDD",
+      "ArchitectureLogicielle",
+      "SoftwareEngineering",
+      "Backend",
+      "TechFrance"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/domain-driven-design-ddd/",
+    "date": "2026-09-03",
+    "index": 14
+  },
+  {
+    "slug": "abstract-factory",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "L'Abstract Factory facilite l'ajout d'un nouveau thème complet. Elle complique beaucoup plus l'ajout d'un seul nouveau composant.",
+    "body": "Ajouter une nouvelle famille — un \"Thème contraste élevé\", par exemple — revient à ajouter une nouvelle factory concrète, sans toucher au code existant. Le principe ouvert/fermé est respecté à la lettre.\n\nMais ajouter un nouveau type de produit à une famille déjà en place — un composant Menu déroulant, en plus du Bouton et de la CaseACocher — oblige à modifier l'interface UIFactory, puis toutes les factories concrètes existantes. C'est le vrai point faible du pattern, celui qu'on oublie souvent de mentionner en entretien.\n\nLe signal qui doit faire penser à Abstract Factory plutôt qu'à une Factory simple : plusieurs objets qui doivent varier ensemble selon un même contexte, où un mélange entre familles serait un vrai bug — pas juste un détail esthétique.",
+    "hashtags": [
+      "DesignPatterns",
+      "ArchitectureLogicielle",
+      "Java",
+      "SoftwareEngineering",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/abstract-factory/",
+    "date": "2026-09-05",
+    "index": 15
+  },
+  {
+    "slug": "test-unitaire-vs-integration",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Une équipe teste calculerRemise() en isolation, le test passe toujours. En production, la remise ne s'applique jamais.",
+    "body": "La cause : la requête SQL qui récupère le statut fidélité du client renvoie la mauvaise colonne. Le test unitaire n'a rien vu, car il ne testait que la logique de calcul, pas la façon dont les composants s'assemblent réellement.\n\nC'est exactement la différence entre les deux niveaux. Un test unitaire répond à \"cette logique, prise isolément, se comporte-t-elle comme prévu ?\". Un test d'intégration répond à \"ces composants, assemblés ensemble, produisent-ils le résultat attendu ?\"\n\nLes deux questions sont différentes, et aucune ne remplace l'autre. Se contenter de tests d'intégration parce que \"c'est plus proche de la réalité\" a un coût réel : ils sont plus lents, et un échec est plus difficile à localiser — la cause peut venir de n'importe quel composant impliqué.",
+    "hashtags": [
+      "Tests",
+      "EntretienTechnique",
+      "Backend",
+      "SoftwareEngineering",
+      "PHP"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/test-unitaire-vs-integration/",
+    "date": "2026-09-08",
+    "index": 16
+  },
+  {
+    "slug": "index-bdd",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Erreur fréquente chez les devs qui découvrent les index : indexer toutes les colonnes \"pour être tranquille\".",
+    "body": "Un index accélère la lecture, mais il a un coût réel : chaque INSERT, UPDATE ou DELETE doit aussi mettre à jour l'index. Plus une table a d'index, plus les écritures ralentissent.\n\nEt un index n'est même pas toujours utile. Sur une colonne peu sélective — un booléen \"actif\" par exemple, avec seulement deux valeurs possibles — le moteur préfère souvent un scan complet plutôt que de suivre l'index. Trop peu de valeurs distinctes, pas assez de gain.\n\nLa bonne question n'est pas \"combien d'index\" mais \"quelles colonnes sont réellement filtrées, jointes ou triées dans mes requêtes réelles\". EXPLAIN ANALYZE existe justement pour vérifier ça au lieu de le supposer.",
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "Performance",
+      "EntretienTechnique",
+      "PostgreSQL"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/index-bdd/",
+    "date": "2026-09-10",
+    "index": 17
+  },
+  {
+    "slug": "docker-explique-simplement",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'erreur la plus fréquente que j'entends sur Docker : \"c'est une VM plus légère\".",
+    "body": "Non. Une VM virtualise du matériel et embarque son propre système d'exploitation complet — plusieurs gigaoctets, démarrage en minutes. Un conteneur partage le noyau de la machine hôte et n'isole que l'espace utilisateur — quelques dizaines de mégaoctets, démarrage en une seconde.\n\nLa distinction à vraiment connaître pour un entretien : image vs conteneur. Une image est un modèle figé, comme une classe. Un conteneur est une instance en cours d'exécution de cette image, comme un objet. On peut lancer dix conteneurs identiques à partir d'une seule et même image.\n\nDétail technique que peu de devs citent spontanément : chaque instruction d'un Dockerfile crée une couche mise en cache. Placer les instructions qui changent le moins souvent avant celles qui changent tout le temps accélère nettement les rebuilds.",
+    "hashtags": [
+      "Docker",
+      "DevOps",
+      "CloudComputing",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/docker-explique-simplement/",
+    "date": "2026-09-12",
+    "index": 18
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Débat entre devs 🐻",
+    "body": "Design pattern le plus sur-utilisé en 2026 : Singleton ou Factory ?\n\nMon avis : Singleton, parce qu'on le sort dès qu'on a besoin \"d'une seule instance\", en oubliant qu'un conteneur d'injection de dépendances gère déjà ce scope proprement, sans état global caché.\n\nVous êtes d'accord, ou je me trompe ?",
+    "link": null,
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "PHP",
+      "Java"
+    ],
+    "date": "2026-09-15",
+    "index": 19
+  },
+  {
+    "slug": "couplage-fort-vs-faible",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Le signal le plus fiable d'un couplage fort dans du code : un new NomDeClasseConcrete() planté au milieu d'une méthode métier.",
+    "body": "C'est la question qu'on pose souvent en entretien pour vérifier qu'on sait reconnaître le problème, pas juste le définir. Deuxième signal, tout aussi fiable : si on ne peut pas tester une classe sans faire tourner une vraie base de données ou un vrai service externe, c'est qu'elle dépend d'une implémentation concrète plutôt que d'une abstraction.\n\nLa correction ne demande pas un gros chantier : une interface, et l'injection de la dépendance par le constructeur au lieu d'un new en interne. Résultat, on peut remplacer Stripe par un autre prestataire de paiement sans toucher à la classe qui l'utilise.\n\nAttention à l'excès inverse, cela dit : créer une interface pour une simple fonction utilitaire sans effet de bord n'ajoute que de l'indirection, sans aucun bénéfice réel.",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "SOLID",
+      "CleanCode",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/couplage-fort-vs-faible/",
+    "date": "2026-09-17",
+    "index": 20
+  },
+  {
+    "slug": "builder",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Un constructeur avec dix paramètres optionnels a un nom : le \"constructeur télescope\". Et c'est illisible à l'appel.",
+    "body": "Impossible de savoir quel argument correspond à quel paramètre sans rouvrir la signature complète — et chaque appelant se retrouve à passer null pour tout ce qu'il n'utilise pas.\n\nLe Builder résout ça en séparant la construction en étapes chaînées, chacune nommée explicitement : methode(), header(), timeout(). Le code appelant devient auto-documenté, et une méthode finale construire() valide l'ensemble avant de retourner un objet fini, généralement immuable.\n\nSignal d'alerte à repérer en code review : au-delà de quatre ou cinq paramètres optionnels sur un constructeur, ou plusieurs constructeurs qui se chevauchent pour couvrir toutes les combinaisons possibles. C'est le moment de sortir un Builder plutôt que d'ajouter un onzième paramètre.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "PHP",
+      "Java",
+      "SoftwareEngineering"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/builder/",
+    "date": "2026-09-19",
+    "index": 21
+  },
+  {
+    "slug": "mock-vs-stub",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Un stub, c'est un figurant qui répond toujours la même réplique préparée à l'avance. Un mock, c'est l'huissier de justice qui note qui a dit quoi, à qui, et combien de fois.",
+    "body": "Dans un test, le stub joue son rôle sans qu'on l'interroge sur son passé. Le mock, lui, est interrogé après l'action pour confirmer que les bonnes interactions ont bien eu lieu.\n\nCe qu'on ne dit pas assez : abuser des mocks rend un test fragile. Un mock vérifie le comment (quelles méthodes appelées, avec quels arguments) — un détail d'implémentation. Changez la façon d'obtenir le même résultat métier sans changer le résultat observable, et le test casse alors que rien de réel n'a changé.\n\nDétail utile en entretien : PHPUnit distingue explicitement createStub() et createMock(). Jest, plus permissif, utilise jest.fn() pour les deux usages — la différence tient alors uniquement dans la présence d'un toHaveBeenCalledWith().",
+    "hashtags": [
+      "Tests",
+      "TDD",
+      "JavaScript",
+      "PHP",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/mock-vs-stub/",
+    "date": "2026-09-22",
+    "index": 22
+  },
+  {
+    "slug": "transactions-acid",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question piège classique : le serveur plante une seconde après un COMMIT. Vos données sont perdues ?",
+    "body": "Non — et c'est tout l'intérêt de la Durabilité, le D d'ACID. Une fois qu'une transaction est validée par COMMIT, le moteur a déjà écrit les changements dans un journal des transactions (write-ahead log) sur disque, avant même de confirmer au client que c'est bon.\n\nAu redémarrage, la base rejoue ce journal et retrouve exactement l'état validé. Rien n'est perdu, même si le crash survient littéralement une milliseconde après.\n\nCe qui piège souvent en entretien, c'est la suite : la différence entre Atomicité et Isolation. L'Atomicité protège une transaction en elle-même (tout ou rien). L'Isolation protège les transactions les unes des autres. Deux garanties, deux problèmes différents — et confondre les deux dans une réponse trahit vite une compréhension de surface.",
+    "hashtags": [
+      "BasesDeDonnees",
+      "SQL",
+      "Backend",
+      "EntretienTechnique",
+      "DataEngineering"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/transactions-acid/",
+    "date": "2026-09-24",
+    "index": 23
+  },
+  {
+    "slug": "kubernetes-explique-simplement",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Ce qu'on vous demande vraiment quand on vous pose une question sur Kubernetes en entretien.",
+    "body": "Rarement \"c'est quoi Kubernetes\". Plutôt : \"Pod, Deployment, Service, quelle différence ?\" Le Pod est l'unité d'exécution la plus petite. Le Deployment décrit l'état désiré — combien de réplicas, quelle image — et gère les mises à jour progressives. Le Service donne une adresse réseau stable vers des Pods qui, eux, changent d'IP à chaque redémarrage.\n\nLe concept qui sépare vraiment les candidats préparés des autres : la boucle de réconciliation. Vous déclarez \"je veux 3 réplicas\", et le contrôleur agit en continu pour que l'état réel corresponde à cet état désiré, en recréant un Pod qui crashe sans aucune intervention humaine.\n\nUne bonne image mentale pour retenir tout ça : un régulateur de flotte de taxis qui redirige un client vers un autre véhicule si le sien tombe en panne, sans jamais que le client appelle un taxi précis par son numéro.",
+    "hashtags": [
+      "Kubernetes",
+      "Docker",
+      "DevOps",
+      "CloudComputing",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/kubernetes-explique-simplement/",
+    "date": "2026-09-26",
+    "index": 24
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Vrai ou faux 🐻",
+    "body": "\"Un index accélère toujours une requête SQL.\"\n\nVrai ou faux ?\n\n(Indice : la réponse dépend de ce qui se passe à l'écriture, pas seulement à la lecture — et c'est exactement le genre de nuance qui fait la différence en entretien.)\n\nRéponse en commentaire demain, avec le lien vers l'explication complète.",
+    "link": null,
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "Backend",
+      "EntretienTechnique"
+    ],
+    "date": "2026-09-29",
+    "index": 25
+  },
+  {
+    "slug": "separation-des-responsabilites",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Une astuce simple pour savoir si une classe a trop de responsabilités : décrivez ce qu'elle fait en une phrase, sans utiliser le mot \"et\".",
+    "body": "Si la phrase devient \"elle valide les données et calcule le prix et envoie un e-mail\", le diagnostic est fait — plusieurs responsabilités sont mélangées dans la même unité de code.\n\nUne responsabilité, ce n'est pas une méthode ni une ligne de code : c'est une raison de changer. Le vrai symptôme apparaît quand des équipes différentes, pour des raisons totalement indépendantes, finissent par modifier le même fichier — le service marketing change l'e-mail, la compta change le calcul du prix, et la classe entière tremble à chaque fois.\n\nLe principe s'applique à toutes les échelles, pas seulement à une classe : un module \"facturation\" qui contient de la logique de stock viole exactement le même principe, juste à une échelle plus grande.",
+    "hashtags": [
+      "CleanCode",
+      "ArchitectureLogicielle",
+      "SOLID",
+      "SoftwareEngineering",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/separation-des-responsabilites/",
+    "date": "2026-10-01",
+    "index": 26
+  },
+  {
+    "slug": "observer",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Si vous avez déjà écrit addEventListener ou utilisé un EventEmitter en Node.js, vous connaissez déjà l'Observer Pattern — même sans l'avoir jamais nommé.",
+    "body": "Le principe : un Subject notifie automatiquement tous ses abonnés dès qu'un état change, sans avoir besoin de connaître leur nature exacte. Un statut de commande qui passe à \"payée\" peut déclencher un e-mail, un SMS et une notification à l'entrepôt, sans que la classe Commande sache rien de ces trois services.\n\nL'erreur la plus fréquente avec ce pattern n'est pas conceptuelle, elle est opérationnelle : oublier le désabonnement. C'est la cause la plus courante de fuite mémoire liée à l'Observer, particulièrement en JavaScript avec des écouteurs d'événements jamais retirés.\n\nAutre point à connaître pour un entretien un peu poussé : le pub/sub n'est pas l'Observer, c'en est une évolution distribuée — un intermédiaire (message broker, event bus) s'intercale, et émetteurs et abonnés ne se connaissent plus du tout entre eux.",
+    "hashtags": [
+      "DesignPatterns",
+      "JavaScript",
+      "SoftwareEngineering",
+      "Backend",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/observer/",
+    "date": "2026-10-03",
+    "index": 27
+  },
+  {
+    "slug": "pyramide-des-tests",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Une \"pyramide inversée\" — beaucoup de tests end-to-end, peu de tests unitaires — c'est un signal d'alerte qui revient souvent en entretien.",
+    "body": "Le scénario classique : une équipe soucieuse de tester \"comme un vrai utilisateur\" construit sa confiance sur des tests end-to-end pilotant un navigateur automatisé. Au fil des mois, la suite prend plus d'une heure, devient instable — des tests échouent à cause de délais réseau ou d'animations UI, sans rapport avec un vrai bug.\n\nRésultat : plus personne ne fait confiance aux échecs, et l'équipe relance les tests \"jusqu'à ce que ça passe\".\n\nLa forme pyramidale, popularisée par Mike Cohn, n'est pas un dogme esthétique : beaucoup de tests unitaires rapides à la base, un nombre modéré de tests d'intégration, très peu de end-to-end réservés aux parcours critiques. Si votre suite met plus de quelques minutes à tourner en local, c'est souvent le signe que trop de poids repose sur les niveaux du haut.",
+    "hashtags": [
+      "Tests",
+      "EntretienTechnique",
+      "SoftwareEngineering",
+      "Backend",
+      "TDD"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/pyramide-des-tests/",
+    "date": "2026-10-06",
+    "index": 28
+  },
+  {
+    "slug": "isolation-transactionnelle",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "La question qui sépare un dev junior d'un dev senior en entretien SQL : quelle différence entre un non-repeatable read et un phantom read ?",
+    "body": "Un non-repeatable read, c'est relire la même ligne deux fois dans une transaction et obtenir une valeur différente, parce qu'une autre transaction l'a modifiée et validée entre-temps.\n\nUn phantom read, c'est différent : c'est ré-exécuter le même SELECT avec un critère (WHERE statut = 'en_cours') et obtenir un ensemble de LIGNES différent, parce que d'autres lignes correspondant au critère ont été insérées ou supprimées entre-temps.\n\nLe premier porte sur une ligne qui change de valeur. Le second porte sur des lignes qui apparaissent ou disparaissent. Read Committed empêche le premier problème sans résoudre le second — il faut monter jusqu'à Serializable pour éliminer les deux.\n\nCe n'est pas une question de vocabulaire. C'est une question qui révèle si on sait raisonner sur la concurrence, pas juste écrire des requêtes isolées.",
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "EntretienTechnique",
+      "Backend",
+      "PostgreSQL"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/isolation-transactionnelle/",
+    "date": "2026-10-08",
+    "index": 29
+  },
+  {
+    "slug": "ci-cd",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "CI, livraison continue, déploiement continu : trois termes qu'on confond presque tout le temps en entretien.",
+    "body": "L'intégration continue automatise juste le build et les tests à chaque commit. La livraison continue va plus loin : le code est automatiquement prêt à être déployé, mais la mise en ligne reste une décision humaine. Le déploiement continu supprime cette dernière étape : chaque commit qui passe les tests part en production, sans validation manuelle.\n\nLa différence entre les deux derniers tient à une seule étape, et beaucoup de candidats emploient \"CI/CD\" comme un seul mot flou sans savoir laquelle des trois pratiques tourne réellement chez eux.\n\nLe principe qui sous-tend tout ça mérite d'être cité en entretien : fail fast. Plus une erreur est détectée tôt dans le pipeline, moins elle coûte cher à corriger — un bug attrapé en CI se règle en minutes, le même bug en prod peut prendre des heures d'investigation.",
+    "hashtags": [
+      "CICD",
+      "DevOps",
+      "Docker",
+      "EntretienTechnique",
+      "TechFrance"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/ci-cd/",
+    "date": "2026-10-10",
+    "index": 30
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Sondage DevOps 🐻",
+    "body": "Vous avez appris Docker et Kubernetes plutôt :\n\n🔵 En formation / bootcamp\n🟡 Sur le tas, en prod, sous pression\n🟢 En autodidacte, par curiosité, avant d'en avoir besoin\n\nJe suis curieux de voir comment les gens qui me suivent sont rentrés dans le sujet — dites-moi en commentaire.",
+    "link": null,
+    "hashtags": [
+      "Docker",
+      "Kubernetes",
+      "DevOps",
+      "TechFrance"
+    ],
+    "date": "2026-10-13",
+    "index": 31
+  },
+  {
+    "slug": "solid-explique-simplement",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Sur les 5 lettres de SOLID, laquelle est la plus souvent violée sans que personne s'en rende compte ?",
+    "body": "Réponse : le L, Liskov Substitution. Contrairement aux autres, sa violation ne saute pas aux yeux — le code compile, l'interface est respectée à la lettre, mais le comportement trahit le contrat attendu.\n\nL'exemple classique : une classe Pingouin qui hérite d'Oiseau et lève une exception dans sa méthode voler(). Rien ne casse à la compilation. Ça casse en production, le jour où un appelant générique manipule un Oiseau sans savoir qu'il a affaire à un Pingouin.\n\nSOLID n'est pas une checklist à cocher systématiquement sur chaque classe — c'est un ensemble de signaux d'alerte à reconnaître face à du code réel. Beaucoup de devs savent réciter les 5 lettres sans être capables de dire laquelle est violée devant un vrai bout de code, ce qui en fait une excellente question de tri en entretien.",
+    "hashtags": [
+      "SOLID",
+      "ArchitectureLogicielle",
+      "CleanCode",
+      "EntretienTechnique",
+      "PHP"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/solid-explique-simplement/",
+    "date": "2026-10-15",
+    "index": 32
+  },
+  {
+    "slug": "adapter",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Question piège en entretien : Adapter et Decorator enveloppent tous les deux un objet. Quelle différence ?",
+    "body": "Beaucoup de devs répondent par une définition floue apprise par cœur, et se plantent sur l'essentiel.\n\nLa réponse tient en une phrase : Adapter change l'interface de l'objet enveloppé pour la rendre compatible avec ce qu'attend le client. Decorator garde exactement la même interface et l'utilise pour ajouter un comportement en plus.\n\nUn Adapter répond à \"comment faire parler deux contrats différents ?\". Un Decorator répond à \"comment enrichir un comportement sans y toucher ?\"\n\nL'analogie qu'on utilise sur MyBearIsYellow : l'adaptateur de prise électrique dans une valise. Le courant qui circule est le même des deux côtés, seule la forme de la prise change. L'adapter ne doit jamais contenir de logique métier, juste de la traduction.",
+    "hashtags": [
+      "DesignPatterns",
+      "EntretienTechnique",
+      "CleanCode",
+      "PHP",
+      "ArchitectureLogicielle"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/adapter/",
+    "date": "2026-10-17",
+    "index": 33
+  },
+  {
+    "slug": "bdd-avec-gherkin",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Un scénario Gherkin n'est ni un test unitaire, ni un test d'intégration, ni un test end-to-end.",
+    "body": "C'est un format de spécification, indépendant du niveau technique auquel il s'exécute. Les steps derrière un Given/When/Then peuvent appeler une fonction isolée, orchestrer plusieurs composants réels, ou piloter un navigateur — ça dépend entièrement de l'implémentation.\n\nLe vrai objectif du BDD n'est pas la syntaxe, c'est la conversation qui précède : un scénario Gherkin écrit seul par un développeur, sans le métier, perd une grande partie de son intérêt.\n\nEt non, le BDD ne remplace pas le TDD. Le TDD structure la façon d'écrire le code à partir d'un test technique. Le BDD structure la façon de définir le comportement attendu à partir d'une conversation avec le métier — les deux peuvent cohabiter, à des niveaux différents.",
+    "hashtags": [
+      "BDD",
+      "Tests",
+      "TDD",
+      "EntretienTechnique",
+      "SoftwareEngineering"
+    ],
+    "link": "https://www.mybearisyellow.me/tests/bdd-avec-gherkin/",
+    "date": "2026-10-20",
+    "index": 34
+  },
+  {
+    "slug": "normalisation",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Un email de client recopié sur dix commandes différentes. Le jour où il déménage, il faut corriger dix lignes — en oublier une, et vous avez deux vérités pour la même personne.",
+    "body": "C'est ce qu'on appelle une anomalie de mise à jour, et c'est exactement le problème que la normalisation résout. Trois règles progressives : 1NF (chaque cellule contient une seule valeur, pas de liste cachée dans une colonne), 2NF (chaque colonne dépend de la clé primaire entière), 3NF (chaque colonne dépend UNIQUEMENT de la clé primaire, jamais d'une autre colonne).\n\nDans une table \"commandes\" avec client_nom et client_email à plat, l'email dépend du nom du client, pas de l'id de la commande — c'est une dépendance transitive, et c'est le piège le plus fréquent qui empêche d'atteindre la 3NF.\n\nEn entretien, on n'attend pas de réciter les sigles. On attend qu'un candidat regarde une table dénormalisée et propose spontanément le découpage en tables reliées par des clés.",
+    "hashtags": [
+      "BasesDeDonnees",
+      "SQL",
+      "EntretienTechnique",
+      "DeveloppeurWeb",
+      "DataEngineering"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/normalisation/",
+    "date": "2026-10-22",
+    "index": 35
+  },
+  {
+    "slug": "infrastructure-as-code",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'idempotence en Infrastructure as Code, en 30 secondes.",
+    "body": "Appliquer plusieurs fois la même configuration IaC doit toujours produire le même résultat, sans doublon ni effet de bord. Rejouer une commande Terraform après un souci réseau ne doit jamais créer un deuxième serveur par accident.\n\nC'est ce qui distingue une approche déclarative — je décris l'état voulu, l'outil calcule le chemin pour y arriver — d'un script impératif classique, où rejouer la même séquence d'étapes peut casser une ressource déjà en place.\n\nLe nom donné à l'inverse de l'IaC est presque un aveu : configurer son infra à coups de clics dans une console s'appelle du \"ClickOps\" — non reproductible, non versionné, et souvent connu d'une seule personne dans toute l'équipe.",
+    "hashtags": [
+      "InfrastructureAsCode",
+      "Terraform",
+      "DevOps",
+      "CloudComputing",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/infrastructure-as-code/",
+    "date": "2026-10-24",
+    "index": 36
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "Question d'entretien classique : \"Différence entre REST et SOAP ?\"",
+    "body": "REST s'appuie sur les verbes HTTP standards (GET, POST, PUT, DELETE), transporte généralement du JSON, et traite chaque ressource comme une URL.\n\nSOAP est un protocole plus strict, basé sur XML, avec un contrat formel (WSDL) et des standards intégrés pour la sécurité et les transactions.\n\nREST domine aujourd'hui pour les API grand public. SOAP reste présent dans certains systèmes d'entreprise ou bancaires qui exigent des garanties contractuelles fortes.",
+    "link": "https://www.mybearisyellow.me/preparation-entretien/questions-backend/",
+    "hashtags": [
+      "EntretienTechnique",
+      "API",
+      "Backend",
+      "TechFrance"
+    ],
+    "date": "2026-10-27",
+    "index": 37
+  },
+  {
+    "slug": "clean-architecture-expliquee-simplement",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Une question suffit pour savoir si un fichier appartient au métier ou pas : est-ce qu'il importe un framework, un ORM ou un client HTTP ?",
+    "body": "Si la réponse est oui, ce n'est pas du domaine — c'est un détail technique qui devrait être à l'extérieur des cercles de la Clean Architecture, pas au centre.\n\nLa règle de dépendance dit exactement ça : le code ne peut dépendre que vers l'intérieur. Le centre (Entities, Use Cases) ne connaît jamais Doctrine, Eloquent ou un SGBD précis — ce sont les couches extérieures qui implémentent des interfaces définies par le métier, jamais l'inverse.\n\nCe n'est pas gratuit : plus de fichiers, plus d'indirection dès le premier commit. Le bénéfice n'apparaît que plus tard, quand changer de base de données ou exposer le même métier via une CLI en plus d'une API ne demande de toucher qu'un seul point de branchement.",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "CleanCode",
+      "SoftwareEngineering",
+      "Backend",
+      "PHP"
+    ],
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/clean-architecture-expliquee-simplement/",
+    "date": "2026-10-29",
+    "index": 38
+  },
+  {
+    "slug": "decorator",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Pourquoi Express, PSR-15 et ASP.NET utilisent tous le même design pattern sans le nommer, en 30 secondes.",
+    "body": "Le concept de middleware, dans n'importe quel framework web, c'est du Decorator Pattern pur.\n\nChaque middleware enveloppe le traitement suivant, ajoute un comportement (log, auth, compression), puis délègue à la couche d'après — en respectant toujours la même interface que ce qu'il enveloppe.\n\nL'avantage : on empile les couches dans l'ordre voulu, à l'exécution, sans jamais créer de sous-classe. Avec de l'héritage classique, gérer \"log seul\", \"chiffrement seul\" et \"les deux ensemble\" demanderait déjà trois classes — et ça explose avec chaque nouvelle option.\n\nSeul vrai piège : l'ordre d'empilement change le résultat. Chiffrer avant de journaliser ne produit pas le même log que journaliser avant de chiffrer.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "Backend",
+      "DeveloppeurWeb",
+      "WebDev"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/decorator/",
+    "date": "2026-10-31",
+    "index": 39
+  },
+  {
+    "slug": "sql-vs-nosql",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question piège en entretien : une base NoSQL garantit-elle les propriétés ACID ?",
+    "body": "La réponse courte, \"non\", est fausse. La bonne réponse, c'est \"ça dépend du produit et du périmètre\".\n\nBeaucoup de bases NoSQL sacrifient une partie de la cohérence forte au profit de la disponibilité et de la scalabilité — c'est le compromis décrit par le théorème CAP. Mais certaines, comme MongoDB depuis ses versions récentes, offrent bien des transactions ACID, avec des limites de performance par rapport à un moteur relationnel dédié.\n\nEt NoSQL ne veut même pas dire \"sans SQL\" — ça veut dire \"Not Only SQL\". Document, clé-valeur, colonne, graphe : quatre familles, quatre modèles de données différents, chacune pensée pour un pattern d'accès précis.\n\nLe vrai réflexe à avoir en entretien : ne jamais répondre \"SQL\" ou \"NoSQL\" sans expliquer le compromis qui justifie le choix pour le cas posé.",
+    "hashtags": [
+      "SQL",
+      "NoSQL",
+      "BasesDeDonnees",
+      "EntretienTechnique",
+      "TechFrance"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/sql-vs-nosql/",
+    "date": "2026-11-03",
+    "index": 40
+  },
+  {
+    "slug": "monitoring",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'erreur la plus courante en monitoring : confondre ça avec l'observabilité.",
+    "body": "Le monitoring surveille un ensemble d'indicateurs prédéfinis — il répond aux questions qu'on a pensé à poser à l'avance. L'observabilité va plus loin : elle permet d'explorer et de comprendre pourquoi un système se comporte ainsi, y compris pour des questions qu'on n'avait pas anticipées.\n\nLes trois piliers à connaître par cœur pour un entretien : les métriques (des chiffres agrégés dans le temps, légers, parfaits pour l'alerting), les logs (des événements détaillés pour investiguer précisément), les traces (le chemin d'une requête à travers plusieurs services, indispensable dès qu'il y en a plus d'un).\n\nUne règle simple à citer : une alerte doit être actionnable. Si personne ne sait quoi faire en la recevant à 3h du matin, ce n'est pas une alerte, c'est du bruit — et à terme, du bruit qui fait ignorer les vraies urgences.",
+    "hashtags": [
+      "Monitoring",
+      "DevOps",
+      "CloudComputing",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/monitoring/",
+    "date": "2026-11-05",
+    "index": 41
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Comment tu optimiserais une API lente ?\" — la question qui sépare les niveaux en entretien",
+    "body": "Une bonne réponse ne commence jamais par une solution. Elle commence par : \"je mesure d'abord, avant de deviner.\"\n\nEnsuite, les leviers classiques : cache sur les réponses qui changent peu, pagination plutôt que tout renvoyer d'un coup, éviter le problème N+1 en base, ne renvoyer que les champs nécessaires, compresser les réponses.\n\nLa liste complète des questions backend qui reviennent le plus, avec des réponses directes 👇",
+    "link": "https://www.mybearisyellow.me/preparation-entretien/questions-backend/",
+    "hashtags": [
+      "EntretienTechnique",
+      "Backend",
+      "Performance",
+      "API"
+    ],
+    "date": "2026-11-07",
+    "index": 42
+  },
+  {
+    "slug": "repository",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "L'erreur la plus fréquente sur les projets qui \"utilisent\" le Repository Pattern : appeler l'ORM directement depuis le code métier, à côté du repository.",
+    "body": "Ça donne un faux sentiment de découplage. On a bien une interface UtilisateurRepositoryInterface quelque part dans le projet, mais la moitié du code appelle encore Eloquent ou Doctrine en direct pour \"aller plus vite\".\n\nRésultat : impossible de tester la logique sans une vraie base de données, et changer d'ORM demande de traquer des appels techniques éparpillés partout dans le métier.\n\nLe vrai test en entretien n'est pas \"connaissez-vous le Repository Pattern\" mais \"un Repository correspond-il à une table ?\". Non — il correspond à un agrégat métier. Un agrégat Commande peut être stocké sur plusieurs tables (commandes, lignes de commande) tout en n'exposant qu'un seul CommandeRepositoryInterface.",
+    "hashtags": [
+      "DesignPatterns",
+      "ArchitectureLogicielle",
+      "CleanCode",
+      "Backend",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/repository/",
+    "date": "2026-11-10",
+    "index": 43
+  },
+  {
+    "slug": "cache-redis",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Mettre un TTL infini sur ses clés Redis \"pour être tranquille\" est une fausse bonne idée.",
+    "body": "Sans TTL, une clé jamais invalidée explicitement — bug applicatif, oubli dans le code — reste périmée indéfiniment en mémoire. Et la mémoire de Redis se remplit progressivement de données obsolètes que personne ne va nettoyer.\n\nLe TTL n'est pas la stratégie d'invalidation elle-même, c'est un filet de sécurité. La vraie invalidation, la fiable, c'est de supprimer explicitement la clé juste après chaque écriture en base (DEL après un UPDATE), pour refléter le changement immédiatement plutôt que d'attendre l'expiration.\n\nMême avec ça, une fenêtre de risque existe : entre l'écriture en base et l'invalidation du cache, une lecture concurrente peut voir une valeur périmée pendant un court instant. Un TTL raisonnable en complément limite les dégâts si l'invalidation explicite est ratée.",
+    "hashtags": [
+      "Redis",
+      "NoSQL",
+      "Performance",
+      "Backend",
+      "BasesDeDonnees"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/cache-redis/",
+    "date": "2026-11-12",
+    "index": 44
+  },
+  {
+    "slug": "scalabilite",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Scaler horizontalement une appli qui n'a pas été conçue pour ça : l'erreur classique.",
+    "body": "La scalabilité verticale, c'est prendre une machine plus grosse — simple, mais plafonné par le matériel, et toujours un point de défaillance unique. La scalabilité horizontale, c'est ajouter des machines identiques derrière un load balancer — sans plafond théorique, mais ça exige une contrainte de conception forte : le service doit être stateless.\n\nLe piège : une instance qui garde une session utilisateur en mémoire locale force le load balancer à toujours router ce client vers la même instance. Ça casse la répartition de charge et complique la gestion des pannes. La solution consiste à externaliser cet état dans une base de données, un cache Redis, ou un JWT côté client.\n\nDétail qu'on oublie souvent en entretien : un load balancer doit inclure des health checks. Envoyer du trafic vers une instance déjà en panne aggrave l'incident au lieu de le contourner.",
+    "hashtags": [
+      "Scalabilite",
+      "Kubernetes",
+      "DevOps",
+      "CloudComputing",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/cloud-devops/scalabilite/",
+    "date": "2026-11-14",
+    "index": 45
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Pourquoi un index accélère une requête ?\" — la question SQL la plus posée en entretien",
+    "body": "Sans index, la base scanne toutes les lignes d'une table pour trouver celles qui correspondent à un critère.\n\nUn index construit une structure arborescente triée (souvent un B-Tree), ce qui permet de retrouver les lignes recherchées en un nombre d'étapes logarithmique plutôt que linéaire — au prix d'un coût supplémentaire à chaque écriture.\n\nC'est cette dernière partie (le coût à l'écriture) que la plupart des gens oublient de mentionner, et qui fait souvent la différence.",
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/index-bdd/",
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "date": "2026-11-17",
+    "index": 46
+  },
+  {
+    "slug": "dependency-injection",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Ce qu'on vérifie vraiment quand on vous demande d'expliquer l'injection de dépendances en entretien : connaissez-vous le Service Locator, et savez-vous pourquoi c'est un anti-pattern.",
+    "body": "Avec un Service Locator, une classe va elle-même chercher ses dépendances dans un registre global. Elles sont cachées à l'intérieur du code, invisibles depuis la signature du constructeur.\n\nAvec l'injection de dépendances, elles sont explicites, révélées par le constructeur — on voit immédiatement de quoi une classe a besoin, et on peut les remplacer par des mocks en test sans effort.\n\nC'est cette différence, pas la définition théorique du pattern, qui distingue un dev qui a compris DI d'un dev qui récite une définition.\n\nDétail qu'on oublie souvent : un conteneur DI (Symfony, Spring) n'est qu'un outil qui automatise le câblage. Le principe fonctionne très bien à la main, sans aucun conteneur, dans un script de dix lignes.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "SoftwareEngineering",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/dependency-injection/",
+    "date": "2026-11-19",
+    "index": 47
+  },
+  {
+    "slug": "replication",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "La réplication n'est PAS une sauvegarde. Confondre les deux peut coûter cher le jour où quelqu'un lance un DELETE sans WHERE.",
+    "body": "La réplication protège contre une panne matérielle : si le serveur principal tombe, une réplique à jour peut prendre le relais. Mais une erreur applicative se propage vers les répliques presque aussi vite que vers les données originales — un DELETE malheureux sur le maître se retrouve répliqué en quelques secondes.\n\nUne sauvegarde, elle, capture un état à un instant T qu'on peut restaurer indépendamment de ce qui s'est passé après. Les deux mécanismes sont complémentaires, pas interchangeables — et s'appuyer uniquement sur la réplication en pensant être couvert est une des erreurs d'infra les plus coûteuses à découvrir en pleine crise.\n\nEn entretien, savoir expliquer cette distinction est souvent plus valorisé que de connaître par cœur la configuration exacte d'un moteur de réplication précis.",
+    "hashtags": [
+      "BasesDeDonnees",
+      "PostgreSQL",
+      "Backend",
+      "DataEngineering",
+      "EntretienTechnique"
+    ],
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/replication/",
+    "date": "2026-11-21",
+    "index": 48
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Explique-moi Docker\" en une réponse qui tient en 30 secondes",
+    "body": "Docker empaquette une application avec toutes ses dépendances (code, runtime, librairies, configuration) dans un conteneur : un environnement isolé et portable, identique du poste du développeur à la production.\n\nContrairement à une VM, un conteneur partage le noyau du système hôte — beaucoup plus léger, beaucoup plus rapide à démarrer.\n\nSi on vous demande la suite logique (\"et Kubernetes dans tout ça ?\"), la réponse est dans l'article complet.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/docker-explique-simplement/",
+    "hashtags": [
+      "Docker",
+      "DevOps",
+      "EntretienTechnique",
+      "CloudComputing"
+    ],
+    "date": "2026-11-24",
+    "index": 49
+  },
+  {
+    "slug": "strategy",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Le signe qu'il vous manque un Strategy Pattern : une méthode avec un switch ou une cascade de if/else qui grossit à chaque nouveau cas.",
+    "body": "Livraison standard, puis express, puis internationale, puis un partenaire avec ses propres tarifs — six mois plus tard, calculerFrais() est un mur illisible où chaque nouvelle règle risque de casser les précédentes.\n\nLe vrai problème n'est pas la logique elle-même, c'est qu'elle est figée dans une seule méthode. Impossible de tester un mode de livraison isolément, impossible d'en ajouter un sans rouvrir un fichier que tout le monde touche.\n\nAvec Strategy, ajouter un comportement revient à ajouter une classe. Rien d'existant n'a besoin d'être modifié — c'est littéralement le principe ouvert/fermé appliqué.\n\nPiège classique en entretien : Strategy et State ont presque le même diagramme UML. La différence est dans l'intention — avec Strategy, c'est le client qui choisit la stratégie ; avec State, c'est l'objet qui change de comportement selon son propre état interne.",
+    "hashtags": [
+      "DesignPatterns",
+      "CleanCode",
+      "EntretienTechnique",
+      "SoftwareEngineering",
+      "PHP"
+    ],
+    "link": "https://www.mybearisyellow.me/design-patterns/strategy/",
+    "date": "2026-11-26",
+    "index": 50
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Quelle différence entre DELETE et TRUNCATE ?\" — question SQL piège",
+    "body": "DELETE est une commande DML : elle supprime ligne par ligne, peut être filtrée avec un WHERE, déclenche les triggers, et peut être annulée avec un ROLLBACK.\n\nTRUNCATE est une commande DDL : elle vide la table entière d'un coup, réinitialise l'auto-incrément, et est généralement beaucoup plus rapide — mais sans la finesse du filtrage.\n\nLe piège classique : penser que c'est juste \"deux façons de vider une table\". Ce n'est pas le cas.",
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/sql-explique-simplement/",
+    "hashtags": [
+      "SQL",
+      "BasesDeDonnees",
+      "EntretienTechnique",
+      "Backend"
+    ],
+    "date": "2026-11-28",
+    "index": 51
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Docker dans plus de 80% des offres backend mid/senior en 2026 🐻",
+    "body": "C'est ce que montrent les analyses de compétences backend de cette année : Docker n'est plus un \"plus\", c'est une compétence de base attendue au même titre que Git.\n\nSi le vocabulaire (image, conteneur, Dockerfile, Compose) est encore flou, on l'a expliqué simplement, sans jargon inutile — avec un vrai Dockerfile commenté.\n\nÇa se rattrape en un article.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/docker-explique-simplement/",
+    "hashtags": [
+      "Docker",
+      "DevOps",
+      "TechFrance",
+      "Backend"
+    ],
+    "date": "2026-12-01",
+    "index": 52
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Le \"modular monolith\" revient fort dans les discussions d'architecture en 2026",
+    "body": "L'idée : récupérer 80% des bénéfices des microservices (frontières claires, équipes autonomes) pour 20% du coût opérationnel — sans la complexité réseau d'un système distribué.\n\nC'est exactement pour ça que le couplage faible et les bonnes frontières entre modules comptent plus que jamais, microservices ou pas.\n\nOn a détaillé ce qui distingue vraiment un couplage fort d'un couplage faible, avec un exemple de code.",
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/couplage-fort-vs-faible/",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "SoftwareEngineering",
+      "TechFrance",
+      "Backend"
+    ],
+    "date": "2026-12-03",
+    "index": 53
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "L'architecture hexagonale revient sur le devant de la scène pour un usage précis en 2026 : moderniser du legacy",
+    "body": "Pas pour \"faire propre\" sur un projet neuf, mais comme filet de sécurité pour moderniser progressivement un système existant sans tout réécrire d'un coup — en isolant le métier derrière des ports, pendant qu'on remplace les adaptateurs un par un.\n\nOn a expliqué le vocabulaire port/adapter avec un exemple concret, sans jargon.",
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/architecture-hexagonale/",
+    "hashtags": [
+      "ArchitectureLogicielle",
+      "CleanCode",
+      "SoftwareEngineering",
+      "TechFrance"
+    ],
+    "date": "2026-12-05",
+    "index": 54
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Java n'est pas \"hype\" en 2026 — et c'est justement pour ça qu'il reste incontournable",
+    "body": "Finance, assurance, service public : les grands systèmes d'information tournent sur Java, avec Spring Boot pour les API, Hibernate pour la persistance, Spring Security pour la protection des endpoints. Rien de tout ça ne disparaît dans les 3 à 5 prochaines années.\n\nOr Spring repose massivement sur l'injection de dépendances — un principe qu'il vaut mieux comprendre en profondeur plutôt que de le subir via des annotations magiques.",
+    "link": "https://www.mybearisyellow.me/design-patterns/dependency-injection/",
+    "hashtags": [
+      "Java",
+      "SpringBoot",
+      "Backend",
+      "TechFrance"
+    ],
+    "date": "2026-12-08",
+    "index": 55
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "L'observabilité (métriques, logs, traces) devient une compétence \"attendue\", pas \"un plus\", en 2026",
+    "body": "Avec des architectures de plus en plus cloud-native et distribuées, deviner où se situe un problème en production sans monitoring n'est juste plus une option viable.\n\nLes trois piliers restent les mêmes depuis des années : métriques, logs, traces. Ce qui change, c'est à quel point c'est devenu non-négociable dans une stack moderne.\n\nOn a détaillé les bases, avec les pièges classiques d'un monitoring mal pensé.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/monitoring/",
+    "hashtags": [
+      "DevOps",
+      "Monitoring",
+      "CloudComputing",
+      "TechFrance"
+    ],
+    "date": "2026-12-10",
+    "index": 56
+  }
+]

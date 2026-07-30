@@ -1,0 +1,123 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="mt-4 max-w-2xl text-lg text-neutral-400">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}
+    <section class="prose mt-8 max-w-prose dark:prose-invert">
+      {{ . | emojify }}
+    </section>
+  {{ end }}
+
+  {{ $pages := .Pages }}
+  {{ $patterns := slice }}
+  {{ range $pages }}
+    {{ $patterns = $patterns | append .Params.pattern }}
+  {{ end }}
+  {{ $patterns = $patterns | uniq | sort }}
+
+  <section class="mt-10">
+    <div class="sticky top-0 z-10 -mx-4 border-b border-neutral-200 bg-neutral-50/90 px-4 py-4 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/90">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <input
+          id="dsa-search"
+          type="text"
+          placeholder="Rechercher un problème (ex: two sum, arbre, dp...)"
+          class="w-full flex-1 rounded-lg border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-neutral-900 placeholder-neutral-400 focus:border-primary-500 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral dark:placeholder-neutral-500 dark:focus:border-primary-400 sm:max-w-sm"
+        />
+        <select
+          id="dsa-pattern"
+          class="rounded-lg border border-neutral-300 bg-neutral-50 px-3 py-2.5 text-sm text-neutral-900 focus:border-primary-500 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral dark:focus:border-primary-400"
+        >
+          <option value="">Tous les patterns</option>
+          {{ range $patterns }}
+            <option value="{{ . }}">{{ . }}</option>
+          {{ end }}
+        </select>
+        <div class="flex gap-2">
+          <button type="button" class="dsa-chip bear-badge" data-diff="Facile">Facile</button>
+          <button type="button" class="dsa-chip bear-badge" data-diff="Moyen">Moyen</button>
+          <button type="button" class="dsa-chip bear-badge" data-diff="Difficile">Difficile</button>
+        </div>
+      </div>
+      <p class="mt-3 text-sm text-neutral-500">
+        <span id="dsa-count">{{ len $pages }}</span>/{{ len $pages }} problèmes
+      </p>
+    </div>
+
+    <div class="mt-4 divide-y divide-neutral-200 rounded-xl border border-neutral-200 dark:divide-neutral-800 dark:border-neutral-800">
+      {{ range $pages }}
+        <a
+          href="{{ .Permalink }}"
+          class="dsa-row flex items-center gap-4 px-4 py-3 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900"
+          data-search="{{ printf "%v %s %s" .Params.number .Title .Params.pattern | lower }}"
+          data-pattern="{{ .Params.pattern }}"
+          data-diff="{{ .Params.difficulty }}"
+        >
+          <span class="w-10 flex-shrink-0 text-right font-mono text-sm text-neutral-500">#{{ .Params.number }}</span>
+          <span class="flex-1 font-semibold text-neutral-900 dark:text-neutral">{{ .Title }}</span>
+          <span class="bear-badge hidden sm:inline-flex">{{ .Params.pattern }}</span>
+          <span class="bear-badge{{ if eq .Params.difficulty "Facile" }}-primary{{ end }}">{{ .Params.difficulty }}</span>
+        </a>
+      {{ end }}
+    </div>
+
+    <p id="dsa-empty" class="mt-10 hidden text-center text-neutral-400">
+      Aucun problème ne correspond à ta recherche.
+    </p>
+  </section>
+
+  <script>
+    (function () {
+      var search = document.getElementById('dsa-search');
+      var patternSelect = document.getElementById('dsa-pattern');
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.dsa-chip'));
+      var rows = Array.prototype.slice.call(document.querySelectorAll('.dsa-row'));
+      var counter = document.getElementById('dsa-count');
+      var empty = document.getElementById('dsa-empty');
+      var activeDiffs = new Set();
+
+      function apply() {
+        var q = search.value.trim().toLowerCase();
+        var pattern = patternSelect.value;
+        var visible = 0;
+
+        rows.forEach(function (row) {
+          var okSearch = !q || row.dataset.search.indexOf(q) !== -1;
+          var okPattern = !pattern || row.dataset.pattern === pattern;
+          var okDiff = activeDiffs.size === 0 || activeDiffs.has(row.dataset.diff);
+          var show = okSearch && okPattern && okDiff;
+          row.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        counter.textContent = visible;
+        empty.classList.toggle('hidden', visible !== 0);
+      }
+
+      search.addEventListener('input', apply);
+      patternSelect.addEventListener('change', apply);
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var d = chip.dataset.diff;
+          if (activeDiffs.has(d)) {
+            activeDiffs.delete(d);
+            chip.classList.remove('is-active');
+          } else {
+            activeDiffs.add(d);
+            chip.classList.add('is-active');
+          }
+          apply();
+        });
+      });
+    })();
+  </script>
+
+  {{ partial "pagination.html" . }}
+{{ end }}

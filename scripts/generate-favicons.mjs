@@ -6,8 +6,8 @@ import path from "path";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 
-const transparentSvg = readFileSync(path.join(root, "assets/images/logo-mark.svg"));
-const solidSvg = readFileSync(path.join(root, "assets/images/icon-solid.svg"));
+const transparentSvg = readFileSync(path.join(root, "assets/images/bear-emoji.svg"));
+const solidSvg = readFileSync(path.join(root, "assets/images/bear-emoji-solid.svg"));
 
 const targets = [
   { svg: transparentSvg, size: 16, out: "static/favicon-16x16.png" },

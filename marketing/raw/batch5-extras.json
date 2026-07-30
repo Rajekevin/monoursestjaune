@@ -1,0 +1,130 @@
+[
+  {
+    "type": "lancement",
+    "category_label": "Lancement",
+    "hook": "On a lancé MyBearIsYellow 🐻",
+    "body": "L'idée de départ : arrêter d'apprendre les concepts techniques par cœur pour un entretien, et vraiment les comprendre.\n\nChaque fiche suit la même trame : le problème concret, l'idée générale, une analogie, un schéma, du code, et les questions qu'on vous pose vraiment en entretien.\n\nArchitecture logicielle, Design Patterns, Bases de données, Tests, Cloud & DevOps : 40 fiches déjà en ligne, gratuites, en français.",
+    "link": "https://www.mybearisyellow.me",
+    "hashtags": ["DeveloppeurWeb", "SoftwareEngineering", "TechFrance", "EntretienTechnique"]
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Question aux devs qui me suivent 👇",
+    "body": "Quel concept technique vous a pris le plus de temps à VRAIMENT comprendre — pas juste réciter pour un entretien ?\n\nPour moi c'était les niveaux d'isolation transactionnelle en SQL. J'ai dû me planter en prod pour vraiment intégrer la différence entre Read Committed et Repeatable Read.\n\nDites-moi en commentaire, ça m'intéresse pour les prochains sujets à couvrir sur MyBearIsYellow 🐻",
+    "link": null,
+    "hashtags": ["BasesDeDonnees", "SQL", "DeveloppeurWeb", "Backend"]
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Sondage rapide 🐻",
+    "body": "En entretien technique, la question qui vous stresse le plus c'est plutôt :\n\n🔵 \"Explique-moi SOLID\"\n🟡 \"Explique-moi une transaction SQL\"\n🟢 \"Différence entre REST et SOAP\"\n⚪ \"Comment tu optimiserais cette API ?\"\n\nDites-moi en commentaire, je fais un post détaillé sur celle qui revient le plus.",
+    "link": null,
+    "hashtags": ["EntretienTechnique", "DeveloppeurWeb", "Backend", "TechFrance"]
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Débat entre devs 🐻",
+    "body": "Design pattern le plus sur-utilisé en 2026 : Singleton ou Factory ?\n\nMon avis : Singleton, parce qu'on le sort dès qu'on a besoin \"d'une seule instance\", en oubliant qu'un conteneur d'injection de dépendances gère déjà ce scope proprement, sans état global caché.\n\nVous êtes d'accord, ou je me trompe ?",
+    "link": null,
+    "hashtags": ["DesignPatterns", "CleanCode", "PHP", "Java"]
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Vrai ou faux 🐻",
+    "body": "\"Un index accélère toujours une requête SQL.\"\n\nVrai ou faux ?\n\n(Indice : la réponse dépend de ce qui se passe à l'écriture, pas seulement à la lecture — et c'est exactement le genre de nuance qui fait la différence en entretien.)\n\nRéponse en commentaire demain, avec le lien vers l'explication complète.",
+    "link": null,
+    "hashtags": ["SQL", "BasesDeDonnees", "Backend", "EntretienTechnique"]
+  },
+  {
+    "type": "engagement",
+    "category_label": "Engagement",
+    "hook": "Sondage DevOps 🐻",
+    "body": "Vous avez appris Docker et Kubernetes plutôt :\n\n🔵 En formation / bootcamp\n🟡 Sur le tas, en prod, sous pression\n🟢 En autodidacte, par curiosité, avant d'en avoir besoin\n\nJe suis curieux de voir comment les gens qui me suivent sont rentrés dans le sujet — dites-moi en commentaire.",
+    "link": null,
+    "hashtags": ["Docker", "Kubernetes", "DevOps", "TechFrance"]
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "Question d'entretien classique : \"Différence entre REST et SOAP ?\"",
+    "body": "REST s'appuie sur les verbes HTTP standards (GET, POST, PUT, DELETE), transporte généralement du JSON, et traite chaque ressource comme une URL.\n\nSOAP est un protocole plus strict, basé sur XML, avec un contrat formel (WSDL) et des standards intégrés pour la sécurité et les transactions.\n\nREST domine aujourd'hui pour les API grand public. SOAP reste présent dans certains systèmes d'entreprise ou bancaires qui exigent des garanties contractuelles fortes.",
+    "link": "https://www.mybearisyellow.me/preparation-entretien/questions-backend/",
+    "hashtags": ["EntretienTechnique", "API", "Backend", "TechFrance"]
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Comment tu optimiserais une API lente ?\" — la question qui sépare les niveaux en entretien",
+    "body": "Une bonne réponse ne commence jamais par une solution. Elle commence par : \"je mesure d'abord, avant de deviner.\"\n\nEnsuite, les leviers classiques : cache sur les réponses qui changent peu, pagination plutôt que tout renvoyer d'un coup, éviter le problème N+1 en base, ne renvoyer que les champs nécessaires, compresser les réponses.\n\nLa liste complète des questions backend qui reviennent le plus, avec des réponses directes 👇",
+    "link": "https://www.mybearisyellow.me/preparation-entretien/questions-backend/",
+    "hashtags": ["EntretienTechnique", "Backend", "Performance", "API"]
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Pourquoi un index accélère une requête ?\" — la question SQL la plus posée en entretien",
+    "body": "Sans index, la base scanne toutes les lignes d'une table pour trouver celles qui correspondent à un critère.\n\nUn index construit une structure arborescente triée (souvent un B-Tree), ce qui permet de retrouver les lignes recherchées en un nombre d'étapes logarithmique plutôt que linéaire — au prix d'un coût supplémentaire à chaque écriture.\n\nC'est cette dernière partie (le coût à l'écriture) que la plupart des gens oublient de mentionner, et qui fait souvent la différence.",
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/index-bdd/",
+    "hashtags": ["SQL", "BasesDeDonnees", "EntretienTechnique", "Backend"]
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Explique-moi Docker\" en une réponse qui tient en 30 secondes",
+    "body": "Docker empaquette une application avec toutes ses dépendances (code, runtime, librairies, configuration) dans un conteneur : un environnement isolé et portable, identique du poste du développeur à la production.\n\nContrairement à une VM, un conteneur partage le noyau du système hôte — beaucoup plus léger, beaucoup plus rapide à démarrer.\n\nSi on vous demande la suite logique (\"et Kubernetes dans tout ça ?\"), la réponse est dans l'article complet.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/docker-explique-simplement/",
+    "hashtags": ["Docker", "DevOps", "EntretienTechnique", "CloudComputing"]
+  },
+  {
+    "type": "entretien",
+    "category_label": "Entretien",
+    "hook": "\"Quelle différence entre DELETE et TRUNCATE ?\" — question SQL piège",
+    "body": "DELETE est une commande DML : elle supprime ligne par ligne, peut être filtrée avec un WHERE, déclenche les triggers, et peut être annulée avec un ROLLBACK.\n\nTRUNCATE est une commande DDL : elle vide la table entière d'un coup, réinitialise l'auto-incrément, et est généralement beaucoup plus rapide — mais sans la finesse du filtrage.\n\nLe piège classique : penser que c'est juste \"deux façons de vider une table\". Ce n'est pas le cas.",
+    "link": "https://www.mybearisyellow.me/bases-de-donnees/sql-explique-simplement/",
+    "hashtags": ["SQL", "BasesDeDonnees", "EntretienTechnique", "Backend"]
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Docker dans plus de 80% des offres backend mid/senior en 2026 🐻",
+    "body": "C'est ce que montrent les analyses de compétences backend de cette année : Docker n'est plus un \"plus\", c'est une compétence de base attendue au même titre que Git.\n\nSi le vocabulaire (image, conteneur, Dockerfile, Compose) est encore flou, on l'a expliqué simplement, sans jargon inutile — avec un vrai Dockerfile commenté.\n\nÇa se rattrape en un article.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/docker-explique-simplement/",
+    "hashtags": ["Docker", "DevOps", "TechFrance", "Backend"]
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Le \"modular monolith\" revient fort dans les discussions d'architecture en 2026",
+    "body": "L'idée : récupérer 80% des bénéfices des microservices (frontières claires, équipes autonomes) pour 20% du coût opérationnel — sans la complexité réseau d'un système distribué.\n\nC'est exactement pour ça que le couplage faible et les bonnes frontières entre modules comptent plus que jamais, microservices ou pas.\n\nOn a détaillé ce qui distingue vraiment un couplage fort d'un couplage faible, avec un exemple de code.",
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/couplage-fort-vs-faible/",
+    "hashtags": ["ArchitectureLogicielle", "SoftwareEngineering", "TechFrance", "Backend"]
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "L'architecture hexagonale revient sur le devant de la scène pour un usage précis en 2026 : moderniser du legacy",
+    "body": "Pas pour \"faire propre\" sur un projet neuf, mais comme filet de sécurité pour moderniser progressivement un système existant sans tout réécrire d'un coup — en isolant le métier derrière des ports, pendant qu'on remplace les adaptateurs un par un.\n\nOn a expliqué le vocabulaire port/adapter avec un exemple concret, sans jargon.",
+    "link": "https://www.mybearisyellow.me/architecture-logicielle/architecture-hexagonale/",
+    "hashtags": ["ArchitectureLogicielle", "CleanCode", "SoftwareEngineering", "TechFrance"]
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "Java n'est pas \"hype\" en 2026 — et c'est justement pour ça qu'il reste incontournable",
+    "body": "Finance, assurance, service public : les grands systèmes d'information tournent sur Java, avec Spring Boot pour les API, Hibernate pour la persistance, Spring Security pour la protection des endpoints. Rien de tout ça ne disparaît dans les 3 à 5 prochaines années.\n\nOr Spring repose massivement sur l'injection de dépendances — un principe qu'il vaut mieux comprendre en profondeur plutôt que de le subir via des annotations magiques.",
+    "link": "https://www.mybearisyellow.me/design-patterns/dependency-injection/",
+    "hashtags": ["Java", "SpringBoot", "Backend", "TechFrance"]
+  },
+  {
+    "type": "actualite",
+    "category_label": "Actualité",
+    "hook": "L'observabilité (métriques, logs, traces) devient une compétence \"attendue\", pas \"un plus\", en 2026",
+    "body": "Avec des architectures de plus en plus cloud-native et distribuées, deviner où se situe un problème en production sans monitoring n'est juste plus une option viable.\n\nLes trois piliers restent les mêmes depuis des années : métriques, logs, traces. Ce qui change, c'est à quel point c'est devenu non-négociable dans une stack moderne.\n\nOn a détaillé les bases, avec les pièges classiques d'un monitoring mal pensé.",
+    "link": "https://www.mybearisyellow.me/cloud-devops/monitoring/",
+    "hashtags": ["DevOps", "Monitoring", "CloudComputing", "TechFrance"]
+  }
+]

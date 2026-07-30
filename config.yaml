@@ -80,26 +80,38 @@ menu:
     - name: "Cloud & DevOps"
       pageRef: "/cloud-devops"
       weight: 5
+    - name: "Clean Code"
+      pageRef: "/clean-code"
+      weight: 6
+    - name: "Algorithmes"
+      pageRef: "/algorithmes"
+      weight: 7
     - name: "Entretiens"
       pageRef: "/preparation-entretien"
-      weight: 6
+      weight: 8
     - name: "Recherche"
       params:
         action: "search"
         icon: "search"
         showName: false
-      weight: 7
+      weight: 9
     - name: "Apparence"
       params:
         action: "appearance"
         icon: "moon"
         showName: false
-      weight: 8
+      weight: 10
 
   footer:
     - name: "🐻 Pourquoi notre ours est jaune ?"
       pageRef: "/notre-histoire"
       weight: 1
+    - name: "Mentions légales"
+      pageRef: "/mentions-legales"
+      weight: 2
+    - name: "Politique de confidentialité"
+      pageRef: "/politique-de-confidentialite"
+      weight: 3
 
 params:
   env: production

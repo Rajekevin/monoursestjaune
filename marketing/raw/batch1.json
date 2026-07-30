@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "quest-ce-quune-architecture-logicielle",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Comment savoir si une décision technique est \"architecturale\" ou pas ? Une seule question suffit.",
+    "body": "Pas besoin de diagramme UML ni de titre ronflant. La question à se poser avant toute décision structurante : si on se trompe, combien ça coûte de revenir en arrière ?\n\nRenommer une méthode, changer un for en foreach : réversible en quelques minutes, c'est du design. Choisir comment deux services communiquent, ou si un modèle de données est partagé entre équipes : ça peut coûter des semaines à défaire, c'est de l'architecture.\n\nLa distinction n'a rien d'universel — elle dépend du contexte réel du projet. Mais elle donne un réflexe simple à appliquer avant de foncer sur un new StripeClient() en plein milieu d'un contrôleur.",
+    "hashtags": ["ArchitectureLogicielle", "SoftwareEngineering", "CleanCode", "DeveloppeurWeb", "EntretienTechnique"]
+  },
+  {
+    "slug": "architecture-hexagonale",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Port primaire, port secondaire : si vous confondez les deux en entretien, ça se voit tout de suite.",
+    "body": "L'architecture hexagonale (Ports & Adapters, formalisée par Alistair Cockburn en 2005) tient sur une image simple : une prise électrique murale. Elle définit un contrat standard, sans savoir ce qu'on va y brancher — une lampe, un chargeur, un aspirateur.\n\nUn port primaire, c'est ce qui pilote le métier : un contrôleur HTTP ou une commande CLI qui déclenche une action. Un port secondaire, c'est l'inverse : le métier qui appelle l'extérieur, pour persister une donnée ou envoyer un e-mail, sans jamais connaître l'implémentation réelle derrière.\n\nLe nombre six dans \"hexagonale\" n'a rien de spécial, au passage — Cockburn voulait juste assez de faces pour montrer qu'un métier peut avoir plusieurs ports, pas seulement une entrée et une sortie comme le suggérerait un rectangle.",
+    "hashtags": ["ArchitectureLogicielle", "CleanCode", "SoftwareEngineering", "EntretienTechnique", "Backend"]
+  },
+  {
+    "slug": "domain-driven-design-ddd",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Un \"Client\" en facturation et un \"Client\" en support technique ne sont pas le même objet. Et c'est très bien comme ça.",
+    "body": "Un système qui grossit accumule presque toujours des mots ambigus. Le mot \"Client\" finit par désigner un compte de facturation pour une équipe, un contact commercial pour une autre, un utilisateur connecté pour une troisième — et une classe unique de 40 attributs que plus personne ne comprend vraiment.\n\nLe Domain Driven Design ne cherche pas à unifier ce mot de force. Il découpe le système en bounded contexts, des frontières explicites à l'intérieur desquelles un mot a un sens unique et précis. \"Client\" peut légitimement vouloir dire deux choses différentes en Facturation et en Support, tant que chaque contexte reste cohérent avec lui-même.\n\nC'est exactement comme le mot \"pièce\" : un architecte, un comptable et un déménageur n'en ont pas la même définition, et aucun des trois n'a tort.",
+    "hashtags": ["DDD", "ArchitectureLogicielle", "SoftwareEngineering", "Backend", "TechFrance"]
+  },
+  {
+    "slug": "couplage-fort-vs-faible",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Le signal le plus fiable d'un couplage fort dans du code : un new NomDeClasseConcrete() planté au milieu d'une méthode métier.",
+    "body": "C'est la question qu'on pose souvent en entretien pour vérifier qu'on sait reconnaître le problème, pas juste le définir. Deuxième signal, tout aussi fiable : si on ne peut pas tester une classe sans faire tourner une vraie base de données ou un vrai service externe, c'est qu'elle dépend d'une implémentation concrète plutôt que d'une abstraction.\n\nLa correction ne demande pas un gros chantier : une interface, et l'injection de la dépendance par le constructeur au lieu d'un new en interne. Résultat, on peut remplacer Stripe par un autre prestataire de paiement sans toucher à la classe qui l'utilise.\n\nAttention à l'excès inverse, cela dit : créer une interface pour une simple fonction utilitaire sans effet de bord n'ajoute que de l'indirection, sans aucun bénéfice réel.",
+    "hashtags": ["ArchitectureLogicielle", "SOLID", "CleanCode", "EntretienTechnique", "Backend"]
+  },
+  {
+    "slug": "separation-des-responsabilites",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Une astuce simple pour savoir si une classe a trop de responsabilités : décrivez ce qu'elle fait en une phrase, sans utiliser le mot \"et\".",
+    "body": "Si la phrase devient \"elle valide les données et calcule le prix et envoie un e-mail\", le diagnostic est fait — plusieurs responsabilités sont mélangées dans la même unité de code.\n\nUne responsabilité, ce n'est pas une méthode ni une ligne de code : c'est une raison de changer. Le vrai symptôme apparaît quand des équipes différentes, pour des raisons totalement indépendantes, finissent par modifier le même fichier — le service marketing change l'e-mail, la compta change le calcul du prix, et la classe entière tremble à chaque fois.\n\nLe principe s'applique à toutes les échelles, pas seulement à une classe : un module \"facturation\" qui contient de la logique de stock viole exactement le même principe, juste à une échelle plus grande.",
+    "hashtags": ["CleanCode", "ArchitectureLogicielle", "SOLID", "SoftwareEngineering", "Backend"]
+  },
+  {
+    "slug": "solid-explique-simplement",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Sur les 5 lettres de SOLID, laquelle est la plus souvent violée sans que personne s'en rende compte ?",
+    "body": "Réponse : le L, Liskov Substitution. Contrairement aux autres, sa violation ne saute pas aux yeux — le code compile, l'interface est respectée à la lettre, mais le comportement trahit le contrat attendu.\n\nL'exemple classique : une classe Pingouin qui hérite d'Oiseau et lève une exception dans sa méthode voler(). Rien ne casse à la compilation. Ça casse en production, le jour où un appelant générique manipule un Oiseau sans savoir qu'il a affaire à un Pingouin.\n\nSOLID n'est pas une checklist à cocher systématiquement sur chaque classe — c'est un ensemble de signaux d'alerte à reconnaître face à du code réel. Beaucoup de devs savent réciter les 5 lettres sans être capables de dire laquelle est violée devant un vrai bout de code, ce qui en fait une excellente question de tri en entretien.",
+    "hashtags": ["SOLID", "ArchitectureLogicielle", "CleanCode", "EntretienTechnique", "PHP"]
+  },
+  {
+    "slug": "clean-architecture-expliquee-simplement",
+    "section": "architecture-logicielle",
+    "category_label": "Architecture logicielle",
+    "hook": "Une question suffit pour savoir si un fichier appartient au métier ou pas : est-ce qu'il importe un framework, un ORM ou un client HTTP ?",
+    "body": "Si la réponse est oui, ce n'est pas du domaine — c'est un détail technique qui devrait être à l'extérieur des cercles de la Clean Architecture, pas au centre.\n\nLa règle de dépendance dit exactement ça : le code ne peut dépendre que vers l'intérieur. Le centre (Entities, Use Cases) ne connaît jamais Doctrine, Eloquent ou un SGBD précis — ce sont les couches extérieures qui implémentent des interfaces définies par le métier, jamais l'inverse.\n\nCe n'est pas gratuit : plus de fichiers, plus d'indirection dès le premier commit. Le bénéfice n'apparaît que plus tard, quand changer de base de données ou exposer le même métier via une CLI en plus d'une API ne demande de toucher qu'un seul point de branchement.",
+    "hashtags": ["ArchitectureLogicielle", "CleanCode", "SoftwareEngineering", "Backend", "PHP"]
+  },
+  {
+    "slug": "singleton",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Un Singleton codé en dur et une instance \"singleton\" gérée par un conteneur d'injection de dépendances : ce n'est pas du tout la même chose.",
+    "body": "Le premier impose l'unicité dans le code lui-même — constructeur privé, accès statique global — impossible à remplacer par un mock en test. Le second reste un objet ordinaire, injectable, testable : seule sa portée est configurée comme singleton par le conteneur (Spring, Symfony...), qui pourrait tout aussi bien lui donner un scope différent sans changer une ligne de code métier.\n\nLe vrai reproche fait au Singleton classique, ce n'est pas le pattern en lui-même : c'est l'état global caché qu'il introduit, avec des dépendances invisibles entre des parties du code qui semblent indépendantes.\n\nSignal d'alerte assez fiable en entretien comme en revue de code : si vos tests unitaires doivent réinitialiser un état statique entre deux exécutions, un Singleton est probablement en cause quelque part.",
+    "hashtags": ["DesignPatterns", "CleanCode", "EntretienTechnique", "PHP", "Java"]
+  },
+  {
+    "slug": "factory",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Si vous retrouvez le même bloc if ($type === 'email') { ... } elseif ($type === 'sms') { ... } copié-collé à cinq endroits du code, vous avez besoin d'une Factory.",
+    "body": "Le Factory Pattern déplace cette logique de décision dans un seul endroit dédié : une méthode ou une classe dont le seul travail est de créer le bon objet selon un paramètre. Le code appelant ne fait plus jamais new EmailNotification() lui-même — il demande une notification de type email, sans savoir quelle classe concrète il reçoit en retour.\n\nLe jour où un nouveau canal apparaît (WhatsApp, par exemple), un seul endroit à modifier, pas cinq.\n\nUn point que beaucoup ratent en entretien : Factory viole en partie le principe ouvert/fermé, puisqu'ajouter un type oblige à modifier le switch. C'est un compromis assumé — concentrer la modification en un point identifié, plutôt que la disperser partout.",
+    "hashtags": ["DesignPatterns", "CleanCode", "PHP", "Java", "EntretienTechnique"]
+  },
+  {
+    "slug": "abstract-factory",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "L'Abstract Factory facilite l'ajout d'un nouveau thème complet. Elle complique beaucoup plus l'ajout d'un seul nouveau composant.",
+    "body": "Ajouter une nouvelle famille — un \"Thème contraste élevé\", par exemple — revient à ajouter une nouvelle factory concrète, sans toucher au code existant. Le principe ouvert/fermé est respecté à la lettre.\n\nMais ajouter un nouveau type de produit à une famille déjà en place — un composant Menu déroulant, en plus du Bouton et de la CaseACocher — oblige à modifier l'interface UIFactory, puis toutes les factories concrètes existantes. C'est le vrai point faible du pattern, celui qu'on oublie souvent de mentionner en entretien.\n\nLe signal qui doit faire penser à Abstract Factory plutôt qu'à une Factory simple : plusieurs objets qui doivent varier ensemble selon un même contexte, où un mélange entre familles serait un vrai bug — pas juste un détail esthétique.",
+    "hashtags": ["DesignPatterns", "ArchitectureLogicielle", "Java", "SoftwareEngineering", "EntretienTechnique"]
+  },
+  {
+    "slug": "builder",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Un constructeur avec dix paramètres optionnels a un nom : le \"constructeur télescope\". Et c'est illisible à l'appel.",
+    "body": "Impossible de savoir quel argument correspond à quel paramètre sans rouvrir la signature complète — et chaque appelant se retrouve à passer null pour tout ce qu'il n'utilise pas.\n\nLe Builder résout ça en séparant la construction en étapes chaînées, chacune nommée explicitement : methode(), header(), timeout(). Le code appelant devient auto-documenté, et une méthode finale construire() valide l'ensemble avant de retourner un objet fini, généralement immuable.\n\nSignal d'alerte à repérer en code review : au-delà de quatre ou cinq paramètres optionnels sur un constructeur, ou plusieurs constructeurs qui se chevauchent pour couvrir toutes les combinaisons possibles. C'est le moment de sortir un Builder plutôt que d'ajouter un onzième paramètre.",
+    "hashtags": ["DesignPatterns", "CleanCode", "PHP", "Java", "SoftwareEngineering"]
+  },
+  {
+    "slug": "observer",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Si vous avez déjà écrit addEventListener ou utilisé un EventEmitter en Node.js, vous connaissez déjà l'Observer Pattern — même sans l'avoir jamais nommé.",
+    "body": "Le principe : un Subject notifie automatiquement tous ses abonnés dès qu'un état change, sans avoir besoin de connaître leur nature exacte. Un statut de commande qui passe à \"payée\" peut déclencher un e-mail, un SMS et une notification à l'entrepôt, sans que la classe Commande sache rien de ces trois services.\n\nL'erreur la plus fréquente avec ce pattern n'est pas conceptuelle, elle est opérationnelle : oublier le désabonnement. C'est la cause la plus courante de fuite mémoire liée à l'Observer, particulièrement en JavaScript avec des écouteurs d'événements jamais retirés.\n\nAutre point à connaître pour un entretien un peu poussé : le pub/sub n'est pas l'Observer, c'en est une évolution distribuée — un intermédiaire (message broker, event bus) s'intercale, et émetteurs et abonnés ne se connaissent plus du tout entre eux.",
+    "hashtags": ["DesignPatterns", "JavaScript", "SoftwareEngineering", "Backend", "EntretienTechnique"]
+  }
+]

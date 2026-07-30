@@ -1,0 +1,66 @@
+{{ define "main" }}
+  <article>
+    <header class="max-w-prose">
+      {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+      {{ end }}
+
+      <div class="mb-5 flex flex-wrap items-center gap-2">
+        {{ with .Params.number }}
+          <span class="bear-badge-primary">#{{ . }}</span>
+        {{ end }}
+        {{ with .Params.pattern }}
+          <span class="bear-badge-primary">{{ . }}</span>
+        {{ end }}
+        {{ with .Params.difficulty }}
+          <span class="bear-badge">{{ . }}</span>
+        {{ end }}
+        {{ if ne .ReadingTime 0 }}
+          <span class="bear-badge">{{ .ReadingTime }} min de lecture</span>
+        {{ end }}
+      </div>
+
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
+
+      {{ with .Params.summary }}
+        <p class="mb-4 rounded-xl border-l-4 border-primary-500 bg-primary-50/60 px-5 py-4 text-lg leading-relaxed text-neutral-800 dark:border-primary-400 dark:bg-neutral-900/40 dark:text-neutral-300">
+          {{ . | markdownify }}
+        </p>
+      {{ end }}
+
+      <p class="mb-10 text-sm text-neutral-500">
+        🐻 Vocabulaire pas clair ?
+        <a href="{{ "/glossaire-algorithmes" | relLangURL }}" class="text-primary-600 no-underline hover:underline dark:text-primary-400">Consultez le glossaire algo</a>.
+      </p>
+    </header>
+
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      {{ if and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            {{ partial "toc.html" . }}
+          </div>
+        </div>
+      {{ end }}
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        {{ .Content | emojify }}
+      </div>
+    </section>
+
+    <footer class="max-w-prose pt-8 print:hidden">
+      {{ with .Params.tags }}
+        <div class="mb-6 flex flex-wrap gap-2">
+          {{ range . }}
+            {{ with site.GetPage (printf "/tags/%s" (. | urlize)) }}
+              <a href="{{ .Permalink }}" class="bear-tag">#{{ .Title }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ partial "sharing-links.html" . }}
+      {{ partial "article-pagination.html" . }}
+    </footer>
+  </article>
+{{ end }}

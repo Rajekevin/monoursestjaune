@@ -112,13 +112,13 @@ body:has(#menu-controller:checked) {
   @apply visible;
 }
 .copy-button {
-  @apply invisible absolute right-0 top-0 z-10 w-20 cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 py-1 font-mono text-sm text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
+  @apply invisible absolute right-0 top-0 z-10 w-20 cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-[#3a3f4b] py-1 font-mono text-xs text-[#abb2bf] opacity-90;
 }
 .copy-button:hover,
 .copy-button:focus,
 .copy-button:active,
 .copy-button:active:hover {
-  @apply bg-primary-100 dark:bg-primary-600;
+  @apply bg-primary-600 text-neutral-900;
 }
 .copy-textarea {
   @apply absolute -z-10 opacity-5;
@@ -140,26 +140,26 @@ code {
   @apply break-words;
 }
 
-/* -- Chroma Highlight -- */
+/* -- Chroma Highlight — always dark (One Dark Pro inspired), regardless of site theme -- */
 /* Background */
 .chroma {
-  @apply rounded-md bg-neutral-50 py-3 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply rounded-lg bg-[#282c34] py-3 text-sm leading-relaxed text-[#abb2bf];
 }
 .chroma pre {
   @apply m-0 p-0;
 }
 .prose div.chroma {
-  @apply mb-6 mt-6;
+  @apply mb-6 mt-6 overflow-x-auto;
 }
 /* LineTable */
 .chroma .lntable {
-  @apply m-0 block w-auto overflow-auto text-base;
+  @apply m-0 block w-auto overflow-auto text-sm;
 }
 /* LineNumbersTable */
 /* LineNumbers */
 .chroma .lnt,
 .chroma .ln {
-  @apply mr-2 px-2 text-neutral-600 dark:text-neutral-300;
+  @apply mr-2 px-2 text-[#495162];
 }
 .chroma .lntd {
   @apply p-0 align-top;
@@ -169,7 +169,7 @@ code {
 }
 /* LineHighlight */
 .chroma .hl {
-  @apply block w-full bg-primary-100 dark:bg-primary-900;
+  @apply block w-full bg-primary-400/10;
 }
 /* Keyword */
 /* KeywordDeclaration */
@@ -191,11 +191,11 @@ code {
 .chroma .nn,
 .chroma .vc,
 .chroma .o {
-  @apply text-primary-600 dark:text-primary-300;
+  @apply text-[#c678dd];
 }
 /* KeywordConstant */
 .chroma .kc {
-  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+  @apply font-semibold text-[#d19a66];
 }
 /* KeywordType */
 /* NameVariable */
@@ -219,7 +219,7 @@ code {
 .chroma .mi,
 .chroma .il,
 .chroma .mo {
-  @apply text-secondary-400 dark:text-secondary-600;
+  @apply text-[#d19a66];
 }
 /* Name */
 /* NameDecorator */
@@ -229,7 +229,7 @@ code {
 .chroma .nd,
 .chroma .ni,
 .chroma .nl {
-  @apply text-secondary-900 dark:text-secondary-200;
+  @apply text-[#abb2bf];
 }
 /* NameAttribute */
 /* NameBuiltin */
@@ -243,7 +243,7 @@ code {
 .chroma .nx,
 .chroma .py,
 .chroma .nt {
-  @apply text-secondary-800 dark:text-secondary-300;
+  @apply text-[#e06c75];
 }
 /* NameConstant */
 /* NameException */
@@ -251,11 +251,11 @@ code {
 .chroma .no,
 .chroma .ne,
 .chroma .vg {
-  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+  @apply font-semibold text-[#d19a66];
 }
 /* NameFunction */
 .chroma .nf {
-  @apply text-secondary-600 dark:text-secondary-500;
+  @apply text-[#61afef];
 }
 /* Literal */
 /* LiteralDate */
@@ -290,21 +290,21 @@ code {
 .chroma .gi,
 .chroma .go,
 .chroma .gp {
-  @apply text-primary-800 dark:text-primary-400;
+  @apply text-[#98c379];
 }
 /* LiteralStringEscape */
 .chroma .se {
-  @apply font-semibold text-secondary-400 dark:text-secondary-500;
+  @apply font-semibold text-[#56b6c2];
 }
 /* LiteralStringRegex */
 /* LiteralStringSymbol */
 .chroma .sr,
 .chroma .ss {
-  @apply font-semibold text-primary-800 dark:text-primary-400;
+  @apply font-semibold text-[#56b6c2];
 }
 /* OperatorWord */
 .chroma .ow {
-  @apply font-semibold text-primary-400 dark:text-primary-600;
+  @apply font-semibold text-[#c678dd];
 }
 /* Comment */
 /* CommentMultiline */
@@ -318,11 +318,11 @@ code {
 .chroma .cs,
 .chroma .cp,
 .chroma .cpf {
-  @apply italic text-neutral-500 dark:text-neutral-400;
+  @apply italic text-[#5c6370];
 }
 /* CommentHashbang */
 .chroma .ch {
-  @apply font-semibold italic text-neutral-500 dark:text-neutral-400;
+  @apply font-semibold italic text-[#5c6370];
 }
 /* GenericEmph */
 .chroma .ge {
@@ -330,7 +330,7 @@ code {
 }
 /* GenericHeading */
 .chroma .gh {
-  @apply font-semibold text-neutral-500;
+  @apply font-semibold text-[#5c6370];
 }
 /* GenericStrong */
 .chroma .gs {
@@ -340,7 +340,7 @@ code {
 /* GenericTraceback */
 .chroma .gu,
 .chroma .gt {
-  @apply text-neutral-500;
+  @apply text-[#5c6370];
 }
 /* GenericUnderline */
 .chroma .gl {
@@ -357,7 +357,7 @@ code {
   @apply btn-bear bg-primary-400 text-neutral-900 hover:bg-primary-300;
 }
 .btn-bear-outline {
-  @apply btn-bear border border-neutral-700 text-neutral hover:border-primary-400 hover:text-primary-400;
+  @apply btn-bear border border-neutral-300 text-neutral-900 hover:border-primary-500 hover:text-primary-600 dark:border-neutral-700 dark:text-neutral dark:hover:border-primary-400 dark:hover:text-primary-400;
 }
 
 /* Meta badges (category / difficulty / reading time) */
@@ -373,29 +373,37 @@ code {
   @apply inline-flex items-center rounded-md border border-neutral-800 bg-neutral-900 px-2 py-0.5 text-xs font-medium text-neutral-400 no-underline transition-colors hover:border-primary-700 hover:text-primary-400;
 }
 
+/* DSA filter chips */
+.dsa-chip {
+  @apply cursor-pointer select-none;
+}
+.dsa-chip.is-active {
+  @apply border-primary-900 bg-primary-950 text-primary-300;
+}
+
 /* Category / article cards */
 .bear-card {
-  @apply flex flex-col gap-3 rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 no-underline transition-all hover:-translate-y-0.5 hover:border-primary-700/60 hover:bg-neutral-900;
+  @apply flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 no-underline shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary-600/60 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900/60 dark:shadow-none dark:hover:border-primary-700/60 dark:hover:bg-neutral-900;
 }
 .bear-card-title {
-  @apply text-lg font-semibold text-neutral;
+  @apply text-lg font-semibold text-neutral-900 dark:text-neutral;
 }
 .bear-card-desc {
-  @apply text-sm leading-relaxed text-neutral-400;
+  @apply text-sm leading-relaxed text-neutral-600 dark:text-neutral-400;
 }
 
 /* Bear memory recall box */
 .bear-memory {
-  @apply my-10 rounded-2xl border border-primary-900/60 bg-gradient-to-br from-primary-950/50 to-neutral-900 p-6;
+  @apply my-10 rounded-2xl border border-primary-300 bg-gradient-to-br from-primary-50 to-neutral-50 p-6 dark:border-primary-900/60 dark:from-primary-950/50 dark:to-neutral-900;
 }
 .bear-memory-title {
-  @apply mb-3 flex items-center gap-2 text-lg font-bold text-primary-300;
+  @apply mb-3 flex items-center gap-2 text-lg font-bold text-primary-700 dark:text-primary-300;
 }
 .bear-memory ul {
   @apply m-0 list-none space-y-2 p-0;
 }
 .bear-memory li {
-  @apply flex items-start gap-2 text-neutral-200;
+  @apply flex items-start gap-2 text-neutral-800 dark:text-neutral-200;
 }
 
 /* Interview questions accordion */
@@ -403,26 +411,26 @@ code {
   @apply my-10;
 }
 .bear-faq-item {
-  @apply rounded-xl border border-neutral-800 bg-neutral-900/40 open:bg-neutral-900;
+  @apply rounded-xl border border-neutral-200 bg-neutral-50 open:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900/40 dark:open:bg-neutral-900;
 }
 .bear-faq-item + .bear-faq-item {
   @apply mt-3;
 }
 .bear-faq-item summary {
-  @apply cursor-pointer list-none px-5 py-4 font-semibold text-neutral marker:content-none;
+  @apply cursor-pointer list-none px-5 py-4 font-semibold text-neutral-900 marker:content-none dark:text-neutral;
 }
 .bear-faq-item summary::-webkit-details-marker {
   display: none;
 }
 .bear-faq-item summary::after {
   content: "+";
-  @apply float-right text-primary-400;
+  @apply float-right text-primary-600 dark:text-primary-400;
 }
 .bear-faq-item[open] summary::after {
   content: "\2212";
 }
 .bear-faq-item-body {
-  @apply border-t border-neutral-800 px-5 py-4 text-neutral-300;
+  @apply border-t border-neutral-200 px-5 py-4 text-neutral-700 dark:border-neutral-800 dark:text-neutral-300;
 }
 
 /* Hero */

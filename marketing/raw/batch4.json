@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "quest-ce-que-le-cloud",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "CAPEX vs OPEX, la vraie bascule du cloud, en 30 secondes.",
+    "body": "Avant le cloud, on achetait des serveurs : un coût fixe, amorti sur plusieurs années, dimensionné pour le pic de trafic le plus haut qu'on pouvait imaginer — même si ce pic n'arrive qu'à Noël et que le serveur tourne à 5 % le reste de l'année.\n\nLe cloud transforme ça en coût variable : on paie à la seconde ce qu'on consomme réellement. Ce n'est pas juste \"le serveur de quelqu'un d'autre\", c'est surtout l'élasticité — la capacité d'ajuster les ressources à la demande, automatiquement, en quelques minutes plutôt qu'en quelques semaines.\n\nLe piège que beaucoup découvrent trop tard : une ressource oubliée mais jamais éteinte continue d'être facturée. Un serveur physique, on le voit tourner dans un coin du datacenter. Sur le cloud, ce coût-là reste invisible jusqu'à la facture.",
+    "hashtags": ["CloudComputing", "DevOps", "Backend", "TechFrance", "EntretienTechnique"]
+  },
+  {
+    "slug": "iaas-paas-saas",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Question piège classique en entretien DevOps : Kubernetes, c'est du IaaS ou du PaaS ?",
+    "body": "La réponse honnête : ni vraiment l'un ni vraiment l'autre. Un cluster managé (EKS, GKE) est fourni comme un service, ce qui se rapproche du PaaS. Mais vous continuez à gérer vous-même les conteneurs, leur configuration et leur déploiement — ce qui garde une bonne part de responsabilité côté IaaS.\n\nOn parle parfois de CaaS (Container as a Service) pour désigner ce niveau intermédiaire. Si un candidat répond \"PaaS\" sans nuancer, c'est souvent le signe qu'il récite une définition plutôt qu'il ne comprend la logique derrière.\n\nLa vraie question derrière IaaS, PaaS et SaaS, ce n'est pas le vocabulaire : c'est \"qui gère quoi\", et jusqu'où on est prêt à déléguer du contrôle contre moins de charge opérationnelle.",
+    "hashtags": ["Kubernetes", "CloudComputing", "DevOps", "EntretienTechnique", "TechFrance"]
+  },
+  {
+    "slug": "docker-explique-simplement",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'erreur la plus fréquente que j'entends sur Docker : \"c'est une VM plus légère\".",
+    "body": "Non. Une VM virtualise du matériel et embarque son propre système d'exploitation complet — plusieurs gigaoctets, démarrage en minutes. Un conteneur partage le noyau de la machine hôte et n'isole que l'espace utilisateur — quelques dizaines de mégaoctets, démarrage en une seconde.\n\nLa distinction à vraiment connaître pour un entretien : image vs conteneur. Une image est un modèle figé, comme une classe. Un conteneur est une instance en cours d'exécution de cette image, comme un objet. On peut lancer dix conteneurs identiques à partir d'une seule et même image.\n\nDétail technique que peu de devs citent spontanément : chaque instruction d'un Dockerfile crée une couche mise en cache. Placer les instructions qui changent le moins souvent avant celles qui changent tout le temps accélère nettement les rebuilds.",
+    "hashtags": ["Docker", "DevOps", "CloudComputing", "EntretienTechnique", "Backend"]
+  },
+  {
+    "slug": "kubernetes-explique-simplement",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Ce qu'on vous demande vraiment quand on vous pose une question sur Kubernetes en entretien.",
+    "body": "Rarement \"c'est quoi Kubernetes\". Plutôt : \"Pod, Deployment, Service, quelle différence ?\" Le Pod est l'unité d'exécution la plus petite. Le Deployment décrit l'état désiré — combien de réplicas, quelle image — et gère les mises à jour progressives. Le Service donne une adresse réseau stable vers des Pods qui, eux, changent d'IP à chaque redémarrage.\n\nLe concept qui sépare vraiment les candidats préparés des autres : la boucle de réconciliation. Vous déclarez \"je veux 3 réplicas\", et le contrôleur agit en continu pour que l'état réel corresponde à cet état désiré, en recréant un Pod qui crashe sans aucune intervention humaine.\n\nUne bonne image mentale pour retenir tout ça : un régulateur de flotte de taxis qui redirige un client vers un autre véhicule si le sien tombe en panne, sans jamais que le client appelle un taxi précis par son numéro.",
+    "hashtags": ["Kubernetes", "Docker", "DevOps", "CloudComputing", "EntretienTechnique"]
+  },
+  {
+    "slug": "ci-cd",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "CI, livraison continue, déploiement continu : trois termes qu'on confond presque tout le temps en entretien.",
+    "body": "L'intégration continue automatise juste le build et les tests à chaque commit. La livraison continue va plus loin : le code est automatiquement prêt à être déployé, mais la mise en ligne reste une décision humaine. Le déploiement continu supprime cette dernière étape : chaque commit qui passe les tests part en production, sans validation manuelle.\n\nLa différence entre les deux derniers tient à une seule étape, et beaucoup de candidats emploient \"CI/CD\" comme un seul mot flou sans savoir laquelle des trois pratiques tourne réellement chez eux.\n\nLe principe qui sous-tend tout ça mérite d'être cité en entretien : fail fast. Plus une erreur est détectée tôt dans le pipeline, moins elle coûte cher à corriger — un bug attrapé en CI se règle en minutes, le même bug en prod peut prendre des heures d'investigation.",
+    "hashtags": ["CICD", "DevOps", "Docker", "EntretienTechnique", "TechFrance"]
+  },
+  {
+    "slug": "infrastructure-as-code",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'idempotence en Infrastructure as Code, en 30 secondes.",
+    "body": "Appliquer plusieurs fois la même configuration IaC doit toujours produire le même résultat, sans doublon ni effet de bord. Rejouer une commande Terraform après un souci réseau ne doit jamais créer un deuxième serveur par accident.\n\nC'est ce qui distingue une approche déclarative — je décris l'état voulu, l'outil calcule le chemin pour y arriver — d'un script impératif classique, où rejouer la même séquence d'étapes peut casser une ressource déjà en place.\n\nLe nom donné à l'inverse de l'IaC est presque un aveu : configurer son infra à coups de clics dans une console s'appelle du \"ClickOps\" — non reproductible, non versionné, et souvent connu d'une seule personne dans toute l'équipe.",
+    "hashtags": ["InfrastructureAsCode", "Terraform", "DevOps", "CloudComputing", "EntretienTechnique"]
+  },
+  {
+    "slug": "monitoring",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "L'erreur la plus courante en monitoring : confondre ça avec l'observabilité.",
+    "body": "Le monitoring surveille un ensemble d'indicateurs prédéfinis — il répond aux questions qu'on a pensé à poser à l'avance. L'observabilité va plus loin : elle permet d'explorer et de comprendre pourquoi un système se comporte ainsi, y compris pour des questions qu'on n'avait pas anticipées.\n\nLes trois piliers à connaître par cœur pour un entretien : les métriques (des chiffres agrégés dans le temps, légers, parfaits pour l'alerting), les logs (des événements détaillés pour investiguer précisément), les traces (le chemin d'une requête à travers plusieurs services, indispensable dès qu'il y en a plus d'un).\n\nUne règle simple à citer : une alerte doit être actionnable. Si personne ne sait quoi faire en la recevant à 3h du matin, ce n'est pas une alerte, c'est du bruit — et à terme, du bruit qui fait ignorer les vraies urgences.",
+    "hashtags": ["Monitoring", "DevOps", "CloudComputing", "EntretienTechnique", "Backend"]
+  },
+  {
+    "slug": "scalabilite",
+    "section": "cloud-devops",
+    "category_label": "Cloud & DevOps",
+    "hook": "Scaler horizontalement une appli qui n'a pas été conçue pour ça : l'erreur classique.",
+    "body": "La scalabilité verticale, c'est prendre une machine plus grosse — simple, mais plafonné par le matériel, et toujours un point de défaillance unique. La scalabilité horizontale, c'est ajouter des machines identiques derrière un load balancer — sans plafond théorique, mais ça exige une contrainte de conception forte : le service doit être stateless.\n\nLe piège : une instance qui garde une session utilisateur en mémoire locale force le load balancer à toujours router ce client vers la même instance. Ça casse la répartition de charge et complique la gestion des pannes. La solution consiste à externaliser cet état dans une base de données, un cache Redis, ou un JWT côté client.\n\nDétail qu'on oublie souvent en entretien : un load balancer doit inclure des health checks. Envoyer du trafic vers une instance déjà en panne aggrave l'incident au lieu de le contourner.",
+    "hashtags": ["Scalabilite", "Kubernetes", "DevOps", "CloudComputing", "EntretienTechnique"]
+  }
+]

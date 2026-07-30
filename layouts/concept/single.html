@@ -22,7 +22,7 @@
       </h1>
 
       {{ with .Params.summary }}
-        <p class="mb-10 rounded-xl border-l-4 border-primary-400 bg-neutral-900/40 px-5 py-4 text-lg leading-relaxed text-neutral-300">
+        <p class="mb-10 rounded-xl border-l-4 border-primary-500 bg-primary-50/60 px-5 py-4 text-lg leading-relaxed text-neutral-800 dark:border-primary-400 dark:bg-neutral-900/40 dark:text-neutral-300">
           {{ . | markdownify }}
         </p>
       {{ end }}
@@ -52,7 +52,7 @@
 
         {{ with .Params.interviewQuestions }}
           <div class="bear-faq not-prose">
-            <h2 class="mb-4 text-2xl font-bold text-neutral">Questions d'entretien</h2>
+            <h2 class="mb-4 text-2xl font-bold text-neutral-900 dark:text-neutral">Questions d'entretien</h2>
             {{ range . }}
               <details class="bear-faq-item">
                 <summary>{{ .q }}</summary>

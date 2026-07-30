@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "comment-fonctionne-une-base-relationnelle",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question d'entretien qui a l'air facile : quelle différence entre une clé primaire et une clé étrangère ?",
+    "body": "La clé primaire identifie une ligne de façon unique dans sa table. Elle ne peut jamais être nulle, jamais dupliquée — et une table n'en a qu'une seule.\n\nLa clé étrangère, c'est différent : c'est une colonne qui pointe vers la clé primaire d'une AUTRE table, pour créer une relation. Une table peut en avoir plusieurs.\n\nCe qui surprend souvent : une relation en base relationnelle n'a rien de magique. \"commande.client_id\" ne contient rien d'autre que la valeur de l'id d'un client qui existe déjà ailleurs. Pas de lien caché, juste une colonne qui référence une valeur.\n\nSi le client déménage, on corrige une seule fiche dans la table clients. Toutes ses commandes restent valides sans qu'on ait à toucher une seule ligne de plus.",
+    "hashtags": ["BasesDeDonnees", "SQL", "PostgreSQL", "DeveloppeurWeb", "EntretienTechnique"]
+  },
+  {
+    "slug": "sql-explique-simplement",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "DELETE et TRUNCATE suppriment tous les deux des lignes. Les confondre en entretien (ou en prod) coûte cher.",
+    "body": "DELETE est une commande DML : elle supprime ligne par ligne, peut être filtrée avec un WHERE, déclenche les triggers, et peut être annulée avec un ROLLBACK dans une transaction.\n\nTRUNCATE est une commande DDL : elle vide toute la table d'un coup, réinitialise le compteur d'auto-incrément, ne se filtre pas, et n'est généralement pas journalisée ligne par ligne — donc beaucoup plus rapide sur un gros volume, mais moins flexible et souvent impossible à annuler selon le moteur.\n\nLa bonne réponse en entretien n'est pas de réciter la définition, c'est de dire QUAND utiliser l'un plutôt que l'autre : DELETE pour un nettoyage ciblé et réversible, TRUNCATE pour vider une table de logs qu'on sait pouvoir sacrifier entièrement.",
+    "hashtags": ["SQL", "BasesDeDonnees", "Backend", "EntretienTechnique", "MySQL"]
+  },
+  {
+    "slug": "index-bdd",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Erreur fréquente chez les devs qui découvrent les index : indexer toutes les colonnes \"pour être tranquille\".",
+    "body": "Un index accélère la lecture, mais il a un coût réel : chaque INSERT, UPDATE ou DELETE doit aussi mettre à jour l'index. Plus une table a d'index, plus les écritures ralentissent.\n\nEt un index n'est même pas toujours utile. Sur une colonne peu sélective — un booléen \"actif\" par exemple, avec seulement deux valeurs possibles — le moteur préfère souvent un scan complet plutôt que de suivre l'index. Trop peu de valeurs distinctes, pas assez de gain.\n\nLa bonne question n'est pas \"combien d'index\" mais \"quelles colonnes sont réellement filtrées, jointes ou triées dans mes requêtes réelles\". EXPLAIN ANALYZE existe justement pour vérifier ça au lieu de le supposer.",
+    "hashtags": ["SQL", "BasesDeDonnees", "Performance", "EntretienTechnique", "PostgreSQL"]
+  },
+  {
+    "slug": "transactions-acid",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question piège classique : le serveur plante une seconde après un COMMIT. Vos données sont perdues ?",
+    "body": "Non — et c'est tout l'intérêt de la Durabilité, le D d'ACID. Une fois qu'une transaction est validée par COMMIT, le moteur a déjà écrit les changements dans un journal des transactions (write-ahead log) sur disque, avant même de confirmer au client que c'est bon.\n\nAu redémarrage, la base rejoue ce journal et retrouve exactement l'état validé. Rien n'est perdu, même si le crash survient littéralement une milliseconde après.\n\nCe qui piège souvent en entretien, c'est la suite : la différence entre Atomicité et Isolation. L'Atomicité protège une transaction en elle-même (tout ou rien). L'Isolation protège les transactions les unes des autres. Deux garanties, deux problèmes différents — et confondre les deux dans une réponse trahit vite une compréhension de surface.",
+    "hashtags": ["BasesDeDonnees", "SQL", "Backend", "EntretienTechnique", "DataEngineering"]
+  },
+  {
+    "slug": "isolation-transactionnelle",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "La question qui sépare un dev junior d'un dev senior en entretien SQL : quelle différence entre un non-repeatable read et un phantom read ?",
+    "body": "Un non-repeatable read, c'est relire la même ligne deux fois dans une transaction et obtenir une valeur différente, parce qu'une autre transaction l'a modifiée et validée entre-temps.\n\nUn phantom read, c'est différent : c'est ré-exécuter le même SELECT avec un critère (WHERE statut = 'en_cours') et obtenir un ensemble de LIGNES différent, parce que d'autres lignes correspondant au critère ont été insérées ou supprimées entre-temps.\n\nLe premier porte sur une ligne qui change de valeur. Le second porte sur des lignes qui apparaissent ou disparaissent. Read Committed empêche le premier problème sans résoudre le second — il faut monter jusqu'à Serializable pour éliminer les deux.\n\nCe n'est pas une question de vocabulaire. C'est une question qui révèle si on sait raisonner sur la concurrence, pas juste écrire des requêtes isolées.",
+    "hashtags": ["SQL", "BasesDeDonnees", "EntretienTechnique", "Backend", "PostgreSQL"]
+  },
+  {
+    "slug": "normalisation",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Un email de client recopié sur dix commandes différentes. Le jour où il déménage, il faut corriger dix lignes — en oublier une, et vous avez deux vérités pour la même personne.",
+    "body": "C'est ce qu'on appelle une anomalie de mise à jour, et c'est exactement le problème que la normalisation résout. Trois règles progressives : 1NF (chaque cellule contient une seule valeur, pas de liste cachée dans une colonne), 2NF (chaque colonne dépend de la clé primaire entière), 3NF (chaque colonne dépend UNIQUEMENT de la clé primaire, jamais d'une autre colonne).\n\nDans une table \"commandes\" avec client_nom et client_email à plat, l'email dépend du nom du client, pas de l'id de la commande — c'est une dépendance transitive, et c'est le piège le plus fréquent qui empêche d'atteindre la 3NF.\n\nEn entretien, on n'attend pas de réciter les sigles. On attend qu'un candidat regarde une table dénormalisée et propose spontanément le découpage en tables reliées par des clés.",
+    "hashtags": ["BasesDeDonnees", "SQL", "EntretienTechnique", "DeveloppeurWeb", "DataEngineering"]
+  },
+  {
+    "slug": "sql-vs-nosql",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Question piège en entretien : une base NoSQL garantit-elle les propriétés ACID ?",
+    "body": "La réponse courte, \"non\", est fausse. La bonne réponse, c'est \"ça dépend du produit et du périmètre\".\n\nBeaucoup de bases NoSQL sacrifient une partie de la cohérence forte au profit de la disponibilité et de la scalabilité — c'est le compromis décrit par le théorème CAP. Mais certaines, comme MongoDB depuis ses versions récentes, offrent bien des transactions ACID, avec des limites de performance par rapport à un moteur relationnel dédié.\n\nEt NoSQL ne veut même pas dire \"sans SQL\" — ça veut dire \"Not Only SQL\". Document, clé-valeur, colonne, graphe : quatre familles, quatre modèles de données différents, chacune pensée pour un pattern d'accès précis.\n\nLe vrai réflexe à avoir en entretien : ne jamais répondre \"SQL\" ou \"NoSQL\" sans expliquer le compromis qui justifie le choix pour le cas posé.",
+    "hashtags": ["SQL", "NoSQL", "BasesDeDonnees", "EntretienTechnique", "TechFrance"]
+  },
+  {
+    "slug": "cache-redis",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "Mettre un TTL infini sur ses clés Redis \"pour être tranquille\" est une fausse bonne idée.",
+    "body": "Sans TTL, une clé jamais invalidée explicitement — bug applicatif, oubli dans le code — reste périmée indéfiniment en mémoire. Et la mémoire de Redis se remplit progressivement de données obsolètes que personne ne va nettoyer.\n\nLe TTL n'est pas la stratégie d'invalidation elle-même, c'est un filet de sécurité. La vraie invalidation, la fiable, c'est de supprimer explicitement la clé juste après chaque écriture en base (DEL après un UPDATE), pour refléter le changement immédiatement plutôt que d'attendre l'expiration.\n\nMême avec ça, une fenêtre de risque existe : entre l'écriture en base et l'invalidation du cache, une lecture concurrente peut voir une valeur périmée pendant un court instant. Un TTL raisonnable en complément limite les dégâts si l'invalidation explicite est ratée.",
+    "hashtags": ["Redis", "NoSQL", "Performance", "Backend", "BasesDeDonnees"]
+  },
+  {
+    "slug": "replication",
+    "section": "bases-de-donnees",
+    "category_label": "Bases de données",
+    "hook": "La réplication n'est PAS une sauvegarde. Confondre les deux peut coûter cher le jour où quelqu'un lance un DELETE sans WHERE.",
+    "body": "La réplication protège contre une panne matérielle : si le serveur principal tombe, une réplique à jour peut prendre le relais. Mais une erreur applicative se propage vers les répliques presque aussi vite que vers les données originales — un DELETE malheureux sur le maître se retrouve répliqué en quelques secondes.\n\nUne sauvegarde, elle, capture un état à un instant T qu'on peut restaurer indépendamment de ce qui s'est passé après. Les deux mécanismes sont complémentaires, pas interchangeables — et s'appuyer uniquement sur la réplication en pensant être couvert est une des erreurs d'infra les plus coûteuses à découvrir en pleine crise.\n\nEn entretien, savoir expliquer cette distinction est souvent plus valorisé que de connaître par cœur la configuration exacte d'un moteur de réplication précis.",
+    "hashtags": ["BasesDeDonnees", "PostgreSQL", "Backend", "DataEngineering", "EntretienTechnique"]
+  }
+]

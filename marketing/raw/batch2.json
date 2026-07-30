@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "adapter",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Question piège en entretien : Adapter et Decorator enveloppent tous les deux un objet. Quelle différence ?",
+    "body": "Beaucoup de devs répondent par une définition floue apprise par cœur, et se plantent sur l'essentiel.\n\nLa réponse tient en une phrase : Adapter change l'interface de l'objet enveloppé pour la rendre compatible avec ce qu'attend le client. Decorator garde exactement la même interface et l'utilise pour ajouter un comportement en plus.\n\nUn Adapter répond à \"comment faire parler deux contrats différents ?\". Un Decorator répond à \"comment enrichir un comportement sans y toucher ?\"\n\nL'analogie qu'on utilise sur MyBearIsYellow : l'adaptateur de prise électrique dans une valise. Le courant qui circule est le même des deux côtés, seule la forme de la prise change. L'adapter ne doit jamais contenir de logique métier, juste de la traduction.",
+    "hashtags": ["DesignPatterns", "EntretienTechnique", "CleanCode", "PHP", "ArchitectureLogicielle"]
+  },
+  {
+    "slug": "decorator",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Pourquoi Express, PSR-15 et ASP.NET utilisent tous le même design pattern sans le nommer, en 30 secondes.",
+    "body": "Le concept de middleware, dans n'importe quel framework web, c'est du Decorator Pattern pur.\n\nChaque middleware enveloppe le traitement suivant, ajoute un comportement (log, auth, compression), puis délègue à la couche d'après — en respectant toujours la même interface que ce qu'il enveloppe.\n\nL'avantage : on empile les couches dans l'ordre voulu, à l'exécution, sans jamais créer de sous-classe. Avec de l'héritage classique, gérer \"log seul\", \"chiffrement seul\" et \"les deux ensemble\" demanderait déjà trois classes — et ça explose avec chaque nouvelle option.\n\nSeul vrai piège : l'ordre d'empilement change le résultat. Chiffrer avant de journaliser ne produit pas le même log que journaliser avant de chiffrer.",
+    "hashtags": ["DesignPatterns", "CleanCode", "Backend", "DeveloppeurWeb", "WebDev"]
+  },
+  {
+    "slug": "repository",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "L'erreur la plus fréquente sur les projets qui \"utilisent\" le Repository Pattern : appeler l'ORM directement depuis le code métier, à côté du repository.",
+    "body": "Ça donne un faux sentiment de découplage. On a bien une interface UtilisateurRepositoryInterface quelque part dans le projet, mais la moitié du code appelle encore Eloquent ou Doctrine en direct pour \"aller plus vite\".\n\nRésultat : impossible de tester la logique sans une vraie base de données, et changer d'ORM demande de traquer des appels techniques éparpillés partout dans le métier.\n\nLe vrai test en entretien n'est pas \"connaissez-vous le Repository Pattern\" mais \"un Repository correspond-il à une table ?\". Non — il correspond à un agrégat métier. Un agrégat Commande peut être stocké sur plusieurs tables (commandes, lignes de commande) tout en n'exposant qu'un seul CommandeRepositoryInterface.",
+    "hashtags": ["DesignPatterns", "ArchitectureLogicielle", "CleanCode", "Backend", "EntretienTechnique"]
+  },
+  {
+    "slug": "dependency-injection",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Ce qu'on vérifie vraiment quand on vous demande d'expliquer l'injection de dépendances en entretien : connaissez-vous le Service Locator, et savez-vous pourquoi c'est un anti-pattern.",
+    "body": "Avec un Service Locator, une classe va elle-même chercher ses dépendances dans un registre global. Elles sont cachées à l'intérieur du code, invisibles depuis la signature du constructeur.\n\nAvec l'injection de dépendances, elles sont explicites, révélées par le constructeur — on voit immédiatement de quoi une classe a besoin, et on peut les remplacer par des mocks en test sans effort.\n\nC'est cette différence, pas la définition théorique du pattern, qui distingue un dev qui a compris DI d'un dev qui récite une définition.\n\nDétail qu'on oublie souvent : un conteneur DI (Symfony, Spring) n'est qu'un outil qui automatise le câblage. Le principe fonctionne très bien à la main, sans aucun conteneur, dans un script de dix lignes.",
+    "hashtags": ["DesignPatterns", "CleanCode", "SoftwareEngineering", "EntretienTechnique", "Backend"]
+  },
+  {
+    "slug": "strategy",
+    "section": "design-patterns",
+    "category_label": "Design Patterns",
+    "hook": "Le signe qu'il vous manque un Strategy Pattern : une méthode avec un switch ou une cascade de if/else qui grossit à chaque nouveau cas.",
+    "body": "Livraison standard, puis express, puis internationale, puis un partenaire avec ses propres tarifs — six mois plus tard, calculerFrais() est un mur illisible où chaque nouvelle règle risque de casser les précédentes.\n\nLe vrai problème n'est pas la logique elle-même, c'est qu'elle est figée dans une seule méthode. Impossible de tester un mode de livraison isolément, impossible d'en ajouter un sans rouvrir un fichier que tout le monde touche.\n\nAvec Strategy, ajouter un comportement revient à ajouter une classe. Rien d'existant n'a besoin d'être modifié — c'est littéralement le principe ouvert/fermé appliqué.\n\nPiège classique en entretien : Strategy et State ont presque le même diagramme UML. La différence est dans l'intention — avec Strategy, c'est le client qui choisit la stratégie ; avec State, c'est l'objet qui change de comportement selon son propre état interne.",
+    "hashtags": ["DesignPatterns", "CleanCode", "EntretienTechnique", "SoftwareEngineering", "PHP"]
+  },
+  {
+    "slug": "pourquoi-ecrire-des-tests",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Écrire des tests, c'est installer des détecteurs de fumée dans une maison.",
+    "body": "Les poser prend du temps et ne rend la maison ni plus grande ni plus belle. Mais le jour où un départ de feu se déclare, c'est le détecteur — pas la vigilance humaine — qui alerte à temps pour agir avant que les dégâts deviennent irréversibles.\n\nSans détecteur, la maison peut très bien fonctionner des années sans incident. Le problème n'est pas la probabilité qu'un incident arrive un jour donné, c'est le coût le jour où il arrive sans qu'on l'ait vu venir.\n\nUn point qu'on oublie souvent en entretien : un test ne prouve jamais l'absence de bug en général. Il prouve seulement qu'un comportement précis, pour une entrée précise, produit la sortie attendue. Le vrai coût des tests, ce n'est pas de les écrire — c'est de ne pas les avoir le jour où il faut modifier le code en confiance.",
+    "hashtags": ["Tests", "CleanCode", "SoftwareEngineering", "DeveloppeurWeb", "EntretienTechnique"]
+  },
+  {
+    "slug": "tdd-explique-simplement",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Question piège sur le TDD : pourquoi faut-il VOIR le test échouer avant d'écrire le code, l'étape Red ?",
+    "body": "La réponse n'est pas \"parce que c'est la règle\". Voir le test échouer d'abord prouve que le test teste réellement quelque chose : s'il passait déjà sans code de production, il ne vérifierait rien d'utile, ou testerait le mauvais fichier.\n\nC'est une vérification du test lui-même, avant de lui faire confiance pour valider le futur code.\n\nDeuxième piège fréquent : le TDD garantit-il un code sans bug ? Non. Il structure la façon d'écrire le code et produit une bonne couverture par construction, mais il ne protège que contre les cas que les tests couvrent explicitement. Un dev qui oublie un cas limite au moment d'écrire le test aura un code TDD... qui ne le couvre pas non plus.",
+    "hashtags": ["TDD", "Tests", "EntretienTechnique", "CleanCode", "SoftwareEngineering"]
+  },
+  {
+    "slug": "test-unitaire-vs-integration",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Une équipe teste calculerRemise() en isolation, le test passe toujours. En production, la remise ne s'applique jamais.",
+    "body": "La cause : la requête SQL qui récupère le statut fidélité du client renvoie la mauvaise colonne. Le test unitaire n'a rien vu, car il ne testait que la logique de calcul, pas la façon dont les composants s'assemblent réellement.\n\nC'est exactement la différence entre les deux niveaux. Un test unitaire répond à \"cette logique, prise isolément, se comporte-t-elle comme prévu ?\". Un test d'intégration répond à \"ces composants, assemblés ensemble, produisent-ils le résultat attendu ?\"\n\nLes deux questions sont différentes, et aucune ne remplace l'autre. Se contenter de tests d'intégration parce que \"c'est plus proche de la réalité\" a un coût réel : ils sont plus lents, et un échec est plus difficile à localiser — la cause peut venir de n'importe quel composant impliqué.",
+    "hashtags": ["Tests", "EntretienTechnique", "Backend", "SoftwareEngineering", "PHP"]
+  },
+  {
+    "slug": "mock-vs-stub",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Un stub, c'est un figurant qui répond toujours la même réplique préparée à l'avance. Un mock, c'est l'huissier de justice qui note qui a dit quoi, à qui, et combien de fois.",
+    "body": "Dans un test, le stub joue son rôle sans qu'on l'interroge sur son passé. Le mock, lui, est interrogé après l'action pour confirmer que les bonnes interactions ont bien eu lieu.\n\nCe qu'on ne dit pas assez : abuser des mocks rend un test fragile. Un mock vérifie le comment (quelles méthodes appelées, avec quels arguments) — un détail d'implémentation. Changez la façon d'obtenir le même résultat métier sans changer le résultat observable, et le test casse alors que rien de réel n'a changé.\n\nDétail utile en entretien : PHPUnit distingue explicitement createStub() et createMock(). Jest, plus permissif, utilise jest.fn() pour les deux usages — la différence tient alors uniquement dans la présence d'un toHaveBeenCalledWith().",
+    "hashtags": ["Tests", "TDD", "JavaScript", "PHP", "EntretienTechnique"]
+  },
+  {
+    "slug": "pyramide-des-tests",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Une \"pyramide inversée\" — beaucoup de tests end-to-end, peu de tests unitaires — c'est un signal d'alerte qui revient souvent en entretien.",
+    "body": "Le scénario classique : une équipe soucieuse de tester \"comme un vrai utilisateur\" construit sa confiance sur des tests end-to-end pilotant un navigateur automatisé. Au fil des mois, la suite prend plus d'une heure, devient instable — des tests échouent à cause de délais réseau ou d'animations UI, sans rapport avec un vrai bug.\n\nRésultat : plus personne ne fait confiance aux échecs, et l'équipe relance les tests \"jusqu'à ce que ça passe\".\n\nLa forme pyramidale, popularisée par Mike Cohn, n'est pas un dogme esthétique : beaucoup de tests unitaires rapides à la base, un nombre modéré de tests d'intégration, très peu de end-to-end réservés aux parcours critiques. Si votre suite met plus de quelques minutes à tourner en local, c'est souvent le signe que trop de poids repose sur les niveaux du haut.",
+    "hashtags": ["Tests", "EntretienTechnique", "SoftwareEngineering", "Backend", "TDD"]
+  },
+  {
+    "slug": "bdd-avec-gherkin",
+    "section": "tests",
+    "category_label": "Tests",
+    "hook": "Un scénario Gherkin n'est ni un test unitaire, ni un test d'intégration, ni un test end-to-end.",
+    "body": "C'est un format de spécification, indépendant du niveau technique auquel il s'exécute. Les steps derrière un Given/When/Then peuvent appeler une fonction isolée, orchestrer plusieurs composants réels, ou piloter un navigateur — ça dépend entièrement de l'implémentation.\n\nLe vrai objectif du BDD n'est pas la syntaxe, c'est la conversation qui précède : un scénario Gherkin écrit seul par un développeur, sans le métier, perd une grande partie de son intérêt.\n\nEt non, le BDD ne remplace pas le TDD. Le TDD structure la façon d'écrire le code à partir d'un test technique. Le BDD structure la façon de définir le comportement attendu à partir d'une conversation avec le métier — les deux peuvent cohabiter, à des niveaux différents.",
+    "hashtags": ["BDD", "Tests", "TDD", "EntretienTechnique", "SoftwareEngineering"]
+  }
+]

@@ -13,7 +13,7 @@
         {{ .Site.Params.tagline }}
         <span class="text-neutral-500">— pourquoi ce nom ?</span>
       </a>
-      <h1 class="text-4xl font-extrabold leading-tight text-neutral sm:text-5xl">
+      <h1 class="text-4xl font-extrabold leading-tight text-neutral-900 dark:text-neutral sm:text-5xl">
         Les concepts du développement<br class="hidden sm:block" />
         expliqués <span class="text-primary-400">simplement</span>.
       </h1>
@@ -71,8 +71,8 @@
 
 {{/* Categories */}}
 <section class="py-16">
-  <h2 class="text-2xl font-bold text-neutral">Explorer par catégorie</h2>
-  <p class="mt-2 text-neutral-400">Six domaines. Un seul objectif : comprendre pour de bon.</p>
+  <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral">Explorer par catégorie</h2>
+  <p class="mt-2 text-neutral-400">Neuf domaines. Un seul objectif : comprendre pour de bon.</p>
 
   {{ $categories := slice
     (dict "icon" "🏛️" "title" "Architecture logicielle" "desc" "Clean Architecture, DDD, hexagonale, couplage." "url" "/architecture-logicielle")
@@ -80,6 +80,9 @@
     (dict "icon" "🗄️" "title" "Bases de données" "desc" "SQL, index, transactions ACID, NoSQL, Redis." "url" "/bases-de-donnees")
     (dict "icon" "✅" "title" "Tests" "desc" "TDD, BDD, pyramide des tests, mocks et stubs." "url" "/tests")
     (dict "icon" "☁️" "title" "Cloud & DevOps" "desc" "Docker, Kubernetes, CI/CD, IaC, scalabilité." "url" "/cloud-devops")
+    (dict "icon" "🧼" "title" "Clean Code" "desc" "Nommage, fonctions courtes, exceptions, code review." "url" "/clean-code")
+    (dict "icon" "🔒" "title" "Sécurité & Performance" "desc" "OWASP, injections, XSS, CSRF, performance PHP." "url" "/securite-performance")
+    (dict "icon" "🧮" "title" "Algorithmes & DSA" "desc" "100 problèmes FAANG en Java, avec l'idée clé expliquée." "url" "/algorithmes")
     (dict "icon" "🎯" "title" "Préparation entretien" "desc" "Les questions posées en entretien technique, expliquées." "url" "/preparation-entretien")
   }}
 
